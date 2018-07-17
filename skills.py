@@ -22,10 +22,10 @@ class IdiomC(Bot):
         super().__init__(data)
         self.data = data
         self.addLaunchHandler(self.launchRequest)
-        self.addIntentHandler('start', self.outside_skill)
-        self.addIntentHandler('answer', self.useful_skill)
-        self.addIntentHandler('round', self.home_skill)
-        self.addIntentHandler('answer_helper', self.kid_skill)
+        self.addIntentHandler('start', self.start)
+        self.addIntentHandler('answer', self.answer)
+        self.addIntentHandler('round', self.round)
+        self.addIntentHandler('answer_helper', self.answer_helper)
         self.addIntentHandler('c_game', self.quesheng)
         self.addIntentHandler('ai.dueros.common.default_intent', self.quesheng)
         self.idiom = [
