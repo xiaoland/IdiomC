@@ -22,11 +22,11 @@ class IdiomC(Bot):
         super().__init__(data)
         self.data = data
         self.addLaunchHandler(self.launchRequest)
-        self.addIntentHandler('start', self.outside_skill)
-        self.addIntentHandler('answer', self.useful_skill)
-        self.addIntentHandler('round', self.home_skill)
-        self.addIntentHandler('answer_helper', self.kid_skill)
-        self.addIntentHandler('c_game', self.quesheng)
+        self.addIntentHandler('start', self.start)
+        self.addIntentHandler('answer', self.answer)
+        self.addIntentHandler('round', self.round)
+        self.addIntentHandler('answer_helper', self.answer_helper)
+        self.addIntentHandler('c_game', self.c_game)
         self.addIntentHandler('ai.dueros.common.default_intent', self.quesheng)
         self.idiom = [
             '水漫金山', '重蹈覆辙', '行尸走肉', '金蝉脱壳', '百里挑一', '金玉满堂', '愚公移山', '魑魅魍魉','背水一战', '霸王别姬', '天上人间', '不吐不快', '海阔天空', '情非得已', '满腹经纶', '兵临城下',
