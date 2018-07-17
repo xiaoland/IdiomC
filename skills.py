@@ -22,11 +22,11 @@ class IdiomC(Bot):
         super().__init__(data)
         self.data = data
         self.addLaunchHandler(self.launchRequest)
-        self.addIntentHandler('start', self.start)
-        self.addIntentHandler('answer', self.answer)
-        self.addIntentHandler('round', self.round)
-        self.addIntentHandler('answer_helper', self.answer_helper)
-        self.addIntentHandler('c_game', self.c_game)
+        self.addIntentHandler('start', self.outside_skill)
+        self.addIntentHandler('answer', self.useful_skill)
+        self.addIntentHandler('round', self.home_skill)
+        self.addIntentHandler('answer_helper', self.kid_skill)
+        self.addIntentHandler('c_game', self.quesheng)
         self.addIntentHandler('ai.dueros.common.default_intent', self.quesheng)
         self.idiom = [
             '水漫金山', '重蹈覆辙', '行尸走肉', '金蝉脱壳', '百里挑一', '金玉满堂', '愚公移山', '魑魅魍魉','背水一战', '霸王别姬', '天上人间', '不吐不快', '海阔天空', '情非得已', '满腹经纶', '兵临城下',
@@ -107,7 +107,6 @@ class IdiomC(Bot):
         欢迎
         :return:
         """
-        self.waitAnswer()
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
         bodyTemplate.setPlainTextContent(r'欢迎来到成语大师，你可以在这里跟我一起玩成语接龙，对我说“开始游戏”即可开始游戏')
@@ -124,7 +123,6 @@ class IdiomC(Bot):
         开始游戏
         :return:
         """
-        self.waitAnswer()
         rand_id = random.randint(0, 499)
         give_idiom = self.idiom[rand_id]
 
@@ -134,7 +132,7 @@ class IdiomC(Bot):
 
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-        bodyTemplate.setPlainTextContent(r'我先来，我出' + give_idiom)
+        bodyTemplate.setPlainTextContent(r'我先来，我出：' + give_idiom)
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -148,7 +146,7 @@ class IdiomC(Bot):
         提示
         :return:
         """
-        self.waitAnswer()
+
         answer = self.getSessionAttribute("answer", '')
         give_idiom = self.getSessionAttribute("give_idiom", '')
         a = 0
@@ -176,7 +174,7 @@ class IdiomC(Bot):
 
         else:
 
-            card = TextCard(r'给你前两个字，想想' + helper_idiom + '**' + '如果实在想不到，可以对我说“跳过”')
+            card = TextCard(r'给你前两个字，想想：' + helper_idiom + '**' + '，如果实在想不到，可以对我说“跳过”)
             return {
                 'card': card,
                 'outputSpeech': r'给你前两个字，想想,' + helper_idiom + '如果实在想不到，可以对我说，跳过，'
@@ -188,7 +186,7 @@ class IdiomC(Bot):
         读取轮回
         :return:
         """
-        self.waitAnswer()
+
         return {
             'outputSpeech': r'您现在已经跟我大战第' + self.getSessionAttribute("idiom_num", 1) + '回合了'
         }
@@ -199,12 +197,12 @@ class IdiomC(Bot):
         继续游戏
         :return:
         """
-        self.waitAnswer()
+
         give_idiom = self.getSessionAttribute("give_idiom", '')
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage(
             'http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-        bodyTemplate.setPlainTextContent(r'好的，我们继续，我刚刚出了' + give_idiom)
+        bodyTemplate.setPlainTextContent(r'好的，我们继续，我刚刚出了：' + give_idiom)
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -218,7 +216,6 @@ class IdiomC(Bot):
         回答
         :return:
         """
-        self.waitAnswer()
         user_answer = self.getSlots('idiom')
         real_answer = self.getSessionAttribute("give_idiom", '')
         answer = self.getSessionAttribute("answer", '')
@@ -226,7 +223,7 @@ class IdiomC(Bot):
 
         if user_answer[0] != answer:
             return {
-                'outputSpeech': r'接错了哦，我的是' + real_answer + '哦！需要提示可以对我说，我需要提示，'
+                'outputSpeech': r'接错了哦，我的是：' + real_answer + '哦！需要提示可以对我说，我需要提示，'
             }
         else:
 
@@ -253,7 +250,7 @@ class IdiomC(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage(
                 'http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-            bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，那我接，' + new_give_idiom)
+            bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，那我接：' + new_give_idiom)
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -267,7 +264,6 @@ class IdiomC(Bot):
             缺省
             :return:
             """
-            self.waitAnswer()
             try:
                 text = self.data['request']['query']['original']
             except:
@@ -277,7 +273,7 @@ class IdiomC(Bot):
             else:
                 if len(text) == 4:
                     return {
-                        'outputSpeech': r'您回答的成语我似乎没能理解'
+                        'outputSpeech': r'很抱歉，您回答的成语我没能理解哦'
                     }
                 elif '下一关' in text or '不会' in text:
 
@@ -291,7 +287,7 @@ class IdiomC(Bot):
                     bodyTemplate = BodyTemplate1()
                     bodyTemplate.setBackGroundImage(
                         'http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-                    bodyTemplate.setPlainTextContent(r'好吧，要加油哦，那接下来我出' + give_idiom)
+                    bodyTemplate.setPlainTextContent(r'好吧，要加油哦，那接下来我出：' + give_idiom)
 
                     directive = RenderTemplate(bodyTemplate)
                     return {
