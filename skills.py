@@ -174,7 +174,7 @@ class IdiomC(Bot):
 
         else:
 
-            card = TextCard(r'给你前两个字，想想：' + helper_idiom + '**' + '，如果实在想不到，可以对我说“跳过”)
+            card = TextCard(r'给你前两个字，想想：' + helper_idiom + '**' + '，如果实在想不到，可以对我说“跳过”')
             return {
                 'card': card,
                 'outputSpeech': r'给你前两个字，想想,' + helper_idiom + '如果实在想不到，可以对我说，跳过，'
