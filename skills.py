@@ -308,21 +308,25 @@ class IdiomC(Bot):
                                 break
                         else:
                             a = a + 1
+            if new_give_idiom == None or new_give_idiom == '':
+                return {
+                    'outputSpeech': '诶呀，你这下真的打败我了，我输了，对我说，你重新开始，试试'
+                }
+            else:
+                self.setSessionAttribute("answer", new_give_idiom[-1], '')
+                self.setSessionAttribute("give_idiom", new_give_idiom, '')
+                self.setSessionAttribute("round_num", self.getSessionAttribute("round_num", 1) + 1, 1)
 
-            self.setSessionAttribute("answer", new_give_idiom[-1], '')
-            self.setSessionAttribute("give_idiom", new_give_idiom, '')
-            self.setSessionAttribute("round_num", self.getSessionAttribute("round_num", 1) + 1, 1)
+                bodyTemplate = BodyTemplate1()
+                bodyTemplate.setBackGroundImage(
+                    'http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
+                bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，那我接：' + new_give_idiom)
 
-            bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage(
-                'http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-            bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，那我接：' + new_give_idiom)
-
-            directive = RenderTemplate(bodyTemplate)
-            return {
-                'directives': [directive],
-                'outputSpeech': r'你真棒，被你接到了，那我接，' + new_give_idiom
-            }
+                directive = RenderTemplate(bodyTemplate)
+                return {
+                    'directives': [directive],
+                    'outputSpeech': r'你真棒，被你接到了，那我接，' + new_give_idiom
+                }
 
     def quesheng(self):
         
