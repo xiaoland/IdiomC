@@ -177,7 +177,8 @@ class IdiomC(Bot):
         :return:
         """
         rand_id = random.randint(0, 1000)
-        give_idiom = self.idiom[rand_id]
+        idiom = self.idiom
+        give_idiom = idiom[rand_id]
 
         self.setSessionAttribute("answer", give_idiom[-1], 0)
         self.setSessionAttribute("give_idiom", give_idiom, 0)
