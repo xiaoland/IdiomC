@@ -273,7 +273,12 @@ class IdiomC(Bot):
         回答
         :return:
         """
-        user_answer = self.getSlots('idiom')
+        result = self.getSlots('answer_dict')
+        try:
+            user_answer = json.loads(result)
+            user_answer = user_answer.get("origin")
+        except:
+            user_answer = result
         if not user_answer:
             self.nlu.ask('idiom')
         else:
