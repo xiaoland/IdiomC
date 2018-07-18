@@ -273,7 +273,7 @@ class IdiomC(Bot):
         回答
         :return:
         """
-        result = self.getSlots('answer_dict')
+        result = self.getSlots('idiom')
         try:
             user_answer = json.loads(result)
             user_answer = user_answer.get("origin")
