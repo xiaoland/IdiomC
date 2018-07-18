@@ -295,7 +295,6 @@ class IdiomC(Bot):
         else:
             idiom = self.idiom
             while 1 == 1:
-                for idiom in self.idiom:
                     try:
                         test = idiom[a]
                     except IndexError:
