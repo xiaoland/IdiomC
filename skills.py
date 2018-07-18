@@ -273,6 +273,7 @@ class IdiomC(Bot):
         回答
         :return:
         """
+        self.waitAnswer()
         result = self.getSlots('idiom')
         try:
             user_answer = json.loads(result)
