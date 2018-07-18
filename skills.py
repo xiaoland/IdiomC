@@ -274,17 +274,21 @@ class IdiomC(Bot):
         :return:
         """
         user_answer = self.getSlots('idiom')
+        if not user_answer:
+            self.nlu.ask('idiom')
+        else:
+            pass
         real_answer = self.getSessionAttribute("give_idiom", 0)
         answer = self.getSessionAttribute("answer", 0)
         a = 0
 
-        if user_answer[0] != answer:
+        if user_answer[0] != real_answer[3]:
             return {
                 'outputSpeech': r'接错了哦，我的是，' + real_answer + '，哦！需要提示可以对我说，我需要提示，'
             }
         else:
-
-            for idiom in self.idiom:
+            idiom = self.idiom
+            while 1 == 1:
                 for idiom in self.idiom:
                     try:
                         test = idiom[a]
