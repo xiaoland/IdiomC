@@ -17,14 +17,16 @@ from dueros.card.ListCardItem import ListCardItem
 from dueros.card.StandardCard import StandardCard
 from dueros.card.TextCard import TextCard
 
-class IdiomC(Bot):
+class IdiomMaster(Bot):
 
     def __init__(self, data):
 
         super().__init__(data)
         self.data = data
         self.addLaunchHandler(self.launchRequest)
-        self.addIntentHandler('start', self.start)
+        self.addIntentHandler('start_IdiomC', self.start_IdiomC)
+        self.addIntentHandler('start_IdiomStory', self.start_IdiomStory)
+        self.addIntentHandler('start_IdiomGuess', self.start_IdiomGuess)
         self.addIntentHandler('answer', self.answer)
         self.addIntentHandler('round', self.round)
         self.addIntentHandler('answer_helper', self.answer_helper)
@@ -171,18 +173,18 @@ class IdiomC(Bot):
         self.waitAnswer()
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-        bodyTemplate.setPlainTextContent(r'欢迎来到成语大师，你可以在这里跟我一起玩成语接龙，对我说“开始游戏”即可开始游戏')
+        bodyTemplate.setPlainTextContent(r'欢迎来到成语大师，你可以在这里跟我一起玩很多关于成语的东西，这里有成语接龙、猜成语、成语故事，试着对我说，我要玩成语接龙')
 
         directive = RenderTemplate(bodyTemplate)
         return {
             'directives': [directive],
-            'outputSpeech': r'欢迎来到成语大师，你可以在这里跟我一起玩成语接龙，对我说，开始游戏，即可开始游戏'
+            'outputSpeech': r'欢迎来到成语大师，你可以在这里跟我一起玩很多关于成语的东西，这里有成语接龙、猜成语、成语故事，试着对我说，我要玩成语接龙'
         }
 
-    def start(self):
+    def start_IdiomC(self):
 
         """
-        开始游戏
+        成语接龙
         :return:
         """
         self.waitAnswer()
@@ -192,6 +194,7 @@ class IdiomC(Bot):
 
         self.setSessionAttribute("answer", give_idiom[-1], 0)
         self.setSessionAttribute("give_idiom", give_idiom, 0)
+        self.setSessionAttribute("game_type", 'IdiomC', 0)
         self.setSessionAttribute("round_num", 1, 1)
 
         bodyTemplate = BodyTemplate1()
@@ -202,6 +205,29 @@ class IdiomC(Bot):
         return {
             'directives': [directive],
             'outputSpeech': r'我先来，我出' + give_idiom
+        }
+
+    def start_IdiomStory(self):
+
+        """
+        成语故事
+        :return:
+        """
+        self.waitAnswer()
+        user_story = self.getSlots('idiom_story_dict')
+        idiom_story = self.idiom_story[user_story][0]
+
+        self.setSessionAttribute("idiom_story_name", user_story, 0)
+        self.setSessionAttribute("game_type", 'IdiomStory', 0)
+
+        bodyTemplate = BodyTemplate1()
+        bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
+        bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story +  '，，，' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+
+        directive = RenderTemplate(bodyTemplate)
+        return {
+            'directives': [directive],
+            'outputSpeech': r'好的，我们来听：' + user_story +  '，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
         }
 
     def answer_helper(self):

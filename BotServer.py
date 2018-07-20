@@ -10,7 +10,7 @@
 """
 from cgi import parse_qs, escape
 import json
-from dueros.IdiomC.skills import IdiomC
+from dueros.IdiomMaster.skills import IdiomMaster
 
 def application(environ, start_response):
 
