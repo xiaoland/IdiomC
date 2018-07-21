@@ -31,7 +31,7 @@ def application(environ, start_response):
         if not request_body:
             return ['未获取到请求数据']
 
-        bot = IdiomMasters(request_body)
+        bot = IdiomMaster(request_body)
         #添加错误回调方法
         bot.setCallBack(callback)
 
