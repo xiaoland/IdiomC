@@ -233,19 +233,24 @@ class IdiomMaster(Bot):
     def start_IdiomGuess(self):
 
         """
-        成语故事
+        猜成语
         :return:
         """
         self.waitAnswer()
         mode = self.getSlots('guess_mode')
+        self.setSessionAttribute("game_type", 'IdiomGuess', 0)
         if mode == 'blank':
 
+            rand_id = random.randint(0, 1000)
+            rand_ids = random.randint(0, 3)
+            answer = self.idiom[rand_id]
             self.setSessionAttribute("real_answer", answer, 0)
-            self.setSessionAttribute("game_type", 'IdiomStory', 0)
+            self.setSessionAttribute("give_idiom", answer.replace(answer[rand_ids] + answer[rand_ids + 1], '*'), '')
+            self.setSessionAttribute("guan_num", 1, 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
-            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+            bodyTemplate.setBackGroundImage('**************!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+            bodyTemplate.setPlainTextContent(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + )
 
             directive = RenderTemplate(bodyTemplate)
             return {
