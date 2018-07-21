@@ -230,6 +230,59 @@ class IdiomMaster(Bot):
             'outputSpeech': r'好的，我们来听：' + user_story +  '，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
         }
 
+    def start_IdiomGuess(self):
+
+        """
+        成语故事
+        :return:
+        """
+        self.waitAnswer()
+        mode = self.getSlots('guess_mode')
+        if mode == 'blank':
+
+            self.setSessionAttribute("real_answer", answer, 0)
+            self.setSessionAttribute("game_type", 'IdiomStory', 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
+            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
+            }
+        elif mode == 'scene':
+
+            self.setSessionAttribute("idiom_story_name", user_story, 0)
+            self.setSessionAttribute("game_type", 'IdiomStory', 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
+            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
+            }
+        elif mode == 'mode':
+
+            self.setSessionAttribute("idiom_story_name", user_story, 0)
+            self.setSessionAttribute("game_type", 'IdiomStory', 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
+            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
+            }
+
+
+
     def answer_helper(self):
 
         """
