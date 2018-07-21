@@ -30,7 +30,7 @@ class IdiomMaster(Bot):
         self.addIntentHandler('answer', self.answer)
         self.addIntentHandler('round', self.round)
         self.addIntentHandler('answer_helper', self.answer_helper)
-        self.addIntentHandler('c_game', self.quesheng)
+        self.addIntentHandler('c_game', self.c_game)
         self.addIntentHandler('ai.dueros.common.default_intent', self.quesheng)
         self.idiom = [
             '水漫金山', '重蹈覆辙', '行尸走肉', '金蝉脱壳', '百里挑一', '金玉满堂', '愚公移山', '魑魅魍魉', '背水一战', '霸王别姬',
