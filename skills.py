@@ -23,19 +23,23 @@ class PuGongYing(Bot):
 
         super().__init__(data)
         self.data = data
-        # idiom modle
+        # main intent
         self.addLaunchHandler(self.launchRequest)
+        self.addIntentHandler('welcome', self.welcome)
+        self.addIntentHandler('answer', self.answer)
+        self.addIntentHandler('answer_helper', self.answer_helper)
+        self.addIntentHandler('c_game', self.c_game)
+        self.addIntentHandler('round', self.round)
+        self.addIntentHandler('ai.dueros.common.default_intent', self.quesheng)
+        # idiom intent
         self.addIntentHandler('start_IdiomC', self.start_IdiomC)
         self.addIntentHandler('tell_idiom_story', self.tell_idiom_story)
         self.addIntentHandler('start_IdiomGuess', self.start_IdiomGuess)
-        # english modle
+        # english intent
         self.addIntentHandler('study_english_word', self.study_english_word)
         self.addIntentHandler('tell_english_joke', self.tell_joke)
         self.addIntentHandler('tell_english_story', self.tell_english_story)
         self.addIntentHandler('english_songs', self.english_songs)
-        # else
-        self.addIntentHandler('welcome', self.welcome)
-        self.addIntentHandler('ai.dueros.common.default_intent', self.quesheng)
         # english data
         self.english_song = [
             ['', ''],
@@ -895,12 +899,12 @@ class PuGongYing(Bot):
                 text = self.data['request']['query']['original']
             except:
                 return {
-                    'outputSpeech': r'我没有理解您的意思'
+                    'outputSpeech': r'您说的我没有理解，对不起，您可以对我说，使用手册'
                 }
             else:
                 if len(text) == 4:
                     return {
-                        'outputSpeech': r'很抱歉，您回答的成语我没能理解哦'
+                        'outputSpeech': r'您说的我没有理解，对不起，您可以对我说，使用手册'
                     }
                 elif '下一关' in text or '不会' in text:
 
@@ -923,5 +927,5 @@ class PuGongYing(Bot):
                     }
                 else:
                     return {
-                        'outputSpeech': r'您说的我没有理解，对不起'
+                        'outputSpeech': r'您说的我没有理解，对不起，您可以对我说，使用手册'
                     }
