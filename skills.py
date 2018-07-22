@@ -100,43 +100,36 @@ class PuGongYing(Bot):
             '': ['', ''],
             '': ['', '']
         }
-        self.idiom_scene = {
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': '',
-            '': ''
-        }
+        self.idiom_scene = [
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', '']
+        ]
         self.idiom = [
             '水漫金山', '重蹈覆辙', '行尸走肉', '金蝉脱壳', '百里挑一', '金玉满堂', '愚公移山', '魑魅魍魉', '背水一战', '霸王别姬',
             '天上人间', '不吐不快', '海阔天空', '情非得已', '满腹经纶', '兵临城下', '气味相投', '投鼠忌器', '屋乌之爱', '爱莫能助',
@@ -272,8 +265,9 @@ class PuGongYing(Bot):
         """
         self.waitAnswer()
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
+        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T04%3A58%3A51Z%2F-1%2F%2Fd5bb19cee3e1245f859866dfbd810f2353636fa3d1ca6e93f6a210bcc152f8a3')
         bodyTemplate.setPlainTextContent(r'欢迎来到蒲公英，在这里，您可以跟我一起学习英语，也可以跟我互斗成语！试着对我说，我怎么跟你玩')
+        bodyTemplate.set_title('蒲公英')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -287,7 +281,18 @@ class PuGongYing(Bot):
         介绍
         :return:
         """
+        self.waitAnswer()
+        bodyTemplate = BodyTemplate1()
+        bodyTemplate.setBackGroundImage(
+            'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T04%3A58%3A51Z%2F-1%2F%2Fd5bb19cee3e1245f859866dfbd810f2353636fa3d1ca6e93f6a210bcc152f8a3')
+        bodyTemplate.setPlainTextContent(r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语电影推荐和学习英语单词与短语，快来一起吧')
+        bodyTemplate.set_title('蒲公英使用介绍')
 
+        directive = RenderTemplate(bodyTemplate)
+        return {
+            'directives': [directive],
+            'outputSpeech': r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语电影推荐和学习英语单词与短语，快来一起吧'
+        }
 
     def start_IdiomC(self):
 
@@ -296,7 +301,7 @@ class PuGongYing(Bot):
         :return:
         """
         self.waitAnswer()
-        rand_id = random.randint(0, 1000)
+        rand_id = random.randint(0, 1100)
         idiom = self.idiom
         give_idiom = idiom[rand_id]
 
@@ -306,7 +311,7 @@ class PuGongYing(Bot):
         self.setSessionAttribute("round_num", 1, 1)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
+        bodyTemplate.setBackGroundImage('://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
         bodyTemplate.setPlainTextContent(r'我先来，我出：' + give_idiom)
 
         directive = RenderTemplate(bodyTemplate)
@@ -314,63 +319,6 @@ class PuGongYing(Bot):
             'directives': [directive],
             'outputSpeech': r'我先来，我出' + give_idiom
         }
-
-    def start_IdiomGuess(self):
-
-        """
-        猜成语
-        :return:
-        """
-        self.waitAnswer()
-        mode = self.getSlots('guess_mode')
-        self.setSessionAttribute("game_type", 'IdiomGuess', 0)
-        if mode == 'blank':
-
-            rand_id = random.randint(0, 1000)
-            rand_ids = random.randint(0, 3)
-            answer = self.idiom[rand_id]
-            give_idiom = answer.replace(answer[rand_ids] + answer[rand_ids + 1], '*')
-            self.setSessionAttribute("real_answer", answer, 0)
-            self.setSessionAttribute("give_idiom", give_idiom, '')
-            self.setSessionAttribute("guan_num", 1, 1)
-
-            bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage('**************!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-            bodyTemplate.setPlainTextContent(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
-
-            directive = RenderTemplate(bodyTemplate)
-            return {
-                'directives': [directive],
-                'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom
-            }
-        elif mode == 'scene':
-
-            self.setSessionAttribute("idiom_story_name", user_story, 0)
-            self.setSessionAttribute("game_type", 'IdiomStory', 0)
-
-            bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
-            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
-
-            directive = RenderTemplate(bodyTemplate)
-            return {
-                'directives': [directive],
-                'outputSpeech': r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
-            }
-        elif mode == 'means':
-
-            self.setSessionAttribute("idiom_story_name", user_story, 0)
-            self.setSessionAttribute("game_type", 'IdiomStory', 0)
-
-            bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
-            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
-
-            directive = RenderTemplate(bodyTemplate)
-            return {
-                'directives': [directive],
-                'outputSpeech': r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
-            }
 
     def tell_idiom_story(self):
 
@@ -414,6 +362,66 @@ class PuGongYing(Bot):
                 'outputSpeech': r'好的，我们来听：' + user_story +  '，，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
             }
 
+    def start_IdiomGuess(self):
+
+        """
+        猜成语
+        :return:
+        """
+        self.waitAnswer()
+        mode = self.getSlots('guess_mode')
+
+        if mode == 'blank':
+
+            rand_id = random.randint(0, 1100)
+            rand_ids = random.randint(0, 3)
+            answer = self.idiom[rand_id]
+            give_idiom = answer.replace(answer[rand_ids] + answer[rand_ids + 1], '*')
+            self.setSessionAttribute("real_answer", answer, 0)
+            self.setSessionAttribute("give_idiom", give_idiom, '')
+            self.setSessionAttribute("game_type", 'IdiomGuessBlank', 0)
+            self.setSessionAttribute("guan_num", 1, 1)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage('**************!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+            bodyTemplate.setPlainTextContent(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom
+            }
+        elif mode == 'scene':
+
+            rand_id = random.randint(0, 20)
+            ask = self.idiom_scene[rand_id][0]
+            self.setSessionAttribute("idiom_scene_num", ask, 0)
+            self.setSessionAttribute("game_type", 'IdiomGuessScene', 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(self.idiom_scene[rand_id][1])
+            bodyTemplate.setPlainTextContent(r'好啊，来看看这个场景用什么成语呢：' + ask)
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好啊，来看看这个场景用什么成语呢，，，，' + ask
+            }
+        elif mode == 'means':
+
+
+            self.setSessionAttribute("", user_story, 0)
+            self.setSessionAttribute("game_type", 'IdiomStory', 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
+            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，我们来听：' + user_story + '，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
+            }
 
     def answer_helper(self):
 
