@@ -81,56 +81,52 @@ class PuGongYing(Bot):
             ['', '']
         ]
         self.english_joke = [
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', '']
+            ['Teacher: whoever answers my next question, can go home.老师：谁能回到我下一个问题，谁就可以回家了。One boy throws his bag out the window.一个小男孩把书包扔到窗外。Teacher: who just threw that?!老师：谁刚刚把书包扔出去了?Boy: Me! I’m going home now.男孩：我!我现在要回家了。', ''],
+            ['What dog can jump higher than a building?什么狗比大楼跳的还高?Anydog, buildings cannot jump!任何一只狗，大楼又跳不起来。', ''],
+            ["Sister's boyfriend: No, dont do that. Here is a nickel.Little brother: That makes a buck and a quarter I love made this mont弟弟：我看见你亲我姐姐了，如果你不给我五分钱，我就告诉我爸。姐姐的男朋友：不要那样做。给你五分钱。弟弟：我这个月已经赚了一块两毛五了。", ''],
+            ["Dentist: I'm sorry, madam, but I'll have to charge you twenty-five dollars for pulling your son's tooth.Mother: Twenty-five dollars! But I thought you only charged five dollars for an extraction.Dentist: I usually do. But your son yelled so loud, he scared four other patients out of the office.牙科医生：对不起，夫人，为给您的儿子拔牙，我得收二十五美元。母亲：二十五美元!可是我知道您拔一颗牙只要五美元呀?牙科医生：是的。但是您儿子这么大声地叫唤，他都吓跑四位病人了。", ""],
+            ["Younger Scout: How can I tell the difference between a mushroom and a toadstool?Older Scout: Just eat one before you go to bed. If you wake up the next morning, it was a mushroom.年少的童子军：我怎样才能把蘑菇和毒蕈区别开呢?年长的童子军：上床前吃一个。如果你第二天早上醒来，那就是蘑菇。", ""],
+            ["‘Do you believe in life after death?’the boss asked one of his employees. ‘Yes, Sir.’ the new recruit replied.‘Well, then, that makes everything just fine,’ the boss went on. 'After you left early yesterday to go to your grandmother's funeral, she stopped in to see you.“你相信人能死后重生吗?”老板问他的一个员工。 “我相信，先生”。这位刚上班不久的员工回答。 “哦，那还好”。老板接着说。 “你昨天提早下班去参加你祖母的葬礼后，她老人家到这儿看你来了。”", ""],
+            ["The fine-furniture store where I work has been in business since the 1920s. Recently I received a call from a woman who wanted to replace some chairs from a dining set purchased from us in the 1930s. I assured her we could help and sought the assistance of the office manager. “You'll never believe this one, ”I told him.“ I just got a call from a customer who bought some chairs from us in the 1930s. ”Before I could finish repeating her request, he interrupted and said, “Don't tell me she hasn't received them yet!”我所工作的精品家具商店是从20世纪二十年代以来就营业的。最近我接到一个妇女的电话。她想换一套餐具中的一些椅子。这套餐具她是在三十年代从我们这儿买的。我向她保证说我们可以帮她的忙，于是我向部门经理寻求帮助。“你永远也不会相信，”我对他说，“我刚接到一个顾客的电话，她在三十年代从我们这里买了一些椅子。” 我还没来得及说她的要求，经理就打断了我的话：“你别告诉我她到现在还没收到货!”", ""],
+            ["A husband and wife,both 91,stood before a judge,asking for a divorce.“I don't understand,”He said,“Why do you want a divorce at this time of life?”the husband explained “Well , you see,We wanted to wait until the children died.”有一个丈夫和妻子都是91岁，他们站在法官面前，要求离婚。“我不明白，”法官说，“你们为什么到了这把年纪还要离婚?”丈夫解释道：“嗯，你是知道的，我们以前是哟等到孩子们都死了。”", ""],
+            ["Teacher: What is the plural of man,Tom?Tom: Men.Teacher: Good. And the plural of child?Tom : Twins.老师: 汤姆，“男人”这个词的复数形式是什么?汤姆:男人们。老师: 答得好。那“孩子”的复数形式呢?汤姆: 双胞胎", ""],
+            ["Mike was late for school. He said to his teacher, Mr. Black, “Excuse me for my coming late, sir. I watched a football match in my dream.”“Why did it make you late?”inquired the teacher.　“Because neither team could win the game, so it lasted a long time.” replied Mike.麦克上学迟到了。他对布莱克老师说：“对不起，老师，今天早上我迟到了。因为我在梦里观看了一场球赛。”“为什么它会让你迟到呢?”老师问道。因为这两个队都没有能力获胜，所以就持续的时间长了。”麦克回答说。", ""],
+            ["After burying his mother nine months earlier, a client of the local mortuary finally had enough money to purchase the expensive coffin he'd originally wanted. So we exhumed the body and transferred his deceased mother into the new steel casket. “What's so special about this coffin?” I asked the funeral director. He replied, “It has a lifetime warranty.”在将母亲下葬9个月后，当地殡仪馆的一个客户终于攒够了钱去买那副他早就相中的价值不菲的棺材了。他把母亲的棺材挖了出来，将尸体转移到了那副新的钢制棺材中。“这副棺材有什么特别?”，我问葬礼的承办人。他回答说，“这种棺材终生保修", ""],
+            ["“Oh, my poor man,”exclaimed the kind old lady， “It must be dreadful to be lame. But it would be much worse if you were blind.”“You're absolutely right,”said the beggar, obviously an old hand at the game.“When I was blind, people kept giving me foreign coins.”“啊，可怜的人。”善良的老妇人惊叹道。“脚瘸就够惨的了，要是眼瞎就更糟了。”“你说的一点儿没错。”那乞丐说。他显然是乞讨老手。“我眼瞎的时候，人们老是给我外币。”", ""],
+            ["A newspaper organized a contest for the best answer to the question: “If a fire broke out in the Louvre, and if you could only save one painting, which one would you carry out?”The winning reply was: “The one nearest the exit.”一份报纸组织了一场竞赛，为下面的问题征集最佳答案：“如果卢浮宫起了火，而你只能救出一幅画，你将救出哪一幅?”获奖的答案是：“最接近门口的那一幅。”", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+
         ]
         self.english_story = [
             ['', ''],
@@ -399,36 +395,6 @@ class PuGongYing(Bot):
             ['杼柚空虚', '形容生产废弛，贫无所有。', ''],
             ['一览全收', '览：看。一眼看去，所有的景物全看见了。形容建筑物的结构没有曲折变化，或诗文内容平淡，没有回味。', '']
         ]
-        self.idiom_scene = [
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', '']
-        ]
         self.idiom = [
             '水漫金山', '重蹈覆辙', '行尸走肉', '金蝉脱壳', '百里挑一', '金玉满堂', '愚公移山', '魑魅魍魉', '背水一战', '霸王别姬',
             '天上人间', '不吐不快', '海阔天空', '情非得已', '满腹经纶', '兵临城下', '气味相投', '投鼠忌器', '屋乌之爱', '爱莫能助',
@@ -612,6 +578,7 @@ class PuGongYing(Bot):
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage('://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
         bodyTemplate.setPlainTextContent(r'我先来，我出：' + give_idiom)
+        bodyTemplate.set_title(r'第一关')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -639,12 +606,13 @@ class PuGongYing(Bot):
 
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage(self.idiom_story[rand_id][1])
-            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + '：' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+            bodyTemplate.setPlainTextContent(r'好的，我们来听：' + '：' + idiom_story + '，，，还想再听一遍吗，试着对我说：再来一遍')
+            bodyTemplate.set_title(user_story)
 
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
-                'outputSpeech': r'好的，我们来听：' + user_story + '，，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
+                'outputSpeech': r'好的，我们来听：' + user_story + '，，，，' + idiom_story + '，，，还想再听一遍吗，试着对我说，再来一遍'
             }
         else:
             idiom_story = self.idiom_story[user_story][0]
@@ -654,6 +622,7 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
             bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story +  '：' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+            bodyTemplate.set_title(user_story)
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -682,32 +651,15 @@ class PuGongYing(Bot):
             self.setSessionAttribute("guan_num", 1, 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage('**************!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
             bodyTemplate.setPlainTextContent(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
+            bodyTemplate.set_title(r'第一关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
                 'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom
             }
-
-        elif mode == 'scene':
-
-            rand_id = random.randint(0, 20)
-            ask = self.idiom_scene[rand_id][1]
-            self.setSessionAttribute("idiom_scene_num", rand_id, 0)
-            self.setSessionAttribute("game_type", 'IdiomGuessScene', 0)
-
-            bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-            bodyTemplate.setPlainTextContent(r'好啊，来看看这个场景用什么成语呢：' + ask)
-
-            directive = RenderTemplate(bodyTemplate)
-            return {
-                'directives': [directive],
-                'outputSpeech': r'好啊，来看看这个场景用什么成语呢，，，，' + ask
-            }
-
         elif mode == 'means':
 
             rand_id = random.randint(0, 20)
@@ -716,14 +668,17 @@ class PuGongYing(Bot):
             self.setSessionAttribute("game_type", 'IdiomStoryMeans', 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage(self.idiom_mean[rand_id][2])
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
             bodyTemplate.setPlainTextContent(r'好啊，这个是哪个成语的意思呢：' + ask)
+            bodyTemplate.set_title(r'第一关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
                 'outputSpeech': r'好啊，这个是哪个成语的意思呢，，，，' + ask
             }
+        elif not mode:
+            self.nlu.ask('guess_mode')
 
     def tell_english_story(self):
 
@@ -731,7 +686,7 @@ class PuGongYing(Bot):
         英语故事
         :return:
         """
-        pass
+        self.setSessionAttribute("game_type", 'EnglishStory', 0)
 
     def tell_english_joke(self):
 
@@ -739,7 +694,7 @@ class PuGongYing(Bot):
         英语笑话
         :return:
         """
-        pass
+        self.setSessionAttribute("game_type", 'EnglishJoke', 0)
 
     def study_english_word(self):
 
@@ -747,7 +702,7 @@ class PuGongYing(Bot):
         学习英语单词
         :return:
         """
-        pass
+        self.setSessionAttribute("game_type", 'EnglishWord', 0)
 
     def english_songs(self):
 
@@ -755,7 +710,7 @@ class PuGongYing(Bot):
         英语歌曲
         :return:
         """
-        pass
+        self.setSessionAttribute("game_type", 'EnglishSong', 0)
 
     def answer_helper(self):
 
