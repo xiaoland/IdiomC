@@ -30,7 +30,7 @@ class PuGongYing(Bot):
         self.addIntentHandler('answer', self.answer)
         self.addIntentHandler('answer_helper', self.answer_helper)
         self.addIntentHandler('c_game', self.c_game)
-        self.addIntentHandler('round', self.round)
+        self.addIntentHandler('more_one', self.more_one)
         self.addIntentHandler('ai.dueros.common.default_intent', self.quesheng)
         # idiom intent
         self.addIntentHandler('start_IdiomC', self.start_IdiomC)
@@ -129,19 +129,19 @@ class PuGongYing(Bot):
 
         ]
         self.english_story = [
-            "今天给大家讲的故事主角是狮子，一个狮子在森林里安静的睡觉，一只老鼠沿着他的身体爬了上去，在狮子头顶上玩的特别开心，当狮子醒来后发生了什么事情？它会和老鼠打架吗？从下面的故事中找找答案吧。The ray of the warm sunlight told us that it was spring. A lion was sleeping peacefully in the forest.While the lion was fast asleep, a mouse went on top of the lion. The bold mouse played happily on top of the lion. “Yuppie! This is really fun.” The mouse ran around thumping and stomping here and there.The lion was not able to sleep with all the racket. The lion knew that there was someone on top of him. So, the lion made a surprise attack and rolled on the ground.And the mouse fell over. When the lion saw the mouse he was relieved and said, “Whew! It was only a mouse.”However, far away a fox had seen the scene. The fox laughed mockingly to the lion and said, “You're as big as a mountain and you're afraid of the mouse. You're a coward!” The fox kept making fun of the Lion.Finally the lion spoke, “I wasn't afraid of the mouse. I was only shocked to find a bold enough animal not afraid to run around on top of a lion.“ When the fox heard this he quietly left.”",
-            "今天给大家讲的故事主角是猴子，据说在从前，树林里有一只猴子，每天猴子都会爬上树看下面的小河看见渔夫扔网与捕鱼。有一天渔民把网放下后吃午饭去了。然后，猴子迅速从树上爬下来跑到河边，模仿渔民的样子撒网，大家想想接下来猴子会撒到鱼吗？会被渔夫逮到吗？从下面的故事中找找答案吧。Once upon a time, there lived a monkey in the woods. The monkey climbed up the tree and looked down at the river everyday.One day, the monkey saw fishermen throw a net over the river. He watched how the fishermen caught fish.Sometime after, the fishermen left the net and went to have lunch. Then, the monkey climbed down from the tree and went to the riverside. The monkey was planning to throw the net like the fishermen did.The monkey was confident since he was good at imitating. Yet, the net wound around the monkey when he touched it. Tied up in the net, the monkey fell into the water.The monkey regretted his behavior, but it was too late. “I should have learned how to use the net before touching it.After believing my prowess and showing off, I am in a bad fix.” The monkey who did not behave carefully drowned in the water.词汇学习：climbed up 爬上fishermen['fiʃəmen]渔夫,钓鱼者climbed down爬下；让步riverside[ˈrɪvəˌsaɪd]河畔的，河边confident[ˈkɒnfɪdənt]确信的；自信的imitating[ˈɪmɪˌteɪt]模仿；仿造好了，今天故事“猴子和渔民”就到这里了，故事比较简短，但故事情节非常有趣。有时候过于相信自己的能力，可能会遍体鳞伤。",
-            "今天的幼儿英语故事比较简短，但故事情节非常有趣。快跟小编一起来读读吧：The Frog and the CowBaby frogs went on a picnic in the woods. Getting out of the pond for the first time, they sang merrily.Then, they found a cow grazing in a field. “Oh, my! What is that?” “It is huge!” All of them wondered what kind of animal it was. “Let's ask Daddy.”They returned home in a hurry and shouted, “Daddy, we saw a strange animal.” “What kind of animal was it?”“It had large horns on its head and its body was way bigger than you. Even if we all add up our power, we can not defeat that animal.“The father was curious what the animal looked like. “Really? Was it bigger than my stomach?”“Yes. Much bigger than that!”The father frog blew up his stomach largely, “Well, now, I'm as big as the animal, right?” “No, you are as big as the animal's heel.”The father puffed himself up deeply and blew up his stomach enormously.“How about now? Am I as big as the animal, huh?" "No, not even. Thinking he could not be outdone, the father frog puffed up his stomach even more.The father frog's stomach was blown up as big as he could get. Right at that very moment, the father frog's stomach burst with a bang.中文：小青蛙们在树林里野餐。这是他们第一次从池塘里出来，他们正在愉快地唱歌。突然，他们发现了一头正在牧场上吃草的奶牛。“哦，天哪！那是什么？好大啊！”他们都很好奇那究竟是什么动物。“咱们问爸爸吧。”他们匆匆忙忙地回了家，大声喊道：“爸爸，我们看到了一只奇怪的动物。”“什么样的动物啊？”“头上有很大的触角，身体比你大得多。就算我们所有人都加起来，都很难打败它。”父亲对他的描述感到很好奇。“真的吗？它比我的肚子还大吗？”“是啊，可比你的肚子大得多！”父亲使劲鼓起了自己的肚子，“现在呢，现在我和那个动物一样大了，对吧？”“不，你现在也就只有那只动物的脚跟那么大。”父亲气急了，又使劲鼓了股他的肚子。“现在呢？现在我和那动物一样大了吧？”“不，还是小。”父亲认为自己不能认输，于是它又深呼吸了一下，肚子又大了一圈。就这样他不停地吹气，肚子已经达到极限了。就在这一瞬间，青蛙爸爸的肚子砰的词汇学习：woods [wʊdz] 森林wondered [ˈwʌndə] 惊奇；惊奇；惊异，想知道，想弄明白returned [rɪˈtɜːnd] 被送回的；归来的；回国的curious [ˈkjʊərɪəs] 好奇的；奇妙的好了，今天的故事就到这里了，有时候妥协一次未尝不好呢，你说是吗？",
-            "今天的幼儿英语故事比较简短，但故事情节非常有趣。快来和我一起来读读吧：Once upon a time, the animals living on the ground and those flying in the sky fought against each other. However, a bat could not take part on either side because he was timid and had no courage.When the beasts seemed like winning, the bat went to them and said, “I would like to fight with you.” They believed him.Yet, the bat began to worry, as the birds started to move ahead. So, the bat went to them and begged, “I am on your side because I am winged, too.”They pleasantly accepted the bat. “Sure. Since you have wings, you are on our side.”The fight between the birds and the beasts continued and the bat went back and forth to the winning side.Then one day, peace was made in the woods. The birds and the beasts learned that the bat went hither and thither between them. All the animals determined to expel him. Turned away from both sides, the bat started to live in a dark cave.从前，地上的动物和天上的动物经常打架。然而，蝙蝠无法参加任何一方的队伍，因为他很胆小，缺乏勇气当野兽快要胜利的时候，蝙蝠赶过去说：“我要跟你并肩战斗。”他们相信了蝙蝠。然而，鸟儿们占上风的时候，蝙蝠又开始担心。于是，蝙蝠转而投靠他们恳求道：“我是你们这边，你们看我也有翅膀。”他们愉快地接受了蝙蝠。“当然。既然你有翅膀，你就是我们的战友。”鸟儿与野兽的打斗仍然没有停止，蝙蝠来来回回地投靠每次胜利的一方。一天，树林里终于迎来了和平。鸟和野兽得知蝙蝠在他们中间来回地欺骗。所有的动物都同意驱逐他。两方的队伍都不欢迎他，于是，蝙蝠开始在黑暗的洞穴里生活。词汇学习：Once upon a time 很久很久以前，曾经，从前against [əˈɡɛnst] 违反；反对；对...不利pleasantly [ˈplɛzəntlɪ] 愉快地；和蔼地，亲切地accepted [əkˈsɛptɪd] 公认的好了，今天的故事就讲到这里，与我们的周围人相处时不要像蝙蝠一样欺骗别人哦",
-            "今天的幼儿英语故事比较简短，但故事情节非常有趣。讲述的是：两个人正在沿着山道走，他们是非常要好的朋友。途中，突然遇到一头大熊，他们吓坏了，四处寻找藏身之处。其中的一个人抢先爬上了树，躲了起来，而另一个我遇到了一只熊，他会被熊吃掉吗？Oncepon a time, two young men were walking along the mountain trail. They were very close friends.But, all of a sudden, a bear showed up. Shocked, the young men were looking for a place to hide. One fellow hid himself by climbing up a tree, but the other one was unable to run away.When the bear pounced upon him, the fellow who could not run away threw himself flat down upon the ground and pretended to be dead. The young man on the ground held his breath and stayed still. The bear, coming up to him, put his muzzle close to the man, and sniffed. “He's dead. I don't eat dead meat.”The bear left the young man along and went away. After the bear was gone, the friend in the tree came down. Wiping away his cold sweat, the friend asked, “What did the bear say to you?“oh, the bear told me”, said the other,“Not to hang out with a friend who runs away when a risky situation occurs.”After hearing him, the young man who climbed up the tree alone felt sorry for his behavior. Friends mean being there for each other even when danger comes.词汇学习：mountain [ˈmaʊntən] 山；山脉；大量unable [ʌnˈeɪbəl] 不能的；无能力的pounced [paʊns] 猛扑，突袭muzzle [ˈmʌzəl] 鼻口部；口套；好了，通过以上的故事告诉了我们：遇到危险时，朋友之间应该互相帮助。",
-            "今天给大家讲的故事主角是父亲与儿子，一位胆小的父亲担心喜欢打猎的儿子受伤并予以阻止，一天，父亲梦见儿子被狮子追杀，醒来后建了一间木屋并将儿子锁在里面，那么喜欢打猎的儿子如何从木屋中逃出去呢？赶紧从下面的故事中找找答案吧。Once upon a time, there lived a very timid-minded father in a town. He was always worried that his son might get hurt. The son was brave and loved hunting, but his father prevented his son from hunting everyday.The father brought pictures of animals to his son's room so that the son would not get bored. The father even stuck a picture of a lion on the wooden wall. However, the son felt stuffy about just staying home.One day, the son vented his anger on the picture of a lion. “You bastard! I cannot go outside because of you! Why did you appear in my father's dream and torture me?”The son hit the picture with his fist.Right then, the wooden wall broke down and a thorn got stuck in his hand. The son tried to take it out, but it did not come out easily. Due to the thorn, the wound enlarged and the inflammation worsened.After a few days, the young son died from the wound. The father who tried to shut his child in lost his child because of his actions.词汇学习Once upon a time很久很久以前，曾经，从前wooden house木屋好了，今天的故事“胆小的父亲”就到这里了，故事比较简短，但故事情节非常有趣。大家是不是对英文故事及英语学习有了更多的积累了呢？喜欢就赶快收藏起来吧~",
-            "今天给大家讲的故事主角是狮子，一个狮子在森林里安静的睡觉，一只老鼠沿着他的身体爬了上去，在狮子头顶上玩的特别开心，当狮子醒来后发生了什么事情？它会和老鼠打架吗？从下面的故事中找找答案吧。The ray of the warm sunlight told us that it was spring. A lion was sleeping peacefully in the forest.While the lion was fast asleep, a mouse went on top of the lion. The bold mouse played happily on top of the lion. “Yuppie! This is really fun.”The mouse ran around thumping and stomping here and ther.The lion was not able to sleep with all the racket. The lion knew that there was someone on top of him. So, the lion made a surprise attack and rolled on the ground.And the mouse fell over. When the lion saw the mouse he was relieved and said, “Whew! It was only a mouse.”However, far away a fox had seen the scene. The fox laughed mockingly to the lion and said, “You're as big as a mountain and you're afraid of the mouse. You're a coward!” The fox kept making fun of the Lion.Finally the lion spoke, “I wasn't afraid of the mouse. I was only shocked to find a bold enough animal not afraid to run around on top of a lion.” When the fox heard this he quietly left.",
-            "今天小编给大家推荐一篇适合小朋友们学习的英语故事：Too Soft on CrimeNo one knows for sure, but some experts estimate that half of the crimes committed in the US go unreported. Half of those reported never result in the criminal being found. Half of those in which the criminal is found never result in convictions. Half of the convictions result in reduced or full sentences. Half of the full sentences eventually become reduced sentences because of “good behavior” or overcrowded prisons that result in early releases.“The problem,” said Wyatt Earp, a retired police officer, “is that punishment is not swift enough or severe enough. All they get is a slap on the wrist. Too many judges are soft on criminals. We need to change the law so that there is an eye for an eye, and a tooth for a tooth. Even criminals understand physical pain.“If I were president, I would do many things to teach these punks a lesson. Prisons would have no heat and no air-conditioning. Let the jerks freeze in the winter and bake in the summer. They would get one peanut butter and jelly sandwich for breakfast, for lunch, and for dinner. This way we don’t have to worry about prisoners using utensils to injure guards or other inmates, or dig out of prison. And no crunchy or organic peanut butter either—only the cheap stuff. Their only beverage would be water—no soda, milk, coffee, or tea. And no fancy bottled water, either. Their water would be straight from the faucet.”",
+            "这个大家讲的故事主角是狮子，一个狮子在森林里安静的睡觉，一只老鼠沿着他的身体爬了上去，在狮子头顶上玩的特别开心，当狮子醒来后发生了什么事情？它会和老鼠打架吗？从下面的故事中找找答案吧。The ray of the warm sunlight told us that it was spring. A lion was sleeping peacefully in the forest.While the lion was fast asleep, a mouse went on top of the lion. The bold mouse played happily on top of the lion. “Yuppie! This is really fun.” The mouse ran around thumping and stomping here and there.The lion was not able to sleep with all the racket. The lion knew that there was someone on top of him. So, the lion made a surprise attack and rolled on the ground.And the mouse fell over. When the lion saw the mouse he was relieved and said, “Whew! It was only a mouse.”However, far away a fox had seen the scene. The fox laughed mockingly to the lion and said, “You're as big as a mountain and you're afraid of the mouse. You're a coward!” The fox kept making fun of the Lion.Finally the lion spoke, “I wasn't afraid of the mouse. I was only shocked to find a bold enough animal not afraid to run around on top of a lion.“ When the fox heard this he quietly left.”",
+            "这个大家讲的故事主角是猴子，据说在从前，树林里有一只猴子，每天猴子都会爬上树看下面的小河看见渔夫扔网与捕鱼。有一天渔民把网放下后吃午饭去了。然后，猴子迅速从树上爬下来跑到河边，模仿渔民的样子撒网，大家想想接下来猴子会撒到鱼吗？会被渔夫逮到吗？从下面的故事中找找答案吧。Once upon a time, there lived a monkey in the woods. The monkey climbed up the tree and looked down at the river everyday.One day, the monkey saw fishermen throw a net over the river. He watched how the fishermen caught fish.Sometime after, the fishermen left the net and went to have lunch. Then, the monkey climbed down from the tree and went to the riverside. The monkey was planning to throw the net like the fishermen did.The monkey was confident since he was good at imitating. Yet, the net wound around the monkey when he touched it. Tied up in the net, the monkey fell into the water.The monkey regretted his behavior, but it was too late. “I should have learned how to use the net before touching it.After believing my prowess and showing off, I am in a bad fix.” The monkey who did not behave carefully drowned in the water.词汇学习：climbed up 爬上fishermen['fiʃəmen]渔夫,钓鱼者climbed down爬下；让步riverside[ˈrɪvəˌsaɪd]河畔的，河边confident[ˈkɒnfɪdənt]确信的；自信的imitating[ˈɪmɪˌteɪt]模仿；仿造好了，今天故事“猴子和渔民”就到这里了，故事比较简短，但故事情节非常有趣。有时候过于相信自己的能力，可能会遍体鳞伤。",
+            "这个幼儿英语故事比较简短，但故事情节非常有趣。快跟小编一起来读读吧：The Frog and the CowBaby frogs went on a picnic in the woods. Getting out of the pond for the first time, they sang merrily.Then, they found a cow grazing in a field. “Oh, my! What is that?” “It is huge!” All of them wondered what kind of animal it was. “Let's ask Daddy.”They returned home in a hurry and shouted, “Daddy, we saw a strange animal.” “What kind of animal was it?”“It had large horns on its head and its body was way bigger than you. Even if we all add up our power, we can not defeat that animal.“The father was curious what the animal looked like. “Really? Was it bigger than my stomach?”“Yes. Much bigger than that!”The father frog blew up his stomach largely, “Well, now, I'm as big as the animal, right?” “No, you are as big as the animal's heel.”The father puffed himself up deeply and blew up his stomach enormously.“How about now? Am I as big as the animal, huh?" "No, not even. Thinking he could not be outdone, the father frog puffed up his stomach even more.The father frog's stomach was blown up as big as he could get. Right at that very moment, the father frog's stomach burst with a bang.中文：小青蛙们在树林里野餐。这是他们第一次从池塘里出来，他们正在愉快地唱歌。突然，他们发现了一头正在牧场上吃草的奶牛。“哦，天哪！那是什么？好大啊！”他们都很好奇那究竟是什么动物。“咱们问爸爸吧。”他们匆匆忙忙地回了家，大声喊道：“爸爸，我们看到了一只奇怪的动物。”“什么样的动物啊？”“头上有很大的触角，身体比你大得多。就算我们所有人都加起来，都很难打败它。”父亲对他的描述感到很好奇。“真的吗？它比我的肚子还大吗？”“是啊，可比你的肚子大得多！”父亲使劲鼓起了自己的肚子，“现在呢，现在我和那个动物一样大了，对吧？”“不，你现在也就只有那只动物的脚跟那么大。”父亲气急了，又使劲鼓了股他的肚子。“现在呢？现在我和那动物一样大了吧？”“不，还是小。”父亲认为自己不能认输，于是它又深呼吸了一下，肚子又大了一圈。就这样他不停地吹气，肚子已经达到极限了。就在这一瞬间，青蛙爸爸的肚子砰的词汇学习：woods [wʊdz] 森林wondered [ˈwʌndə] 惊奇；惊奇；惊异，想知道，想弄明白returned [rɪˈtɜːnd] 被送回的；归来的；回国的curious [ˈkjʊərɪəs] 好奇的；奇妙的好了，今天的故事就到这里了，有时候妥协一次未尝不好呢，你说是吗？",
+            "这个幼儿英语故事比较简短，但故事情节非常有趣。快来和我一起来读读吧：Once upon a time, the animals living on the ground and those flying in the sky fought against each other. However, a bat could not take part on either side because he was timid and had no courage.When the beasts seemed like winning, the bat went to them and said, “I would like to fight with you.” They believed him.Yet, the bat began to worry, as the birds started to move ahead. So, the bat went to them and begged, “I am on your side because I am winged, too.”They pleasantly accepted the bat. “Sure. Since you have wings, you are on our side.”The fight between the birds and the beasts continued and the bat went back and forth to the winning side.Then one day, peace was made in the woods. The birds and the beasts learned that the bat went hither and thither between them. All the animals determined to expel him. Turned away from both sides, the bat started to live in a dark cave.从前，地上的动物和天上的动物经常打架。然而，蝙蝠无法参加任何一方的队伍，因为他很胆小，缺乏勇气当野兽快要胜利的时候，蝙蝠赶过去说：“我要跟你并肩战斗。”他们相信了蝙蝠。然而，鸟儿们占上风的时候，蝙蝠又开始担心。于是，蝙蝠转而投靠他们恳求道：“我是你们这边，你们看我也有翅膀。”他们愉快地接受了蝙蝠。“当然。既然你有翅膀，你就是我们的战友。”鸟儿与野兽的打斗仍然没有停止，蝙蝠来来回回地投靠每次胜利的一方。一天，树林里终于迎来了和平。鸟和野兽得知蝙蝠在他们中间来回地欺骗。所有的动物都同意驱逐他。两方的队伍都不欢迎他，于是，蝙蝠开始在黑暗的洞穴里生活。词汇学习：Once upon a time 很久很久以前，曾经，从前against [əˈɡɛnst] 违反；反对；对...不利pleasantly [ˈplɛzəntlɪ] 愉快地；和蔼地，亲切地accepted [əkˈsɛptɪd] 公认的好了，今天的故事就讲到这里，与我们的周围人相处时不要像蝙蝠一样欺骗别人哦",
+            "这个幼儿英语故事比较简短，但故事情节非常有趣。讲述的是：两个人正在沿着山道走，他们是非常要好的朋友。途中，突然遇到一头大熊，他们吓坏了，四处寻找藏身之处。其中的一个人抢先爬上了树，躲了起来，而另一个我遇到了一只熊，他会被熊吃掉吗？Oncepon a time, two young men were walking along the mountain trail. They were very close friends.But, all of a sudden, a bear showed up. Shocked, the young men were looking for a place to hide. One fellow hid himself by climbing up a tree, but the other one was unable to run away.When the bear pounced upon him, the fellow who could not run away threw himself flat down upon the ground and pretended to be dead. The young man on the ground held his breath and stayed still. The bear, coming up to him, put his muzzle close to the man, and sniffed. “He's dead. I don't eat dead meat.”The bear left the young man along and went away. After the bear was gone, the friend in the tree came down. Wiping away his cold sweat, the friend asked, “What did the bear say to you?“oh, the bear told me”, said the other,“Not to hang out with a friend who runs away when a risky situation occurs.”After hearing him, the young man who climbed up the tree alone felt sorry for his behavior. Friends mean being there for each other even when danger comes.词汇学习：mountain [ˈmaʊntən] 山；山脉；大量unable [ʌnˈeɪbəl] 不能的；无能力的pounced [paʊns] 猛扑，突袭muzzle [ˈmʌzəl] 鼻口部；口套；好了，通过以上的故事告诉了我们：遇到危险时，朋友之间应该互相帮助。",
+            "这个大家讲的故事主角是父亲与儿子，一位胆小的父亲担心喜欢打猎的儿子受伤并予以阻止，一天，父亲梦见儿子被狮子追杀，醒来后建了一间木屋并将儿子锁在里面，那么喜欢打猎的儿子如何从木屋中逃出去呢？赶紧从下面的故事中找找答案吧。Once upon a time, there lived a very timid-minded father in a town. He was always worried that his son might get hurt. The son was brave and loved hunting, but his father prevented his son from hunting everyday.The father brought pictures of animals to his son's room so that the son would not get bored. The father even stuck a picture of a lion on the wooden wall. However, the son felt stuffy about just staying home.One day, the son vented his anger on the picture of a lion. “You bastard! I cannot go outside because of you! Why did you appear in my father's dream and torture me?”The son hit the picture with his fist.Right then, the wooden wall broke down and a thorn got stuck in his hand. The son tried to take it out, but it did not come out easily. Due to the thorn, the wound enlarged and the inflammation worsened.After a few days, the young son died from the wound. The father who tried to shut his child in lost his child because of his actions.词汇学习Once upon a time很久很久以前，曾经，从前wooden house木屋好了，今天的故事“胆小的父亲”就到这里了，故事比较简短，但故事情节非常有趣。大家是不是对英文故事及英语学习有了更多的积累了呢？喜欢就赶快收藏起来吧~",
+            "这个大家讲的故事主角是狮子，一个狮子在森林里安静的睡觉，一只老鼠沿着他的身体爬了上去，在狮子头顶上玩的特别开心，当狮子醒来后发生了什么事情？它会和老鼠打架吗？从下面的故事中找找答案吧。The ray of the warm sunlight told us that it was spring. A lion was sleeping peacefully in the forest.While the lion was fast asleep, a mouse went on top of the lion. The bold mouse played happily on top of the lion. “Yuppie! This is really fun.”The mouse ran around thumping and stomping here and ther.The lion was not able to sleep with all the racket. The lion knew that there was someone on top of him. So, the lion made a surprise attack and rolled on the ground.And the mouse fell over. When the lion saw the mouse he was relieved and said, “Whew! It was only a mouse.”However, far away a fox had seen the scene. The fox laughed mockingly to the lion and said, “You're as big as a mountain and you're afraid of the mouse. You're a coward!” The fox kept making fun of the Lion.Finally the lion spoke, “I wasn't afraid of the mouse. I was only shocked to find a bold enough animal not afraid to run around on top of a lion.” When the fox heard this he quietly left.",
+            "这是一篇适合小朋友们学习的英语故事：Too Soft on CrimeNo one knows for sure, but some experts estimate that half of the crimes committed in the US go unreported. Half of those reported never result in the criminal being found. Half of those in which the criminal is found never result in convictions. Half of the convictions result in reduced or full sentences. Half of the full sentences eventually become reduced sentences because of “good behavior” or overcrowded prisons that result in early releases.“The problem,” said Wyatt Earp, a retired police officer, “is that punishment is not swift enough or severe enough. All they get is a slap on the wrist. Too many judges are soft on criminals. We need to change the law so that there is an eye for an eye, and a tooth for a tooth. Even criminals understand physical pain.“If I were president, I would do many things to teach these punks a lesson. Prisons would have no heat and no air-conditioning. Let the jerks freeze in the winter and bake in the summer. They would get one peanut butter and jelly sandwich for breakfast, for lunch, and for dinner. This way we don’t have to worry about prisoners using utensils to injure guards or other inmates, or dig out of prison. And no crunchy or organic peanut butter either—only the cheap stuff. Their only beverage would be water—no soda, milk, coffee, or tea. And no fancy bottled water, either. Their water would be straight from the faucet.”",
             "A woman is standing at a bus stop at noon. A van pulls up. A young man hops out of the van, grabs the woman’s purse, gets back into the van, and it drives off.An elderly man is standing on the sidewalk in front of his home at 10:30 p.m. He is admiring the full moon. A car pulls up right in front of him and stops. Two men get out. One man punches the old man in the mouth. The other man takes the man’s wallet out of his pants. They get back into their car and drive off.A woman puts her laptop and purse into her car in her driveway at 3:15 p.m. She starts the car, and then remembers that she forgot to turn off the TV. She goes back into her house, turns off the TV, and comes back to her car. Her purse and her laptop are gone.The department of transportation built an elevated freeway on top of the 110 freeway in Los Angeles. The new freeway is supported by more than 100 thick concrete columns. Since the freeway was built, each column has been tagged with graffiti and repainted at least ten times.Late one night, someone managed to raise a heavy metal shopping cart to the top of a flagpole outside a supermarket. The next morning, a 56-year-old supermarket worker hooked up the US flag and started to raise it by pulling on the rope. A second later, the cart crashed down on her. She was permanently paralyzed. When released from the hospital, she told a TV reporter that she forgave the culprit. “Please don’t do this again,” she said. “You might kill someone, and that would be terrible.” A police spokesman admitted that they might not ever find the “prankster.”",
-            "今天给大家讲的故事主角是父亲与儿子，一位胆小的父亲担心喜欢打猎的儿子受伤并予以阻止，一天，父亲梦见儿子被狮子追杀，醒来后建了一间木屋并将儿子锁在里面，那么喜欢打猎的儿子如何从木屋中逃出去呢？赶紧从下面的故事中找找答案吧。Once upon a time, there lived a very timid-minded father in a town. He was always worried that his son might get hurt. The son was brave and loved hunting, but his father prevented his son from hunting everyday.One night, the father dreamed of his son being pursued by a lion. After he woke up, he thought, 'I should not leave things like this.' The father built a strong wooden house for his son because he believed his son would not be in danger if he locked his son in the house.The father brought pictures of animals to his son's room so that the son would not get bored. The father even stuck a picture of a lion on the wooden wall. However, the son felt stuffy about just staying home.One day, the son vented his anger on the picture of a lion. “You bastard! I cannot go outside because of you! Why did you appear in my father's dream and torture me?” The son hit the picture with his fist.Right then, the wooden wall broke down and a thorn got stuck in his hand. The son tried to take it out, but it did not come out easily. Due to the thorn, the wound enlarged and the inflammation worsened.After a few days, the young son died from the wound. The father who tried to shut his child in lost his child because of his actions.词汇学习：Once upon a time很久很久以前，曾经，从前wooden house木屋好了，今天的故事“胆小的父亲”就到这里了，故事比较简短，但故事情节非常有趣。大家是不是对英文故事及英语学习有了更多的积累了呢？喜欢就赶快收藏起来吧~",
-            "多阅读一些英语童话小故事，会提高孩子的英语阅读能力而且对口语和词汇量的增加也有所帮助。下面一起来看看这篇童话故事：风和太阳。One day the wind said to the sun, “Look at that man walking along the road. I can get his cloak off more quickly than you can.”“We will see about that,” said the sun. “I will let you try first.”“We will see about that,” said the sun. “I will let you try first.”So the wind tried to make the man take off his cloak. He blew and blew, but the man only pulled his cloak more closely around himself.“I give up,” said the wind at last. “I cannot get his cloak off.” Then the sun tried. He shone as hard as he could. The man soon became hot and took off his cloak.有一天风跟太阳说: “看看那个沿着路上走的人.我可以比你快让他把披风脱下来.“我们等着看吧,”太阳说, “我让你先试.因此风尝试让那个人把披风脱下来.他用力地吹,可是那个人把披风拉得更紧.“我放弃了,”风最后说, “我无法让他把披风脱下来.”然后由太阳试试看.他尽可能地晒他.不久,那个人很热就把披风脱下来了.词汇学习: give up放弃; 投降; 把…让给; 戒除at last终于; 卒; 结果; 算是took off脱掉; 开始; 起飞好了，以上就是关于“英语童话故事：风和太阳”的介绍。大家还知道哪些英语童话故事呢？在日常枯燥的英语学习过程中大家可以多读读英语童话故事，来培养自己的英语兴趣，增加对单词，句子的记忆与理解，当然，大家要是喜欢这则故事，可分享给更多的人哦。最后，希望以上的内容能给大家的英语学习有所帮助。One day the staff members of a zoo called a meeting to discuss the problem--how to deal with the kangaroos that were found out of the cage. They came to the conclusion that the cage was placed too low and decided to raise it from one to two meters high. But the next day the kangaroos were still at large and they again raised the cage to three meters.Quite beyond their expectation the next morning they saw the kangaroos still free to go about. They were alarmed and determined to go to all the length by raising the cage to the height of ten meters.Later a giraffe, while chatting with some kangaroos, asked them, “Do you think they will go on raising your cage?”“Hard to say,” said a kangaroo, “if they continue forgetting to fasten the cage door.”有一天，动物园的管理员们发现袋鼠从笼子里跑出来了， 于是开会讨论，一致认为是笼子的高度过低，所以他们决定将笼子的高度由原来的1米加高到2米。结果第二天他们发现，袋鼠还是跑到外面来，所以他们又决定再将高度加高到3米。没想到隔天居然又看到袋鼠全跑到外面，于是管理 员们大为紧张，决定一不做二不休，将笼子的高度加高到10米。一天，长颈鹿和几只袋鼠在闲聊，“你们看，这些人 会不会再继续加高你们的笼子?”长颈鹿问。“很难说。”袋鼠说，“如果他们再继续忘记关门的话!”词汇学习：staff members职工，工作人员a meeting会议好了，以上就是关于“英语童话故事：袋鼠与笼子”的介绍。大家还知道哪些英语童话故事呢？在日常枯燥的英语学习过程中大家可以多读读英语童话故事，来培养自己的英语兴趣，增加对单词，句子的记忆与理解，当然，大家要是喜欢这则故事，可分享给更多的人哦。最后，希望以上的内容能给大家的英语学习有所帮助。",
-            "多阅读一些英语童话小故事，会提高孩子的英语阅读能力而且对口语和词汇量的增加也有所帮助。下面一起来看看这篇童话故事：埃杰克斯。Ajax was a man of giant stature,daring but slow.When the Trojan War was about to break out he led his forces from Salamis to join the Greek army at Aulis.As one of the trustiest champions of the Greek cause,he was given thejob of guarding one end of the Greek camp near Troy.He was noted in the battlefield for his bravery and courage.After Achilles' death he became one of the two hot contestants for the dead hero's shield and armour,the other being Odysseus.When the weapons were finally judged to his rival,Ajax went mad for grief.Unable to get over the hardships,he took his own life.When,in order to seek the advice of,Odysseus came to visit the lower world,the shade of Ajax frowned uponhim.In the lower world Ajax chose to be a lion,guided clearly by the bitter recollection of his former life.埃杰克斯是位身材魁梧、骁勇善战、但头脑迟钝的人。当特洛伊战争即将爆发时,他率领军队从萨拉米斯到达奥尔墨斯加入了希腊军队。作为一名为希腊事业奋斗的最可信赖的斗士,他被派去保卫靠近特洛伊的希腊军营边界。战场上,他因作战勇猛而出名。阿基里斯死后,他成为两个最有可能获得阿基里斯的盾甲的有力竞争对手之一。另一名对手是奥德修斯。最后，他的对手胜利了，并得到了盾甲。埃杰克斯悲伤至极,无法自拔,最终结束了自己的生命。奥德修斯为了得到盲人底比斯的忠告而来到阴间;埃杰克斯的幽灵冲着他直皱眉头。在阴间,由于受到前世痛苦记忆的折磨,埃杰克斯选择了做一头狮子。词汇学习：in order to为了…​Ajax埃杰克斯Trojan War 特洛伊战争好了，以上就是关于“英语童话故事：埃杰克斯”的介绍。大家还知道哪些英语童话故事呢？在日常枯燥的英语学习过程中大家可以多读读英语童话故事，来培养自己的英语兴趣，增加对单词，句子的记忆与理解，当然，大家要是喜欢这则故事，可分享给更多的人哦。最后，希望以上的内容能给大家的英语学习有所帮助。",
-            "多阅读一些英语童话小故事，会提高孩子的英语阅读能力而且对口语和词汇量的增加也有所帮助。面一起来看看这篇童话故事：阿波罗Among the crowd of Olympian gods the one most widely admired was Apollo.He was the son of Zeus and Let to.According to Greek mythology,Leto was driven by Hera from land to land at last Poseidon took Pity on her and brought the island of Delos out of water for her to live on.There she gave birth to the twins ,Apollo and Artemis.Apollo was me sun-god.He wore a purple robe.He usually sat in his bright eastern palace early in the morning and madeready to start his daily journey across the sky.During the day hed rove his carriage of gold and ivory , and brought light, life and love to the great world below. Iate in the afternoon he came to the end of his journey in the far western sea and got on his golden boat to return to his eastern home.Apollo was the god of music and poetry.He could stir up all feelings.These feelings are expressed in lofty songs.With his lyre of gold and the sweet accents of his godlike voice heled the choir of the Muses at Olympus.The pleasant music from his lyre was so exciting that stones marched into their places in rhythmic time and of their own will when he helped Poseidonbuild up the walls of Troy.On one occasion,invited to a contest by the human musician Marsyas,he won and then flayed him to death for his pride.On another occasion,he lost out toPan at a musical contest and turned the ears of the judge,King Midas,into those of an ass.His son,Orpheus,took over such skill from the father that his lyre moved man and animals alike.Apollo stood for youthful and manly beauty.His goldenhair,stately manner and air all combined to make him the admiration of the world.A beautiful girl,by the name of Clytle,was so fond of his beauty and glory that from dawn to dusk she knelt on the ground,her hands outstretched towards the sungod,and her eyes looked at his golden wheeled carriage racing across the blue sky.Though her love was not returned,she had never changed her mind about Apollo.The gods were moved at the sad sight,and changed her into a sunflower.在众多的奥林波斯山神中，主神宙斯和雷托之子阿波罗最受推崇。据希腊神话记载,雷托被天后赫拉驱赶得四处流浪。最终是海神波塞冬怜悯她并从海中捞起提落岛让她居住。在岛上,她生了孪生儿子阿波罗和阿尔特弥斯。阿波罗是太阳神。清晨他身着紫色袍,坐在那明亮的东方宫殿,准备开始每日穿越天空的旅行。白天,他驾着用金子和象牙制成的战车,给广阔无垠的大地带来光明、生命和仁爱。黄昏时分,他在遥远的西海结束了旅行,然后就乘上金船返回东方的家中。阿波罗是音乐神和诗神。他可唤起人们倾注于圣歌中的各种情感。在奥林波斯山上,他手拿金质里拉,用悦耳的音调指挥缪斯的合唱。当他帮助波塞冬建造特洛伊城墙时,里拉奏出的音乐如此动听,以致石头有节奏地、自动地各就其位。有一次他接受凡人音乐家马斯亚斯的挑战参加一次竞赛。战胜对方后,他将对手剥皮致死以惩罚他的狂妄自大。在另外一次音乐比赛中,因输给了潘神,他就将裁判迈尔斯国王的耳朵变成了驴耳朵。阿波罗的儿子俄耳甫斯继承了父亲这方面的才能。他的竖琴使人与动物皆受感动。阿波罗象征着青春和男子汉的美。金色的头发、庄重的举止、容光焕发的神态,这些足以使他受到世人的青睐。一位名叫克里提的美丽少女迷恋于他的英俊潇洒,跪在地上,从黎明到黄昏,双手伸向太阳神。她凝视着那辆金质马车在蔚蓝的天空驰骋。虽然她的爱并未得到回报,但她对阿波罗的痴情却从未改变。目睹这悲哀的场面,众神深受感动,将她变成了一株向日葵。",
+            "这个故事的主角是父亲与儿子，一位胆小的父亲担心喜欢打猎的儿子受伤并予以阻止，一天，父亲梦见儿子被狮子追杀，醒来后建了一间木屋并将儿子锁在里面，那么喜欢打猎的儿子如何从木屋中逃出去呢？赶紧从下面的故事中找找答案吧。Once upon a time, there lived a very timid-minded father in a town. He was always worried that his son might get hurt. The son was brave and loved hunting, but his father prevented his son from hunting everyday.One night, the father dreamed of his son being pursued by a lion. After he woke up, he thought, 'I should not leave things like this.' The father built a strong wooden house for his son because he believed his son would not be in danger if he locked his son in the house.The father brought pictures of animals to his son's room so that the son would not get bored. The father even stuck a picture of a lion on the wooden wall. However, the son felt stuffy about just staying home.One day, the son vented his anger on the picture of a lion. “You bastard! I cannot go outside because of you! Why did you appear in my father's dream and torture me?” The son hit the picture with his fist.Right then, the wooden wall broke down and a thorn got stuck in his hand. The son tried to take it out, but it did not come out easily. Due to the thorn, the wound enlarged and the inflammation worsened.After a few days, the young son died from the wound. The father who tried to shut his child in lost his child because of his actions.词汇学习：Once upon a time很久很久以前，曾经，从前wooden house木屋好了，今天的故事“胆小的父亲”就到这里了，故事比较简短，但故事情节非常有趣。大家是不是对英文故事及英语学习有了更多的积累了呢？喜欢就赶快收藏起来吧~",
+            "下面一起来看看这篇童话故事：风和太阳。One day the wind said to the sun, “Look at that man walking along the road. I can get his cloak off more quickly than you can.”“We will see about that,” said the sun. “I will let you try first.”“We will see about that,” said the sun. “I will let you try first.”So the wind tried to make the man take off his cloak. He blew and blew, but the man only pulled his cloak more closely around himself.“I give up,” said the wind at last. “I cannot get his cloak off.” Then the sun tried. He shone as hard as he could. The man soon became hot and took off his cloak.有一天风跟太阳说: “看看那个沿着路上走的人.我可以比你快让他把披风脱下来.“我们等着看吧,”太阳说, “我让你先试.因此风尝试让那个人把披风脱下来.他用力地吹,可是那个人把披风拉得更紧.“我放弃了,”风最后说, “我无法让他把披风脱下来.”然后由太阳试试看.他尽可能地晒他.不久,那个人很热就把披风脱下来了.词汇学习: give up放弃; 投降; 把…让给; 戒除at last终于; 卒; 结果; 算是took off脱掉; 开始; 起飞好了，以上就是关于“英语童话故事：风和太阳”的介绍。大家还知道哪些英语童话故事呢？在日常枯燥的英语学习过程中大家可以多读读英语童话故事，来培养自己的英语兴趣，增加对单词，句子的记忆与理解，当然，大家要是喜欢这则故事，可分享给更多的人哦。最后，希望以上的内容能给大家的英语学习有所帮助。One day the staff members of a zoo called a meeting to discuss the problem--how to deal with the kangaroos that were found out of the cage. They came to the conclusion that the cage was placed too low and decided to raise it from one to two meters high. But the next day the kangaroos were still at large and they again raised the cage to three meters.Quite beyond their expectation the next morning they saw the kangaroos still free to go about. They were alarmed and determined to go to all the length by raising the cage to the height of ten meters.Later a giraffe, while chatting with some kangaroos, asked them, “Do you think they will go on raising your cage?”“Hard to say,” said a kangaroo, “if they continue forgetting to fasten the cage door.”有一天，动物园的管理员们发现袋鼠从笼子里跑出来了， 于是开会讨论，一致认为是笼子的高度过低，所以他们决定将笼子的高度由原来的1米加高到2米。结果第二天他们发现，袋鼠还是跑到外面来，所以他们又决定再将高度加高到3米。没想到隔天居然又看到袋鼠全跑到外面，于是管理 员们大为紧张，决定一不做二不休，将笼子的高度加高到10米。一天，长颈鹿和几只袋鼠在闲聊，“你们看，这些人 会不会再继续加高你们的笼子?”长颈鹿问。“很难说。”袋鼠说，“如果他们再继续忘记关门的话!”词汇学习：staff members职工，工作人员a meeting会议好了，以上就是关于“英语童话故事：袋鼠与笼子”的介绍。大家还知道哪些英语童话故事呢？在日常枯燥的英语学习过程中大家可以多读读英语童话故事，来培养自己的英语兴趣，增加对单词，句子的记忆与理解，当然，大家要是喜欢这则故事，可分享给更多的人哦。最后，希望以上的内容能给大家的英语学习有所帮助。",
+            "下面一起来看看这篇童话故事：埃杰克斯。Ajax was a man of giant stature,daring but slow.When the Trojan War was about to break out he led his forces from Salamis to join the Greek army at Aulis.As one of the trustiest champions of the Greek cause,he was given thejob of guarding one end of the Greek camp near Troy.He was noted in the battlefield for his bravery and courage.After Achilles' death he became one of the two hot contestants for the dead hero's shield and armour,the other being Odysseus.When the weapons were finally judged to his rival,Ajax went mad for grief.Unable to get over the hardships,he took his own life.When,in order to seek the advice of,Odysseus came to visit the lower world,the shade of Ajax frowned uponhim.In the lower world Ajax chose to be a lion,guided clearly by the bitter recollection of his former life.埃杰克斯是位身材魁梧、骁勇善战、但头脑迟钝的人。当特洛伊战争即将爆发时,他率领军队从萨拉米斯到达奥尔墨斯加入了希腊军队。作为一名为希腊事业奋斗的最可信赖的斗士,他被派去保卫靠近特洛伊的希腊军营边界。战场上,他因作战勇猛而出名。阿基里斯死后,他成为两个最有可能获得阿基里斯的盾甲的有力竞争对手之一。另一名对手是奥德修斯。最后，他的对手胜利了，并得到了盾甲。埃杰克斯悲伤至极,无法自拔,最终结束了自己的生命。奥德修斯为了得到盲人底比斯的忠告而来到阴间;埃杰克斯的幽灵冲着他直皱眉头。在阴间,由于受到前世痛苦记忆的折磨,埃杰克斯选择了做一头狮子。词汇学习：in order to为了…​Ajax埃杰克斯Trojan War 特洛伊战争好了，以上就是关于“英语童话故事：埃杰克斯”的介绍。大家还知道哪些英语童话故事呢？在日常枯燥的英语学习过程中大家可以多读读英语童话故事，来培养自己的英语兴趣，增加对单词，句子的记忆与理解，当然，大家要是喜欢这则故事，可分享给更多的人哦。最后，希望以上的内容能给大家的英语学习有所帮助。",
+            "下面一起来看看这篇童话故事：阿波罗Among the crowd of Olympian gods the one most widely admired was Apollo.He was the son of Zeus and Let to.According to Greek mythology,Leto was driven by Hera from land to land at last Poseidon took Pity on her and brought the island of Delos out of water for her to live on.There she gave birth to the twins ,Apollo and Artemis.Apollo was me sun-god.He wore a purple robe.He usually sat in his bright eastern palace early in the morning and madeready to start his daily journey across the sky.During the day hed rove his carriage of gold and ivory , and brought light, life and love to the great world below. Iate in the afternoon he came to the end of his journey in the far western sea and got on his golden boat to return to his eastern home.Apollo was the god of music and poetry.He could stir up all feelings.These feelings are expressed in lofty songs.With his lyre of gold and the sweet accents of his godlike voice heled the choir of the Muses at Olympus.The pleasant music from his lyre was so exciting that stones marched into their places in rhythmic time and of their own will when he helped Poseidonbuild up the walls of Troy.On one occasion,invited to a contest by the human musician Marsyas,he won and then flayed him to death for his pride.On another occasion,he lost out toPan at a musical contest and turned the ears of the judge,King Midas,into those of an ass.His son,Orpheus,took over such skill from the father that his lyre moved man and animals alike.Apollo stood for youthful and manly beauty.His goldenhair,stately manner and air all combined to make him the admiration of the world.A beautiful girl,by the name of Clytle,was so fond of his beauty and glory that from dawn to dusk she knelt on the ground,her hands outstretched towards the sungod,and her eyes looked at his golden wheeled carriage racing across the blue sky.Though her love was not returned,she had never changed her mind about Apollo.The gods were moved at the sad sight,and changed her into a sunflower.在众多的奥林波斯山神中，主神宙斯和雷托之子阿波罗最受推崇。据希腊神话记载,雷托被天后赫拉驱赶得四处流浪。最终是海神波塞冬怜悯她并从海中捞起提落岛让她居住。在岛上,她生了孪生儿子阿波罗和阿尔特弥斯。阿波罗是太阳神。清晨他身着紫色袍,坐在那明亮的东方宫殿,准备开始每日穿越天空的旅行。白天,他驾着用金子和象牙制成的战车,给广阔无垠的大地带来光明、生命和仁爱。黄昏时分,他在遥远的西海结束了旅行,然后就乘上金船返回东方的家中。阿波罗是音乐神和诗神。他可唤起人们倾注于圣歌中的各种情感。在奥林波斯山上,他手拿金质里拉,用悦耳的音调指挥缪斯的合唱。当他帮助波塞冬建造特洛伊城墙时,里拉奏出的音乐如此动听,以致石头有节奏地、自动地各就其位。有一次他接受凡人音乐家马斯亚斯的挑战参加一次竞赛。战胜对方后,他将对手剥皮致死以惩罚他的狂妄自大。在另外一次音乐比赛中,因输给了潘神,他就将裁判迈尔斯国王的耳朵变成了驴耳朵。阿波罗的儿子俄耳甫斯继承了父亲这方面的才能。他的竖琴使人与动物皆受感动。阿波罗象征着青春和男子汉的美。金色的头发、庄重的举止、容光焕发的神态,这些足以使他受到世人的青睐。一位名叫克里提的美丽少女迷恋于他的英俊潇洒,跪在地上,从黎明到黄昏,双手伸向太阳神。她凝视着那辆金质马车在蔚蓝的天空驰骋。虽然她的爱并未得到回报,但她对阿波罗的痴情却从未改变。目睹这悲哀的场面,众神深受感动,将她变成了一株向日葵。",
             "夏天最爽的就在于吃西瓜了，不但颜色鲜艳清爽，味道甘甜，更重要的是冰凉解暑。所以大家在夏天都爱吃西瓜，连猪妈妈和她的儿子都不例外。这天，太阳光火辣辣地照着大地，猪妈妈让小噜噜去地里搬西瓜回来解解渴，小噜噜该怎么把西瓜搬回家，猪妈妈会吃到搬回来的西瓜吗？In spring, the mother pig took the little pig LuLu to the foot of the mountain. They planted some watermelon.When summer came, there were many big round watermelons in the field.One day, the sun was burning like a fire, it was terribly hot on the ground. The mother pig said to the little pig:“Lulu, go to the field to pick a watermelon back,ok?” Lulu said happily:“Ok! No problem.”Then he ran to the watermelon field. When he got to the field, he was happy to find so many big green watermelons. He chose one of the biggest watermelon and picked it from the vine. Then he held it with his hands trying to lift is on his shoulder to carry it home.“Wow!It is so heavy!” Lulu tried several times, but he failed. And he was socked with sweat. He wiped his sweat off and decided to have a rest.Suddenly he saw the monkey Pipi. He was playing with a hoop. Lulu patted his head and said:“I’ve got it.” He thought,the round hoop can roll, the watermelon round too,then it can roll too.He then put the big melon on the ground and rolled it forward quickly.“At last he got home with the watermelon.The mother pig knew the story, she exclaimed:“My child, you are really clever!”春天的时候，猪妈妈带着小猪噜噜，在山坡下种了一大片西瓜。到了夏天，西瓜地里结满了又圆又大的西瓜。有一天，太阳光火辣辣地照着大地，天啊，可热了。猪妈妈对小猪说：“噜噜，你到咱们的地里摘个大西瓜回来解解渴吧！”小猪噜噜高兴地说：“好吧！”说完就往西瓜地里跑。到了地里一看。呵，到处躺着大西瓜，水灵灵的，真惹人喜爱！噜噜挑了个最大的摘了下来。它双手搂着西瓜，想抱起来放在肩上扛回家。“哟，好重呀！”噜噜试着抱了几次都没有抱起来，还累得满头大汗。 它直起身来，擦了擦脸上的汗水想休息一下，再去试试抱西瓜。突然，它看到小猴皮皮在山下边的马路上滚铁环玩呢。小猪噜噜一拍后脑勺高兴地说：“有了，我有办法了。”什么办法呢？小猪噜噜心想：铁环是圆的，可以滚动。西瓜也是圆的，不也可以滚动吗？想到这儿啊，小猪噜噜顾不上休息，把大西瓜放在地上。咕噜噜，咕噜噜地向前滚，一直把西瓜滚到家里猪妈妈看到小猪噜噜把又圆又大的西瓜搬回家，夸奖噜噜是个爱动脑筋的猪娃娃！",
             "",
             "",
@@ -165,6 +165,68 @@ class PuGongYing(Bot):
             "",
             "",
             ""
+        ]
+        self.english_word = [
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', ''],
+            ['', '']
         ]
         # idiom data
         self.idiom_story = {
@@ -489,7 +551,7 @@ class PuGongYing(Bot):
         self.waitAnswer()
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage(
-            'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T04%3A58%3A51Z%2F-1%2F%2Fd5bb19cee3e1245f859866dfbd810f2353636fa3d1ca6e93f6a210bcc152f8a3')
+            'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T15%3A19%3A05Z%2F-1%2F%2F037e76616226e4fb0ac9825a0b2e7b03b1b1eaa511194b49c1b64f6d298132ee')
         bodyTemplate.setPlainTextContent(r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语电影推荐和学习英语单词与短语，快来一起吧')
         bodyTemplate.set_title('蒲公英使用介绍')
 
@@ -513,12 +575,12 @@ class PuGongYing(Bot):
         self.setSessionAttribute("answer", give_idiom[-1], 0)
         self.setSessionAttribute("give_idiom", give_idiom, 0)
         self.setSessionAttribute("game_type", 'IdiomC', 0)
-        self.setSessionAttribute("round_num", 1, 1)
+        self.setSessionAttribute("guan_num", 1, 1)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage('://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
+        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
         bodyTemplate.setPlainTextContent(r'我先来，我出：' + give_idiom)
-        bodyTemplate.set_title(r'第一关')
+        bodyTemplate.set_title(r'蒲公英：成语接龙：第一关')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -533,21 +595,23 @@ class PuGongYing(Bot):
         :return:
         """
         self.waitAnswer()
-        self.setSessionAttribute("game_type", 'IdiomStory', 0)
+
         user_story = self.getSlots('idiom_story')
         if not user_story:
             self.nlu.ask('idiom_story')
         elif user_story == 'random':
 
             rand_id = random.randint(0, 30)
-            idiom_story = self.idiom_story[rand_id][0]
+            user_story = self.idiom_story_name[rand_id]
+            idiom_story = self.idiom_story[user_story][0]
 
             self.setSessionAttribute("idiom_story_name", user_story, 0)
+            self.setSessionAttribute("game_type", 'IdiomStoryRandom', 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage(self.idiom_story[rand_id][1])
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A57Z%2F-1%2F%2F3081d1933c39e44fd7195b8735caf5457a0315279125ac2406b23bdb55a99762')
             bodyTemplate.setPlainTextContent(r'好的，我们来听：' + '：' + idiom_story + '，，，还想再听一遍吗，试着对我说：再来一遍')
-            bodyTemplate.set_title(user_story)
+            bodyTemplate.set_title('蒲公英：成语故事：' + user_story)
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -558,9 +622,10 @@ class PuGongYing(Bot):
             idiom_story = self.idiom_story[user_story][0]
 
             self.setSessionAttribute("idiom_story_name", user_story, 0)
+            self.setSessionAttribute("game_type", 'IdiomStoryNormal', 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage(self.idiom_story[user_story][1])
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A57Z%2F-1%2F%2F3081d1933c39e44fd7195b8735caf5457a0315279125ac2406b23bdb55a99762')
             bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story +  '：' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
             bodyTemplate.set_title(user_story)
 
@@ -591,9 +656,9 @@ class PuGongYing(Bot):
             self.setSessionAttribute("guan_num", 1, 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
             bodyTemplate.setPlainTextContent(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
-            bodyTemplate.set_title(r'第一关')
+            bodyTemplate.set_title(r'蒲公英：填空猜成语：第一关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -602,15 +667,17 @@ class PuGongYing(Bot):
             }
         elif mode == 'means':
 
-            rand_id = random.randint(0, 20)
+            rand_id = random.randint(0, 89)
             ask = self.idiom_mean[rand_id][1]
+            self.setSessionAttribute("real_answer", self.idiom_mean[rand_id][0], 0)
             self.setSessionAttribute("idiom_means_num", rand_id, 0)
-            self.setSessionAttribute("game_type", 'IdiomStoryMeans', 0)
+            self.setSessionAttribute("game_type", 'IdiomGuessMeans', 0)
+            self.setSessionAttribute("guan_num", 1, 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
             bodyTemplate.setPlainTextContent(r'好啊，这个是哪个成语的意思呢：' + ask)
-            bodyTemplate.set_title(r'第一关')
+            bodyTemplate.set_title(r'蒲公英：意思猜成语：第一关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -628,6 +695,19 @@ class PuGongYing(Bot):
         """
         self.setSessionAttribute("game_type", 'EnglishStory', 0)
         rand_id = random.randint(0, 65)
+        story = self.english_story[rand_id]
+        self.setSessionAttribute("english_story_num", rand_id, 0)
+
+        bodyTemplate = BodyTemplate1()
+        bodyTemplate.setBackGroundImage()
+        bodyTemplate.setPlainTextContent(r'好啊，让我们一起来看英语故事吧！' + story + '。好看吗？要再来一个吗？试着对我说“再来一个”')
+        bodyTemplate.set_title(r'蒲公英：英语故事')
+
+        directive = RenderTemplate(bodyTemplate)
+        return {
+            'directives': [directive],
+            'outputSpeech': r'好啊，让我们一起来看英语故事吧，，，' + story
+        }
 
     def tell_english_joke(self):
 
@@ -636,6 +716,21 @@ class PuGongYing(Bot):
         :return:
         """
         self.setSessionAttribute("game_type", 'EnglishJoke', 0)
+        rand_id = random.randint(0, 65)
+        joke = self.english_joke[rand_id][0]
+        self.setSessionAttribute("english_joke_num", rand_id, 0)
+
+        bodyTemplate = BodyTemplate1()
+        bodyTemplate.setBackGroundImage()
+        bodyTemplate.setPlainTextContent(r'好啊，让我们来搞笑一下吧！' + joke + '。好笑吗？试着对我说“再来一个”')
+        bodyTemplate.set_title(r'蒲公英：英语笑话')
+
+        directive = RenderTemplate(bodyTemplate)
+        return {
+            'directives': [directive],
+            'outputSpeech': r'好啊，让我们来搞笑一下吧，，，' + joke
+        }
+
 
     def study_english_word(self):
 
@@ -644,6 +739,21 @@ class PuGongYing(Bot):
         :return:
         """
         self.setSessionAttribute("game_type", 'EnglishWord', 0)
+        rand_id = random.randint(0, 99)
+        self.setSessionAttribute("english_word_num", rand_id, 0)
+
+        bodyTemplate = BodyTemplate1()
+        bodyTemplate.setBackGroundImage(self.english_word[rand_id][1])
+        bodyTemplate.setPlainTextContent(r'这个是' + self.english_word[rand_id][0])
+        bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
+
+        directive = RenderTemplate(bodyTemplate)
+        return {
+            'directives': [directive],
+            'outputSpeech': r'这个是' + self.english_word[rand_id][0]
+        }
+
+
 
     def english_songs(self):
 
@@ -652,6 +762,41 @@ class PuGongYing(Bot):
         :return:
         """
         self.setSessionAttribute("game_type", 'EnglishSong', 0)
+        rand_id = random.randint(0, 65)
+        self.setSessionAttribute("english_song_num", rand_id, 0)
+
+        directives = []
+        directive = Play(self.english_song[rand_id][0], PlayBehaviorEnum.REPLACE_ALL)
+        directives.append(directive)
+        return {
+            'directives': directives,
+            'outputSpeech': '好啊，让我们来听一下英语歌谣吧',
+        }
+
+    def more_one(self):
+
+        """
+        下一个
+        :return:
+        """
+        self.waitAnswer()
+        game_type = self.getSessionAttribute("game_type", 0)
+        if game_type == 'EnglishSong':
+            pass
+        elif game_type == 'EnglishWord':
+            pass
+        elif game_type == 'EnglishJoke':
+            pass
+        elif game_type == 'EnglishStory':
+            pass
+        elif game_type == 'IdiomGuessMeans':
+            pass
+        elif game_type == 'IdiomGuessBlank':
+            pass
+        elif game_type == 'IdiomStoryRandom':
+            pass
+        elif game_type == 'IdiomStoryNormal':
+            pass
 
     def answer_helper(self):
 
