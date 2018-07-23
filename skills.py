@@ -40,7 +40,7 @@ class PuGongYing(Bot):
         self.addIntentHandler('study_english_word', self.study_english_word)
         self.addIntentHandler('tell_english_joke', self.tell_joke)
         self.addIntentHandler('tell_english_story', self.tell_english_story)
-        self.addIntentHandler('english_songs', self.english_songs)
+        self.addIntentHandler('english_songs', self.english_song)
         # english data
         self.english_song = [
             ['', ''],
@@ -739,23 +739,23 @@ class PuGongYing(Bot):
         :return:
         """
         self.setSessionAttribute("game_type", 'EnglishWord', 0)
-        rand_id = random.randint(0, 99)
+        rand_id = random.randint(0, 123)
         self.setSessionAttribute("english_word_num", rand_id, 0)
 
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage(self.english_word[rand_id][1])
         bodyTemplate.setPlainTextContent(r'这个是' + self.english_word[rand_id][0])
-        bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
+        bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0] + '，再来一个呗，试着对我说“下一个”')
 
         directive = RenderTemplate(bodyTemplate)
         return {
             'directives': [directive],
-            'outputSpeech': r'这个是' + self.english_word[rand_id][0]
+            'outputSpeech': r'这个是' + self.english_word[rand_id][0] + '，再来一个呗，试着对我说“下一个”'
         }
 
 
 
-    def english_songs(self):
+    def english_song(self):
 
         """
         英语歌曲
@@ -782,20 +782,102 @@ class PuGongYing(Bot):
         self.waitAnswer()
         game_type = self.getSessionAttribute("game_type", 0)
         if game_type == 'EnglishSong':
-            pass
+
+            rand_id = random.randint(0, 65)
+
+            while 1 == 1:
+                if self.getSessionAttribute("english_song_num", 0) == rand_id:
+                    rand_id = random.randint(0, 65)
+                else:
+                    break
+
+            self.setSessionAttribute("english_song_num", rand_id, 0)
+            self.setSessionAttribute("game_type", 'EnglishSong', 0)
+
+            directives = []
+            directive = Play(self.english_song[rand_id][0], PlayBehaviorEnum.REPLACE_ALL)
+            directives.append(directive)
+            return {
+                'directives': directives,
+                'outputSpeech': '好的，再来一首英语歌谣',
+            }
         elif game_type == 'EnglishWord':
-            pass
+
+
+            rand_id = random.randint(0, 123)
+
+            while 1 == 1:
+                if self.getSessionAttribute("english_song_num", 0) == rand_id:
+                    rand_id = random.randint(0, 65)
+                else:
+                    break
+
+            self.setSessionAttribute("game_type", 'EnglishWord', 0)
+            self.setSessionAttribute("english_word_num", rand_id, 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(self.english_word[rand_id][1])
+            bodyTemplate.setPlainTextContent(r'这个是' + self.english_word[rand_id][0])
+            bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'你好学的精神感动了我，再来一个！这个是' + self.english_word[rand_id][0]
+            }
         elif game_type == 'EnglishJoke':
-            pass
+
+
+            rand_id = random.randint(0, 65)
+
+            while 1 == 1:
+                if self.getSessionAttribute("english_song_num", 0) == rand_id:
+                    rand_id = random.randint(0, 65)
+                else:
+                    break
+
+            joke = self.english_joke[rand_id][0]
+
+            self.setSessionAttribute("game_type", 'EnglishJoke', 0)
+            self.setSessionAttribute("english_joke_num", rand_id, 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage()
+            bodyTemplate.setPlainTextContent(r'好的，笑一笑更健康！让我们再来一个' + joke)
+            bodyTemplate.set_title(r'蒲公英：英语笑话')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，笑一笑更健康！让我们再来一个' + joke
+            }
         elif game_type == 'EnglishStory':
-            pass
-        elif game_type == 'IdiomGuessMeans':
-            pass
-        elif game_type == 'IdiomGuessBlank':
-            pass
-        elif game_type == 'IdiomStoryRandom':
-            pass
-        elif game_type == 'IdiomStoryNormal':
+
+
+            rand_id = random.randint(0, 65)
+
+            while 1 == 1:
+                if self.getSessionAttribute("english_song_num", 0) == rand_id:
+                    rand_id = random.randint(0, 65)
+                else:
+                    break
+
+            story = self.english_story[rand_id]
+
+            self.setSessionAttribute("english_story_num", rand_id, 0)
+            self.setSessionAttribute("game_type", 'EnglishStory', 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage()
+            bodyTemplate.setPlainTextContent(r'好的，英语故事等着您呢！' + story)
+            bodyTemplate.set_title(r'蒲公英：英语故事')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，英语故事等着您呢！' + story
+            }
+        elif game_type == 'IdiomStoryRandom' or game_type == 'IdiomStoryNormal':
             pass
 
     def answer_helper(self):
