@@ -26,6 +26,7 @@ class PuGongYing(Bot):
         # main intent
         self.addLaunchHandler(self.launchRequest)
         self.addIntentHandler('welcome', self.welcome)
+        self.addIntentHandler('next_one', self.next_one)
         self.addIntentHandler('answer', self.answer)
         self.addIntentHandler('answer_helper', self.answer_helper)
         self.addIntentHandler('c_game', self.c_game)
@@ -887,6 +888,14 @@ class PuGongYing(Bot):
                     'directives': [directive],
                     'outputSpeech': r'你真棒，被你接到了，那我接，' + new_give_idiom
                 }
+
+    def next_one(self):
+
+        """
+        下一个
+        :return:
+        """
+        pass
 
     def quesheng(self):
         
