@@ -581,7 +581,7 @@ class PuGongYing(Bot):
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T15%3A19%3A05Z%2F-1%2F%2F037e76616226e4fb0ac9825a0b2e7b03b1b1eaa511194b49c1b64f6d298132ee')
         bodyTemplate.setPlainTextContent(r'欢迎来到蒲公英，在这里，您可以跟我一起学习英语，也可以跟我互斗成语！试着对我说，我怎么跟你玩')
-        bodyTemplate.set_title('蒲公英')
+        bodyTemplate.setTitle('蒲公英')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -601,7 +601,7 @@ class PuGongYing(Bot):
         bodyTemplate.setBackGroundImage(
             'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T15%3A19%3A05Z%2F-1%2F%2F037e76616226e4fb0ac9825a0b2e7b03b1b1eaa511194b49c1b64f6d298132ee')
         bodyTemplate.setPlainTextContent(r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语电影推荐和学习英语单词与短语，快来一起吧')
-        bodyTemplate.set_title('蒲公英使用介绍')
+        bodyTemplate.setTitle('蒲公英使用介绍')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -628,7 +628,7 @@ class PuGongYing(Bot):
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%8E%A5%E9%BE%99.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A04Z%2F-1%2F%2F5d6ad6f2a138858a06a4f971160a007e8081249286e711d53c06410750713d71')
         bodyTemplate.setPlainTextContent(r'我先来，我出：' + give_idiom)
-        bodyTemplate.set_title(r'蒲公英：成语接龙：第一关')
+        bodyTemplate.setTitle(r'蒲公英：成语接龙：第一关')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -659,7 +659,7 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A57Z%2F-1%2F%2F3081d1933c39e44fd7195b8735caf5457a0315279125ac2406b23bdb55a99762')
             bodyTemplate.setPlainTextContent(r'好的，我们来听：' + '：' + idiom_story + '，，，还想再听一遍吗，试着对我说：再来一遍')
-            bodyTemplate.set_title('蒲公英：成语故事：' + user_story)
+            bodyTemplate.setTitle('蒲公英：成语故事：' + user_story)
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -675,7 +675,7 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A57Z%2F-1%2F%2F3081d1933c39e44fd7195b8735caf5457a0315279125ac2406b23bdb55a99762')
             bodyTemplate.setPlainTextContent(r'好的，我们来听：' + user_story +  '：' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
-            bodyTemplate.set_title(user_story)
+            bodyTemplate.setTitle(user_story)
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -706,7 +706,7 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
             bodyTemplate.setPlainTextContent(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
-            bodyTemplate.set_title(r'蒲公英：填空猜成语：第一关')
+            bodyTemplate.setTitle(r'蒲公英：填空猜成语：第一关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -725,7 +725,7 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
             bodyTemplate.setPlainTextContent(r'好啊，这个是哪个成语的意思呢：' + ask)
-            bodyTemplate.set_title(r'蒲公英：意思猜成语：第一关')
+            bodyTemplate.setTitle(r'蒲公英：意思猜成语：第一关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -749,7 +749,7 @@ class PuGongYing(Bot):
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage()
         bodyTemplate.setPlainTextContent(r'好啊，让我们一起来看英语故事吧！' + story + '。好看吗？要再来一个吗？试着对我说“再来一个”')
-        bodyTemplate.set_title(r'蒲公英：英语故事')
+        bodyTemplate.setTitle(r'蒲公英：英语故事')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -771,7 +771,7 @@ class PuGongYing(Bot):
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage()
         bodyTemplate.setPlainTextContent(r'好啊，让我们来搞笑一下吧！' + joke + '。好笑吗？试着对我说“再来一个”')
-        bodyTemplate.set_title(r'蒲公英：英语笑话')
+        bodyTemplate.setTitle(r'蒲公英：英语笑话')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -793,7 +793,7 @@ class PuGongYing(Bot):
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage(self.english_word[rand_id][1])
         bodyTemplate.setPlainTextContent(r'这个是' + self.english_word[rand_id][0])
-        bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0] + '，再来一个呗，试着对我说“下一个”')
+        bodyTemplate.setTitle(r'蒲公英：英语单词：' + self.english_word[rand_id][0] + '，再来一个呗，试着对我说“下一个”')
 
         directive = RenderTemplate(bodyTemplate)
         return {
@@ -866,7 +866,7 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage(self.english_word[rand_id][1])
             bodyTemplate.setPlainTextContent(r'这个是' + self.english_word[rand_id][0])
-            bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
+            bodyTemplate.setTitle(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -892,7 +892,7 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage()
             bodyTemplate.setPlainTextContent(r'好的，笑一笑更健康！让我们再来一个' + joke)
-            bodyTemplate.set_title(r'蒲公英：英语笑话')
+            bodyTemplate.setTitle(r'蒲公英：英语笑话')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -918,7 +918,7 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.setBackGroundImage()
             bodyTemplate.setPlainTextContent(r'好的，英语故事等着您呢！' + story)
-            bodyTemplate.set_title(r'蒲公英：英语故事')
+            bodyTemplate.setTitle(r'蒲公英：英语故事')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -938,7 +938,7 @@ class PuGongYing(Bot):
             bodyTemplate.setBackGroundImage(
                 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A57Z%2F-1%2F%2F3081d1933c39e44fd7195b8735caf5457a0315279125ac2406b23bdb55a99762')
             bodyTemplate.setPlainTextContent(r'好的，再来一个' + '：' + idiom_story)
-            bodyTemplate.set_title('蒲公英：成语故事：' + user_story)
+            bodyTemplate.setTitle('蒲公英：成语故事：' + user_story)
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -1040,7 +1040,7 @@ class PuGongYing(Bot):
             bodyTemplate.setBackGroundImage(
                 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
             bodyTemplate.setPlainTextContent(r'好的，我们继续填空猜成语：' + give_idiom)
-            bodyTemplate.set_title(r'蒲公英：填空猜成语：第' + guan + '关')
+            bodyTemplate.setTitle(r'蒲公英：填空猜成语：第' + guan + '关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -1056,7 +1056,7 @@ class PuGongYing(Bot):
             bodyTemplate.setBackGroundImage(
                 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
             bodyTemplate.setPlainTextContent(r'好的，让我们继续意思猜成语' + ask )
-            bodyTemplate.set_title(r'蒲公英：意思猜成语：第' + guan + '关')
+            bodyTemplate.setTitle(r'蒲公英：意思猜成语：第' + guan + '关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -1117,6 +1117,7 @@ class PuGongYing(Bot):
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
                 bodyTemplate.setPlainTextContent(r'接错了哦，你可以接' + new_give_idiom)
+                bodyTemplate.setTitle('答对了')
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
@@ -1153,6 +1154,7 @@ class PuGongYing(Bot):
                     bodyTemplate.setBackGroundImage(
                         'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
                     bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，要继续，请对我说“下一关”')
+                    bodyTemplate.setTitle('答对了')
 
                     directive = RenderTemplate(bodyTemplate)
                     return {
@@ -1168,6 +1170,7 @@ class PuGongYing(Bot):
                 bodyTemplate.setBackGroundImage(
                     'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
                 bodyTemplate.setPlainTextContent(r'恭喜你，答对了，要继续，请对我说“下一关”')
+                bodyTemplate.setTitle('答对了')
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
@@ -1181,6 +1184,7 @@ class PuGongYing(Bot):
                 bodyTemplate.setBackGroundImage(
                     'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
                 bodyTemplate.setPlainTextContent(r'好遗憾，答错了，正确答案是' + real_answer + '，你可以对我说“下一关”即可进入下一关')
+                bodyTemplate.setTitle('答错了')
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
@@ -1196,6 +1200,7 @@ class PuGongYing(Bot):
                 bodyTemplate.setBackGroundImage(
                     'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
                 bodyTemplate.setPlainTextContent(r'恭喜你！答对了！对我说“下一关”即可进入下一关')
+                bodyTemplate.setTitle('答对了')
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
@@ -1208,6 +1213,7 @@ class PuGongYing(Bot):
                 bodyTemplate.setBackGroundImage(
                     'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
                 bodyTemplate.setPlainTextContent(r'好遗憾，答错了，你可以回答' + real_answer + '，你可以对我说“下一关”即可进入下一关')
+                bodyTemplate.setTitle('答错了')
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
