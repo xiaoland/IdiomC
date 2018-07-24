@@ -644,7 +644,17 @@ class PuGongYing(Bot):
         """
         self.waitAnswer()
 
-        user_story = self.getSlots('idiom_story')
+        result = self.getSlots('idiom_story')
+        try:
+            user_story = json.loads(result)
+            user_story = user_story.get("origin")
+        except:
+            user_story = result
+        if not user_story:
+            self.nlu.ask('idiom')
+        else:
+            pass
+
         if not user_story:
             self.nlu.ask('idiom_story')
         elif user_story == 'random':
