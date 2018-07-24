@@ -531,6 +531,7 @@ class PuGongYing(Bot):
         :return:
         """
         self.waitAnswer()
+        self.setSessionAttribute("game_type", 'SkillLaunch', 0)
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T04%3A58%3A51Z%2F-1%2F%2Fd5bb19cee3e1245f859866dfbd810f2353636fa3d1ca6e93f6a210bcc152f8a3')
         bodyTemplate.setPlainTextContent(r'欢迎来到蒲公英，在这里，您可以跟我一起学习英语，也可以跟我互斗成语！试着对我说，我怎么跟你玩')
@@ -549,6 +550,7 @@ class PuGongYing(Bot):
         :return:
         """
         self.waitAnswer()
+        self.setSessionAttribute("game_type", 'welcome', 0)
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage(
             'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T15%3A19%3A05Z%2F-1%2F%2F037e76616226e4fb0ac9825a0b2e7b03b1b1eaa511194b49c1b64f6d298132ee')
@@ -578,7 +580,7 @@ class PuGongYing(Bot):
         self.setSessionAttribute("guan_num", 1, 1)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
+        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%8E%A5%E9%BE%99.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A04Z%2F-1%2F%2F5d6ad6f2a138858a06a4f971160a007e8081249286e711d53c06410750713d71')
         bodyTemplate.setPlainTextContent(r'我先来，我出：' + give_idiom)
         bodyTemplate.set_title(r'蒲公英：成语接龙：第一关')
 
@@ -776,7 +778,7 @@ class PuGongYing(Bot):
     def more_one(self):
 
         """
-        下一个
+        再来一个
         :return:
         """
         self.waitAnswer()
@@ -878,7 +880,37 @@ class PuGongYing(Bot):
                 'outputSpeech': r'好的，英语故事等着您呢！' + story
             }
         elif game_type == 'IdiomStoryRandom' or game_type == 'IdiomStoryNormal':
-            pass
+
+            rand_id = random.randint(0, 65)
+            user_story = self.idiom_story_name[rand_id]
+            idiom_story = self.idiom_story[user_story][0]
+
+            self.setSessionAttribute("idiom_story_name", user_story, 0)
+            self.setSessionAttribute("game_type", 'IdiomStoryRandom', 0)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A57Z%2F-1%2F%2F3081d1933c39e44fd7195b8735caf5457a0315279125ac2406b23bdb55a99762')
+            bodyTemplate.setPlainTextContent(r'好的，再来一个' + '：' + idiom_story)
+            bodyTemplate.set_title('蒲公英：成语故事：' + user_story)
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，再来一个：' + user_story + '，，，，' + idiom_story
+            }
+        else:
+            return {
+                'outputSpeech': r'对不起，我不知道您要再来什么'
+            }
+
+    def next_one(self):
+
+        """
+        下一个
+        :return:
+        """
+        pass
 
     def answer_helper(self):
 
@@ -887,50 +919,51 @@ class PuGongYing(Bot):
         :return:
         """
         self.waitAnswer()
-        answer = self.getSessionAttribute("answer", 0)
-        give_idiom = self.getSessionAttribute("give_idiom", 0)
-        a = 0
-        helper_idiom = ''
-        idiom = self.idiom
-        while 1 == 1:
-            try:
-                test = idiom[a]
-            except IndexError:
-                break
-            else:
-                if idiom[a][0] == answer:
-                    helper_idiom = idiom[a][0] + idiom[a][1]
-                    if helper_idiom == give_idiom:
-                        a = a + 1
-                    else:
-                        break
+        game_type = self.getSessionAttribute("game_type", 0)
+        if game_type == 'IdiomC':
+
+            answer = self.getSessionAttribute("answer", 0)
+            give_idiom = self.getSessionAttribute("give_idiom", 0)
+            a = 0
+            helper_idiom = ''
+            idiom = self.idiom
+            while 1 == 1:
+                try:
+                    test = idiom[a]
+                except IndexError:
+                    break
                 else:
-                    a = a + 1
+                    if idiom[a][0] == answer:
+                        helper_idiom = idiom[a][0] + idiom[a][1]
+                        if helper_idiom == give_idiom:
+                            a = a + 1
+                        else:
+                            break
+                    else:
+                        a = a + 1
 
-        if helper_idiom == '' or helper_idiom == None:
+            if helper_idiom == '' or helper_idiom == None:
 
-            return {
-                'outputSpeech': r'诶呀，提示不见了，努力想想吧'
-            }
+                return {
+                    'outputSpeech': r'诶呀，提示不见了，努力想想吧'
+                }
 
+            else:
+
+                card = TextCard(r'给你前两个字，想想：' + helper_idiom + '**' + '，如果实在想不到，可以对我说“跳过”')
+                return {
+                    'card': card,
+                    'outputSpeech': r'给你前两个字，想想,' + helper_idiom + '如果实在想不到，可以对我说，跳过，'
+                }
+        elif game_type == 'IdiomGuessBlank':
+            pass
+        elif game_type == 'IdiomGuessMeans':
+            pass
         else:
-
-            card = TextCard(r'给你前两个字，想想：' + helper_idiom + '**' + '，如果实在想不到，可以对我说“跳过”')
             return {
-                'card': card,
-                'outputSpeech': r'给你前两个字，想想,' + helper_idiom + '如果实在想不到，可以对我说，跳过，'
+                'outputSpeech': r'对不起，我不知道您要什么提示'
             }
 
-    def round(self):
-
-        """
-        读取轮回
-        :return:
-        """
-        self.waitAnswer()
-        return {
-            'outputSpeech': r'您现在已经跟我大战第' + self.getSessionAttribute("idiom_num", 1) + '回合了'
-        }
 
     def c_game(self):
 
@@ -939,17 +972,55 @@ class PuGongYing(Bot):
         :return:
         """
         self.waitAnswer()
-        give_idiom = self.getSessionAttribute("give_idiom", '')
-        bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage(
-            'http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-        bodyTemplate.setPlainTextContent(r'好的，我们继续，我刚刚出了：' + give_idiom)
+        game_type = self.getSessionAttribute("game_type", 0)
+        if game_type == 'IdiomC':
+            give_idiom = self.getSessionAttribute("give_idiom", '')
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%8E%A5%E9%BE%99.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A04Z%2F-1%2F%2F5d6ad6f2a138858a06a4f971160a007e8081249286e711d53c06410750713d71')
+            bodyTemplate.setPlainTextContent(r'好的，我们继续，我刚刚出了：' + give_idiom)
 
-        directive = RenderTemplate(bodyTemplate)
-        return {
-            'directives': [directive],
-            'outputSpeech': r'好的，我们继续，我刚刚出了' + give_idiom
-        }
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，我们继续，我刚刚出了' + give_idiom
+            }
+        elif game_type == 'IdiomGuessBlank':
+
+            give_idiom = self.getSessionAttribute("give_idiom", 0)
+            guan = self.getSessionAttribute("guan_num", 1)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
+            bodyTemplate.setPlainTextContent(r'好的，我们继续填空猜成语：' + give_idiom)
+            bodyTemplate.set_title(r'蒲公英：填空猜成语：第' + guan + '关')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，我们继续填空猜成语：' + give_idiom
+            }
+        elif game_type == 'IdiomGuessMeans':
+
+            ask = self.idiom_mean[self.getSessionAttribute("idiom_mean_num", 0)][1]
+            guan = self.getSessionAttribute("guan_num", 1)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
+            bodyTemplate.setPlainTextContent(r'好的，让我们继续意思猜成语' + ask )
+            bodyTemplate.set_title(r'蒲公英：意思猜成语：第' + guan + '关')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，让我们继续意思猜成语' + ask
+            }
+        else:
+            return {
+                'outputSpeech': r'对不起，我不知道您要继续什么游戏'
+            }
 
     def answer(self):
 
@@ -958,6 +1029,9 @@ class PuGongYing(Bot):
         :return:
         """
         self.waitAnswer()
+
+        game_type = self.getSessionAttribute("game_type", 0)
+
         result = self.getSlots('idiom')
         try:
             user_answer = json.loads(result)
@@ -968,17 +1042,17 @@ class PuGongYing(Bot):
             self.nlu.ask('idiom')
         else:
             pass
-        real_answer = self.getSessionAttribute("give_idiom", 0)
-        answer = self.getSessionAttribute("answer", 0)
-        a = 0
 
-        if user_answer[0] != real_answer[3]:
-            return {
-                'outputSpeech': r'接错了哦，我的是，' + real_answer + '，哦！需要提示可以对我说，我需要提示，'
-            }
-        else:
-            idiom = self.idiom
-            while 1 == 1:
+
+        if game_type == 'IdiomC':
+
+            a = 0
+            real_answer = self.getSessionAttribute("give_idiom", 0)
+            answer = self.getSessionAttribute("answer", 0)
+            if user_answer[0] != real_answer[3]:
+
+                idiom = self.idiom
+                while 1 == 1:
                     try:
                         test = idiom[a]
                     except IndexError:
@@ -992,33 +1066,108 @@ class PuGongYing(Bot):
                                 break
                         else:
                             a = a + 1
-            if new_give_idiom == None or new_give_idiom == '':
-                return {
-                    'outputSpeech': '诶呀，你这下真的打败我了，我输了，对我说，你重新开始，试试'
-                }
-            else:
-                self.setSessionAttribute("answer", new_give_idiom[-1], '')
-                self.setSessionAttribute("give_idiom", new_give_idiom, '')
-                self.setSessionAttribute("round_num", self.getSessionAttribute("round_num", 1) + 1, 1)
-
+                if new_give_idiom == None or new_give_idiom == '':
+                    new_give_idiom = '。。。诶呀！突然发现我也接不了，我们重新来吧，对我说“重新开始”'
                 bodyTemplate = BodyTemplate1()
-                bodyTemplate.setBackGroundImage(
-                    'http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-                bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，那我接：' + new_give_idiom)
+                bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
+                bodyTemplate.setPlainTextContent(r'接错了哦，你可以接' + new_give_idiom)
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
                     'directives': [directive],
-                    'outputSpeech': r'你真棒，被你接到了，那我接，' + new_give_idiom
+                    'outputSpeech': r'接错了哦，你可以接' + new_give_idiom
                 }
 
-    def next_one(self):
+            else:
+                idiom = self.idiom
+                while 1 == 1:
+                        try:
+                            test = idiom[a]
+                        except IndexError:
+                            break
+                        else:
+                            if idiom[a][0] == user_answer[-1]:
+                                new_give_idiom = idiom[a]
+                                if new_give_idiom == real_answer:
+                                    a = a + 1
+                                else:
+                                    break
+                            else:
+                                a = a + 1
+                if new_give_idiom == None or new_give_idiom == '':
+                    return {
+                        'outputSpeech': '诶呀，你这下真的打败我了，我输了，对我说，重新开始成语接龙，'
+                    }
+                else:
+                    self.setSessionAttribute("answer", new_give_idiom[-1], '')
+                    self.setSessionAttribute("give_idiom", new_give_idiom, '')
+                    self.setSessionAttribute("round_num", self.getSessionAttribute("round_num", 1) + 1, 1)
 
-        """
-        下一个
-        :return:
-        """
-        pass
+                    bodyTemplate = BodyTemplate1()
+                    bodyTemplate.setBackGroundImage(
+                        'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
+                    bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，要继续，请对我说“下一关”')
+
+                    directive = RenderTemplate(bodyTemplate)
+                    return {
+                        'directives': [directive],
+                        'outputSpeech': r'你真棒，被你接到了，要继续，请对我说“下一关”'
+                    }
+        elif game_type == 'IdiomGuessBlank':
+
+            real_answer = self.getSessionAttribute("real_answer", 0)
+            if user_answer == real_answer:
+
+                bodyTemplate = BodyTemplate1()
+                bodyTemplate.setBackGroundImage(
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
+                bodyTemplate.setPlainTextContent(r'恭喜你，答对了，要继续，请对我说“下一关”')
+
+                directive = RenderTemplate(bodyTemplate)
+                return {
+                    'directives': [directive],
+                    'outputSpeech': r'恭喜你，答对了，要继续，请对我说“下一关”'
+                }
+
+            else:
+
+                bodyTemplate = BodyTemplate1()
+                bodyTemplate.setBackGroundImage(
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
+                bodyTemplate.setPlainTextContent(r'好遗憾，答错了，正确答案是' + real_answer + '，你可以对我说“下一关”即可进入下一关')
+
+                directive = RenderTemplate(bodyTemplate)
+                return {
+                    'directives': [directive],
+                    'outputSpeech': r'好遗憾，答错了，正确答案是' + real_answer + '，你可以对我说“下一关”即可进入下一关'
+                }
+        elif game_type == 'IdiomGuessMeans':
+
+            real_answer = self.getSessionAttribute("real_answer", 0)
+            if user_answer == real_answer:
+
+                bodyTemplate = BodyTemplate1()
+                bodyTemplate.setBackGroundImage(
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
+                bodyTemplate.setPlainTextContent(r'恭喜你！答对了！对我说“下一关”即可进入下一关')
+
+                directive = RenderTemplate(bodyTemplate)
+                return {
+                    'directives': [directive],
+                    'outputSpeech': r'恭喜你！答对了！对我说“下一关”即可进入下一关'
+                }
+            else:
+
+                bodyTemplate = BodyTemplate1()
+                bodyTemplate.setBackGroundImage(
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
+                bodyTemplate.setPlainTextContent(r'好遗憾，答错了，你可以回答' + real_answer + '，你可以对我说“下一关”即可进入下一关')
+
+                directive = RenderTemplate(bodyTemplate)
+                return {
+                    'directives': [directive],
+                    'outputSpeech': r'好遗憾，答错了，你可以回答' + real_answer + '，你可以对我说“下一关”即可进入下一关'
+                }
 
     def quesheng(self):
         
@@ -1031,31 +1180,12 @@ class PuGongYing(Bot):
                 text = self.data['request']['query']['original']
             except:
                 return {
-                    'outputSpeech': r'您说的我没有理解，对不起，您可以对我说，使用手册'
+                    'outputSpeech': r'答错了哦！需要帮助可以对我说，我需要帮助'
                 }
             else:
                 if len(text) == 4:
                     return {
-                        'outputSpeech': r'您说的我没有理解，对不起，您可以对我说，使用手册'
-                    }
-                elif '下一关' in text or '不会' in text:
-
-                    rand_id = random.randint(0, 499)
-                    give_idiom = self.idiom[rand_id]
-
-                    self.setSessionAttribute("answer", give_idiom[-1], 0)
-                    self.setSessionAttribute("give_idiom", give_idiom, 0)
-                    self.setSessionAttribute("round_num", self.getSessionAttribute("round_num", '') + 1, 1)
-
-                    bodyTemplate = BodyTemplate1()
-                    bodyTemplate.setBackGroundImage(
-                        'http://dbp-resource.gz.bcebos.com/530c5773-9c9b-671c-6212-4af927f1455a/%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E9%A1%B5%E8%83%8C%E6%99%AF.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-07T04%3A26%3A33Z%2F-1%2F%2F5cca0655decbf96a8b6a6d2602d240e4a7376df72228e3d404f218c603949e42')
-                    bodyTemplate.setPlainTextContent(r'好吧，要加油哦，那接下来我出：' + give_idiom)
-
-                    directive = RenderTemplate(bodyTemplate)
-                    return {
-                        'directives': [directive],
-                        'outputSpeech': r'好吧，要加油哦，那接下来我出' + give_idiom
+                        'outputSpeech': r'答错了哦！需要帮助可以对我说，我需要帮助'
                     }
                 else:
                     return {
