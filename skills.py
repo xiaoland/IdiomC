@@ -1056,23 +1056,51 @@ class PuGongYing(Bot):
 
             if helper_idiom == '' or helper_idiom == None:
 
+                bodyTemplate = BodyTemplate1()
+                bodyTemplate.setBackGroundImage(
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-24T13%3A11%3A07Z%2F-1%2F%2F4ba21633f203946933f383d470b953e554cb6ff25be338d59b3379f7ffe68e46')
+                bodyTemplate.setPlainTextContent(r'诶呀，提示不见了，努力想想吧')
+
+                directive = RenderTemplate(bodyTemplate)
                 return {
+                    'directives': [directive],
                     'outputSpeech': r'诶呀，提示不见了，努力想想吧'
                 }
 
             else:
 
-                card = TextCard(r'给你前两个字，想想：' + helper_idiom + '**' + '，如果实在想不到，可以对我说“跳过”')
+                bodyTemplate = BodyTemplate1()
+                bodyTemplate.setBackGroundImage(
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-24T13%3A11%3A07Z%2F-1%2F%2F4ba21633f203946933f383d470b953e554cb6ff25be338d59b3379f7ffe68e46')
+                bodyTemplate.setPlainTextContent(r'给你前两个字，想想,' + helper_idiom + '如果实在想不到，可以对我说，跳过，')
+
+                directive = RenderTemplate(bodyTemplate)
                 return {
-                    'card': card,
+                    'directives': [directive],
                     'outputSpeech': r'给你前两个字，想想,' + helper_idiom + '如果实在想不到，可以对我说，跳过，'
                 }
         elif game_type == 'IdiomGuessBlank':
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-24T13%3A11%3A07Z%2F-1%2F%2F4ba21633f203946933f383d470b953e554cb6ff25be338d59b3379f7ffe68e46')
+            bodyTemplate.setPlainTextContent(r'这个那么简单，不用提示了吧')
+
+            directive = RenderTemplate(bodyTemplate)
             return {
-                'outputSpeech': r'这个这么简单，不用提示了吧'
+                'directives': [directive],
+                'outputSpeech': r'这个那么简单，不用提示了吧'
             }
         elif game_type == 'IdiomGuessMeans':
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-24T13%3A11%3A07Z%2F-1%2F%2F4ba21633f203946933f383d470b953e554cb6ff25be338d59b3379f7ffe68e46')
+            bodyTemplate.setPlainTextContent(r'给你前两个字，想一想，' + self.getSessionAttribute("real_answer", 0)[0] + self.getSessionAttribute("real_answer", 0)[1])
+
+            directive = RenderTemplate(bodyTemplate)
             return {
+                'directives': [directive],
                 'outputSpeech': r'给你前两个字，想一想，' + self.getSessionAttribute("real_answer", 0)[0] + self.getSessionAttribute("real_answer", 0)[1]
             }
         else:
