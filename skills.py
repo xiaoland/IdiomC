@@ -747,7 +747,7 @@ class PuGongYing(Bot):
         self.setSessionAttribute("english_story_num", rand_id, 0)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage()
+        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A22Z%2F-1%2F%2F58ec0c03668d27d86a3aff6611185a2aae02def659de4b420f64651deed1b01b')
         bodyTemplate.setPlainTextContent(r'好啊，让我们一起来看英语故事吧！' + story + '。好看吗？要再来一个吗？试着对我说“再来一个”')
         bodyTemplate.setTitle(r'蒲公英：英语故事')
 
@@ -769,7 +769,7 @@ class PuGongYing(Bot):
         self.setSessionAttribute("english_joke_num", rand_id, 0)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage()
+        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E7%AC%91%E8%AF%9D.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A08Z%2F-1%2F%2F276b3ab30535bca9d0aa1fdded1fdc0fc2f441ebc7cc1d656e64bb74f423dfe2')
         bodyTemplate.setPlainTextContent(r'好啊，让我们来搞笑一下吧！' + joke + '。好笑吗？试着对我说“再来一个”')
         bodyTemplate.setTitle(r'蒲公英：英语笑话')
 
@@ -791,7 +791,7 @@ class PuGongYing(Bot):
         self.setSessionAttribute("english_word_num", rand_id, 0)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage(self.english_word[rand_id][1])
+        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A07Z%2F-1%2F%2F4e733c54b0712327c033cd46ff93ef0e6276d9691216419841c3f09f7578e5a8')
         bodyTemplate.setPlainTextContent(r'这个是' + self.english_word[rand_id][0])
         bodyTemplate.setTitle(r'蒲公英：英语单词：' + self.english_word[rand_id][0] + '，再来一个呗，试着对我说“下一个”')
 
@@ -818,7 +818,7 @@ class PuGongYing(Bot):
         directives.append(directive)
         return {
             'directives': directives,
-            'outputSpeech': '好啊，让我们来听一下英语歌谣吧',
+            'outputSpeech': '好啊，让我们来听一下英语歌曲吧',
         }
 
     def more_one(self):
@@ -864,7 +864,7 @@ class PuGongYing(Bot):
             self.setSessionAttribute("english_word_num", rand_id, 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage(self.english_word[rand_id][1])
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A07Z%2F-1%2F%2F4e733c54b0712327c033cd46ff93ef0e6276d9691216419841c3f09f7578e5a8')
             bodyTemplate.setPlainTextContent(r'这个是' + self.english_word[rand_id][0])
             bodyTemplate.setTitle(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
 
@@ -890,7 +890,7 @@ class PuGongYing(Bot):
             self.setSessionAttribute("english_joke_num", rand_id, 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage()
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A22Z%2F-1%2F%2F58ec0c03668d27d86a3aff6611185a2aae02def659de4b420f64651deed1b01b')
             bodyTemplate.setPlainTextContent(r'好的，笑一笑更健康！让我们再来一个' + joke)
             bodyTemplate.setTitle(r'蒲公英：英语笑话')
 
@@ -916,7 +916,7 @@ class PuGongYing(Bot):
             self.setSessionAttribute("game_type", 'EnglishStory', 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.setBackGroundImage()
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A22Z%2F-1%2F%2F58ec0c03668d27d86a3aff6611185a2aae02def659de4b420f64651deed1b01b')
             bodyTemplate.setPlainTextContent(r'好的，英语故事等着您呢！' + story)
             bodyTemplate.setTitle(r'蒲公英：英语故事')
 
@@ -1002,9 +1002,13 @@ class PuGongYing(Bot):
                     'outputSpeech': r'给你前两个字，想想,' + helper_idiom + '如果实在想不到，可以对我说，跳过，'
                 }
         elif game_type == 'IdiomGuessBlank':
-            pass
+            return {
+                'outputSpeech': r'这个这么简单，不用提示了吧'
+            }
         elif game_type == 'IdiomGuessMeans':
-            pass
+            return {
+                'outputSpeech': r'给你前两个字，想一想，' + self.getSessionAttribute("real_answer", 0)[0] + self.getSessionAttribute("real_answer", 0)[1]
+            }
         else:
             return {
                 'outputSpeech': r'对不起，我不知道您要什么提示'
