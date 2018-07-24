@@ -600,13 +600,13 @@ class PuGongYing(Bot):
         bodyTemplate = BodyTemplate1()
         bodyTemplate.setBackGroundImage(
             'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T15%3A19%3A05Z%2F-1%2F%2F037e76616226e4fb0ac9825a0b2e7b03b1b1eaa511194b49c1b64f6d298132ee')
-        bodyTemplate.setPlainTextContent(r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语电影推荐和学习英语单词与短语，快来一起吧')
+        bodyTemplate.setPlainTextContent(r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语歌谣和学习英语单词与短语，快来一起吧')
         bodyTemplate.setTitle('蒲公英使用介绍')
 
         directive = RenderTemplate(bodyTemplate)
         return {
             'directives': [directive],
-            'outputSpeech': r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语电影推荐和学习英语单词与短语，快来一起吧'
+            'outputSpeech': r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语歌谣和学习英语单词与短语，快来一起吧'
         }
 
     def start_IdiomC(self):
