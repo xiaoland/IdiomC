@@ -677,8 +677,14 @@ class PuGongYing(Bot):
                 'outputSpeech': r'好的，我们来听：' + user_story + '，，，，' + idiom_story + '，，，还想再听一遍吗，试着对我说，再来一遍'
             }
         else:
-            idiom_story = self.idiom_story[user_story][0]
-
+            try:
+                idiom_story = self.idiom_story[user_story][0]
+            except KeyError:
+                return {
+                    'outputSpeech': r'真是对不起了，我这里没有这个成语故事'
+                }
+            else:
+                pass
             self.setSessionAttribute("idiom_story_name", user_story, 0)
             self.setSessionAttribute("game_type", 'IdiomStoryNormal', 0)
 
