@@ -38,7 +38,7 @@ class PuGongYing(Bot):
         self.addIntentHandler('start_IdiomGuess', self.start_IdiomGuess)
         # english intent
         self.addIntentHandler('study_english_word', self.study_english_word)
-        self.addIntentHandler('tell_english_joke', self.tell_joke)
+        self.addIntentHandler('tell_english_joke', self.tell_english_joke)
         self.addIntentHandler('tell_english_story', self.tell_english_story)
         self.addIntentHandler('english_songs', self.english_song)
         # english data
