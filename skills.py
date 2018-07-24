@@ -1019,6 +1019,28 @@ class PuGongYing(Bot):
                 'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom
             }
 
+        elif game_type == 'IdiomC':
+
+            rand_id = random.randint(0, 1100)
+            idiom = self.idiom
+            give_idiom = idiom[rand_id]
+
+            self.setSessionAttribute("answer", give_idiom[-1], 0)
+            self.setSessionAttribute("give_idiom", give_idiom, 0)
+            self.setSessionAttribute("game_type", 'IdiomC', 0)
+            self.setSessionAttribute("guan_num", self.getSessionAttribute("guan_num", 0) + 1, 1)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%8E%A5%E9%BE%99.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A04Z%2F-1%2F%2F5d6ad6f2a138858a06a4f971160a007e8081249286e711d53c06410750713d71')
+            bodyTemplate.setPlainTextContent(r'好的，让我们进入下一关，我先来，我出' + give_idiom)
+            bodyTemplate.setTitle(r'蒲公英：成语接龙：第' + str(self.getSessionAttribute("guan_num", 1)) + '关')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，让我们进入下一关，我先来，我出' + give_idiom
+            }
 
 
 
