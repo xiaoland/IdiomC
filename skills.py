@@ -94,6 +94,25 @@ class PuGongYing(Bot):
             ["After burying his mother nine months earlier, a client of the local mortuary finally had enough money to purchase the expensive coffin he'd originally wanted. So we exhumed the body and transferred his deceased mother into the new steel casket. “What's so special about this coffin?” I asked the funeral director. He replied, “It has a lifetime warranty.”在将母亲下葬9个月后，当地殡仪馆的一个客户终于攒够了钱去买那副他早就相中的价值不菲的棺材了。他把母亲的棺材挖了出来，将尸体转移到了那副新的钢制棺材中。“这副棺材有什么特别?”，我问葬礼的承办人。他回答说，“这种棺材终生保修", ""],
             ["“Oh, my poor man,”exclaimed the kind old lady， “It must be dreadful to be lame. But it would be much worse if you were blind.”“You're absolutely right,”said the beggar, obviously an old hand at the game.“When I was blind, people kept giving me foreign coins.”“啊，可怜的人。”善良的老妇人惊叹道。“脚瘸就够惨的了，要是眼瞎就更糟了。”“你说的一点儿没错。”那乞丐说。他显然是乞讨老手。“我眼瞎的时候，人们老是给我外币。”", ""],
             ["A newspaper organized a contest for the best answer to the question: “If a fire broke out in the Louvre, and if you could only save one painting, which one would you carry out?”The winning reply was: “The one nearest the exit.”一份报纸组织了一场竞赛，为下面的问题征集最佳答案：“如果卢浮宫起了火，而你只能救出一幅画，你将救出哪一幅?”获奖的答案是：“最接近门口的那一幅。”", ""],
+            ["A friend and I were standing in line at a fast-food restaurant, waiting to place our order. There was a big sign posted. “No bills larger than $20 will be accepted.”我和一个朋友在快餐店排队订餐，那里很醒目地写着，不接受超过20美元的大钞(请自备零钱)。The woman in front of us, pointing to the sign, remarked, “Believe me, if I HAD a bill larger than $20, I wouldn't be eating here.”我们前边的一个女士指着这个牌子对我们说：“上帝保佑，如果我身上有超过20美元的话，我一定不会在这儿吃饭!”", ""],
+            ["A man walks into a bar and orders a beer. He takes his first sip and sets it down. While he is looking around the bar, a monkey swings down and steals the pint of beer from him before he is able to stop the monkey.一男子去酒吧，点了一杯啤酒。他喝了一口放下。当他环视酒吧时，发现一只猴子荡下来，在他阻止之前，偷走了啤酒。The man asks the barman who owns the monkey. The barman replies the piano player. The man walks over to the piano player and says “Do you know your monkey stole my beer.” The pianist replies “No, but if you hum it, I'll play it.”该男子问酒吧招待，这只猴子是谁的。服务员回答说是钢琴手的。男子走到钢琴手面前问：“你知道你的猴子偷了我的啤酒吗?”钢琴手回答说：“没有，但是如果你能哼唱，我会为你演奏的。”", ""],
+            ["One day, Bill and Tom went to a restaurant for dinner. As soon as the waiter took out two steaks, Bill quickly picked out the bigger steak for himself.一天，比尔和汤姆去餐馆吃饭。当服务员端上两份牛排时，比尔迅速地为自己拿了比较大的那块。Tom wasn't happy about that: “When are you going to learn to be polite?”汤姆对此很不开心：“你什么时候能学会礼貌?”Bill: “If you had the chance to pick first, which one would you pick?”比尔说：“如果让你先拿，你会拿哪个?”Tom: “The smaller piece, of course.”汤姆说：“当然是小的那个。”Bill: “What are you whining about then? The smaller piece is what you want, right?”比尔：“那你还抱怨什么?小的那个不就是你想要的，不是吗?”", ""],
+            ["As the taxi came to a screeching halt at a traffic light, I asked the driver, “Do you agree that 'Time is money'?”出租车在遇到红灯急刹车时，我问司机：“你同意‘时间就是金钱’这种说法吗?”“Well, it's a very common saying. Who will care so much about that?” the driver answered.“哦，这是一个普遍说法。在这个问题上，谁会在意那么多呢?”司机回答说。“Look, the digits in the meter are still running when the car has stopped, ”I pointed at the meter.“看，在车已经停止的情况下，里程表上的数字还在跑。”我指着里程表说。“Oh, yes. You've got a point here. In this case, time is money for both of us. added the driver.“哦，是的。你说的挺有道理的。在这种情况下，时间对我们俩来说都是金钱。”司机补充说。“", ""],
+            ["Q: Why won’t the elephant use the computer?A: He’s afraid of the mouse!鼠标和老鼠的英文皆为mouse", ""],
+            ["Q: Which are the stronger days of the week?A: Saturday and Sunday. The rest are weekdays.week和weak同音：", ""],
+            ["Q: Which runs faster, hot or cold?A: Hot. Everyone can catch a cold.catch有抓住的意思，catch a cold是感冒的意思", ""],
+            ["Q: How did the soldier fit his tank in his house?A: It was a fish tank.tank n. 坦克；水槽；池塘fish tank  鱼缸，金鱼缸", ""],
+            ["Q: How can you tell the ocean is friendly?A: It waves.wave有波涛翻滚的意思，也有挥手致意的意思", ""],
+            ["A little rabbit is happily running through the forest when he stumbles upon a giraffe rolling a joint. The rabbit looks at her and says, “Giraffe my friend, why do you do this? Come with me running through the forest, you'll feel so much better!” The giraffe looks at him, looks at the joint, tosses it and goes off running with the rabbit.有一只小白兔快乐地奔跑在森林中, 在路上它碰到一只正在卷大麻的长颈鹿。小白兔看着长颈鹿说道：“长颈鹿我的朋友，你为什么要做这种事呢？和我一起在森林中奔跑吧，你会感觉心情舒畅很多！”长颈鹿看看小白兔，又看看手里的大麻烟，把大麻烟向身后一扔，跟着小白兔在森林中奔跑。Then they come across an elephant doing coke, so the rabbit again says, “Elephant my friend, why do you do this? Think about your health. Come running with us through the pretty forest, you'll feel so good! The elephant looks at them, looks at his coke, then tosses it and starts running with the rabbit and giraffe 后来它们遇到一只正准备吸食可卡因的大象，小白兔又对大象说：“大象我的朋友，你为什么要做这种事呢？想想自己的健康啊。跟我们一起在这片美丽的森林中奔跑吧，你会感觉好很多！”大象看看它们，又看看手中的可卡因，于是把可卡因向身后一扔，跟着小白兔和长颈鹿一起奔跑。he three animals then come across a lion about to shoot up and the rabbit again says, “Lion my friend, why do you do this? Think about your health! Come running with us through the sunny forest, you will feel so good!”后来它们遇到一只正准备注射毒品的狮子，小白兔又对狮子说：“狮子我的朋友，你为什么要做这种事呢？想想自己的健康啊！跟我们一起在这片阳光明媚的森林中奔跑吧，你会感觉如此美好！The lion looks at him, puts down his needle, and starts to beat the hell out of the rabbit. As the giraffe and elephant watch in horror, they look at him and ask, ”Lion, why did you do this? He was merely trying to help us all!狮子看看小白兔，放下手中的针筒，把小白兔猛揍了一顿。长颈鹿和大象被吓坏了，它们看着狮子问它：“狮子，你为什么要打小白兔呢？它只是想要帮助我们大家啊！The lion answers, “He makes me run around the forest like an idiot each time he's on ecstasy!狮子回答：“这家伙每次嗑了摇头丸就拉着我像白痴一样在森林里乱跑！”", ""],
+            ["A man walks into a bar and orders a beer. He takes his first sip and sets it down. While he is looking around the bar, a monkey swings down and steals the pint of beer from him before he is able to stop the monkey.一男子去酒吧，点了一杯啤酒。他喝了一口放下。当他环视酒吧时，发现一只猴子荡下来，在他阻止之前，偷走了啤酒。The man asks the barman who owns the monkey. The barman replies the piano player. The man walks over to the piano player and says “Do you know your monkey stole my beer.” The pianist replies ”No, but if you hum it, I'll play it.该男子问酒吧招待，这只猴子是谁的。服务员回答说是钢琴手的。男子走到钢琴手面前问：“你知道你的猴子偷了我的啤酒吗?”钢琴手回答说：“没有，但是如果你能哼唱，我会为你演奏的。”", ""],
+            ["A friend and I were standing in line at a fast-food restaurant, waiting to place our order. There was a big sign posted. ", ""],
+            ["a wealthy old lady who lived near dr. swift used to send him presents occasionally by her servant. dr. swift took her presents but never gave the boy anything for his trouble. one day as swift was busy with his writing, the boy rushed into his room, knocked some books out of their place, threw his parcel on the desk and said, my mistress has sent you two of her rabbits.在斯威夫特博士家附近，有一位富有的老妇人，她时常打发仆人给他送礼物。斯威夫特博士接受她的礼物，但从不给小厮任何酬谢。一天，斯威夫特博士正忙着写东西，小厮冲进了他的房间，把书一扒拉，将一个包裹扔在书桌上，说道：我的女主人送给你两只兔子。swift turned round and said, my boy, that is not the way to deliver your parcel（包裹） . now, you sit in my chair, watch my way of doing it and learn your lesson. 斯威夫特转过身来说：孩子，包裹可不是这样送法呀。现在，你坐在我的椅子上，看看我是怎么送的，并要记取这个教训。the boy sat down. swift went out, knocked on his door and waited. the boy said, come in. the doctor entered, walked to his desk and said, if you please sir, my mistress sends her kind regards and hopes you will accept these rabbits which her son shot this morning in her fields.小厮坐了下来，斯威夫特走出去，敲了敲门，等待回音。小厮说进来。博士进了门，走到桌旁说道：先生，我的女主人向您致以亲切的问候，并希望您收下这些兔子，这是她儿子今天早晨在地里打的。the boy answered, thank you, my boy, give your mistress and her son my thanks for their kindness and here is two shillings for yourself.小厮回答说：谢谢你，我的孩子。向你的女主人和她的儿子致谢，谢谢他们的关心。这两个先令是送给你本人的。the doctor laughed, and after that, swift never forgot to give the boy his tip.博士笑了，打那以后，斯威夫特从没忘记送小费给小厮。", ""],
+            ["joe and fred were helping to build a house in a village. the weather was very warm, there was a lot of dust everywhere, and by half past twelve, they were very thirsty, so they stopped work to have their lunch. they found the nearest small bar, went in and sat down with their sandwiches.乔和佛瑞德在一个村子里帮忙盖一间房子。天气很暖和，到处都有许多灰尘。12点半的时候，他们觉得非常口渴，便停下来去吃午饭了。他们找到最近的一家酒吧，走进去坐下吃他们的三明治。good afternoon, gentlemen. what can i get you? the man behind the bar asked.下午好，先生。你们想要点什么？柜台后面的伺应问道下午好，先生。你们想要点什么？柜台后面的伺应问道joe looked at fred and said, beer, i think. yes, a pint of beer each. is that all right for you, fred?乔看了看佛瑞德说：我想，啤酒吧。好，那就每人一品脱啤酒。这样可以吗，佛瑞德？yes, that's all right. fred said. then he turned to the man behind the bar and said, and i want it in a clean glass! don't forget that好的，可以。佛瑞德说。然后他转过去跟柜台后面的侍应说：我要啤酒装在一个干净的杯子里！别忘了。the man behind the bar filled the glasses and brought them to joe and fred. then he said. which of you asked for the clean glass?.柜台后面的侍应倒满杯子后，拿给乔和佛瑞德，接着说：刚才哪一位要干净的杯子的？", ""],
+            ["miles sometime went to the barber's during working hours to have his hair cut. but this was against the office rules: clerks had to have their hair cut in their own time. while miles was at the barber's one day, the manager of the office came in by chance to have his own hair cut and sat just beside him.麦尔斯有时在上班时间去理发馆理发，但这是违反办公室规定的：职员只能利用自己的时间理发。一天，正当麦尔斯理发时，经理碰巧也进来理发，而且就坐在他旁边。hello, miles, the manager said. i see that you are having your hair cut in office time.“你好，麦尔斯，”经理说。我看到你在上班时间理发了”yes, sir, i am,'admitted miles calmly. “you see, sir, it grows in office time.“是的，先生。正是这样。”“麦尔斯平静地承认了。”可先生，你看，头发是在上班时间长的。“not all of it,：“said the manager at once. ”some of it grows in your own time.“不全都是吧，”经理立刻说，“有一些是在你自己的时间里长的。“yes, sir, that's quite true.”answered miles politely, “but i am not having it all cut off.“对呀，先生，你说得很对。“麦尔斯礼貌地回答说，“但我并没有把头发全都剪掉啊。" , ""],
+            ["进步:One student to another: “How are your English lessons coming along?“Fine. I used to be one who couldn”t understand the English men, and now it“s the English men who can't understand me.”一位学生对另一位说：“你的英语 最近学的怎么样?”很好，我过去不懂英国人说话，可现在是英国人不懂我的话了。”", ""],
+            ["半个还是十分之五:Teacher: Would you rather have one half of an orange or five tenths?Gerald: I'd much rather have the half.Teacher: Think carefully, and tell me why.Gerald: Because you lose too much juice when you cut the orange into five tenths.老师：你愿意要半个柑橘，还是十分之五个柑橘?杰拉得：我宁可要半个。老师：仔细想想，说出理由来。杰拉得：因为你如果把柑橘切成十分之五，那柑橘汁就损失太多了。", ""],
+            ["去天堂Sunday School teacher: Hands up all those who want to go to Heaven? Hands up ..... what about you, Terry? You haven't got your hand up -- don't you want to go to Heaven?Terry: I can't. My Mum told me to go straight home.主日学校的教员：想去天堂的人举起手来，把手举起来。。。你呢，哈里?你还没举手呢-- 你不想去天堂吗?哈里： 我去不了，因为妈妈让我一放学就回家。", ""],
+            ["Teacher: Now, Jonathan, if I gave you three rabbits and then the next day I gave you five rabbits, how many rabbits would you have?Jonathan: Nine, sir.Teacher: Nine?Jonathan: I've got one already, sir.老师：好，乔纳森，假如我给你三只兔子，第二天我又给你五只，你一共有多少只兔子?乔纳森：一共有九只，先生。老师：九只?乔纳森：先生，我本来就有一只。", ""],
             ["", ""],
             ["", ""],
             ["", ""],
@@ -126,7 +145,34 @@ class PuGongYing(Bot):
             ["", ""],
             ["", ""],
             ["", ""],
-
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""]
         ]
         self.english_story = [
             "这个大家讲的故事主角是狮子，一个狮子在森林里安静的睡觉，一只老鼠沿着他的身体爬了上去，在狮子头顶上玩的特别开心，当狮子醒来后发生了什么事情？它会和老鼠打架吗？从下面的故事中找找答案吧。The ray of the warm sunlight told us that it was spring. A lion was sleeping peacefully in the forest.While the lion was fast asleep, a mouse went on top of the lion. The bold mouse played happily on top of the lion. “Yuppie! This is really fun.” The mouse ran around thumping and stomping here and there.The lion was not able to sleep with all the racket. The lion knew that there was someone on top of him. So, the lion made a surprise attack and rolled on the ground.And the mouse fell over. When the lion saw the mouse he was relieved and said, “Whew! It was only a mouse.”However, far away a fox had seen the scene. The fox laughed mockingly to the lion and said, “You're as big as a mountain and you're afraid of the mouse. You're a coward!” The fox kept making fun of the Lion.Finally the lion spoke, “I wasn't afraid of the mouse. I was only shocked to find a bold enough animal not afraid to run around on top of a lion.“ When the fox heard this he quietly left.”",
@@ -533,7 +579,7 @@ class PuGongYing(Bot):
         self.waitAnswer()
         self.setSessionAttribute("game_type", 'SkillLaunch', 0)
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T04%3A58%3A51Z%2F-1%2F%2Fd5bb19cee3e1245f859866dfbd810f2353636fa3d1ca6e93f6a210bcc152f8a3')
+        bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-22T15%3A19%3A05Z%2F-1%2F%2F037e76616226e4fb0ac9825a0b2e7b03b1b1eaa511194b49c1b64f6d298132ee')
         bodyTemplate.setPlainTextContent(r'欢迎来到蒲公英，在这里，您可以跟我一起学习英语，也可以跟我互斗成语！试着对我说，我怎么跟你玩')
         bodyTemplate.set_title('蒲公英')
 
