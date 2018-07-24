@@ -972,7 +972,57 @@ class PuGongYing(Bot):
         下一个
         :return:
         """
-        pass
+        self.waitAnswer()
+        game_type = self.getSessionAttribute("game_type", 0)
+        if game_type == 'IdiomGuessMeans':
+
+            guan = self.getSessionAttribute("guan_num", 0)
+            rand_id = random.randint(0, 89)
+            ask = self.idiom_mean[rand_id][1]
+            self.setSessionAttribute("real_answer", self.idiom_mean[rand_id][0], 0)
+            self.setSessionAttribute("idiom_means_num", rand_id, 0)
+            self.setSessionAttribute("game_type", 'IdiomGuessMeans', 0)
+            self.setSessionAttribute("guan_num", guan + 1, 1)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
+            bodyTemplate.setPlainTextContent(r'好的，让我们进入第' + guan + '关，那么这个意思是哪个成语呢：' + ask)
+            bodyTemplate.setTitle(r'蒲公英：填空猜成语：第' + str(guan + 1) + '关')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好的，让我们进入第' + str(guan + 1) + '关，那么这个意思是哪个成语呢：' + ask
+            }
+
+        elif game_type == 'IdiomGuessBlank':
+
+            guan = self.getSessionAttribute("guan_num", 0)
+            rand_id = random.randint(0, 1100)
+            rand_ids = random.randint(0, 3)
+            answer = self.idiom[rand_id]
+            give_idiom = answer.replace(answer[rand_ids] + answer[rand_ids + 1], '*')
+            self.setSessionAttribute("real_answer", answer, 0)
+            self.setSessionAttribute("give_idiom", give_idiom, '')
+            self.setSessionAttribute("game_type", 'IdiomGuessBlank', 0)
+            self.setSessionAttribute("guan_num", guan + 1, 1)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.setBackGroundImage(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
+            bodyTemplate.setPlainTextContent(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
+            bodyTemplate.setTitle(r'蒲公英：意思猜成语：第' + str(guan + 1) + '关')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom
+            }
+
+
+
+
+
 
     def answer_helper(self):
 
@@ -1060,7 +1110,7 @@ class PuGongYing(Bot):
             bodyTemplate.setBackGroundImage(
                 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
             bodyTemplate.setPlainTextContent(r'好的，我们继续填空猜成语：' + give_idiom)
-            bodyTemplate.setTitle(r'蒲公英：填空猜成语：第' + guan + '关')
+            bodyTemplate.setTitle(r'蒲公英：填空猜成语：第' + str(guan) + '关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -1076,7 +1126,7 @@ class PuGongYing(Bot):
             bodyTemplate.setBackGroundImage(
                 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
             bodyTemplate.setPlainTextContent(r'好的，让我们继续意思猜成语' + ask )
-            bodyTemplate.setTitle(r'蒲公英：意思猜成语：第' + guan + '关')
+            bodyTemplate.setTitle(r'蒲公英：意思猜成语：第' + str(guan) + '关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
@@ -1115,6 +1165,7 @@ class PuGongYing(Bot):
             a = 0
             real_answer = self.getSessionAttribute("give_idiom", 0)
             answer = self.getSessionAttribute("answer", 0)
+            guan = self.getSessionAttribute("guan_num", 0)
             if user_answer[0] != real_answer[3]:
 
                 idiom = self.idiom
@@ -1134,15 +1185,21 @@ class PuGongYing(Bot):
                             a = a + 1
                 if new_give_idiom == None or new_give_idiom == '':
                     new_give_idiom = '。。。诶呀！突然发现我也接不了，我们重新来吧，对我说“重新开始”'
+                else:
+                    pass
+                self.setSessionAttribute("answer", new_give_idiom[-1], '')
+                self.setSessionAttribute("give_idiom", new_give_idiom, '')
+                self.setSessionAttribute("guan_num", self.getSessionAttribute("guan_num", 1) + 1, 1)
+
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.setBackGroundImage('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
-                bodyTemplate.setPlainTextContent(r'接错了哦，你可以接' + new_give_idiom)
-                bodyTemplate.setTitle('答对了')
+                bodyTemplate.setPlainTextContent(r'接错了哦，你可以接' + new_give_idiom + '，好的，接下来我出' + new_give_idiom)
+                bodyTemplate.setTitle('蒲公英：成语接龙：第' + str(guan) + '关')
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
                     'directives': [directive],
-                    'outputSpeech': r'接错了哦，你可以接' + new_give_idiom
+                    'outputSpeech': r'接错了哦，你可以接' + new_give_idiom + '，好的，接下来我出' + new_give_idiom
                 }
 
             else:
@@ -1168,18 +1225,18 @@ class PuGongYing(Bot):
                 else:
                     self.setSessionAttribute("answer", new_give_idiom[-1], '')
                     self.setSessionAttribute("give_idiom", new_give_idiom, '')
-                    self.setSessionAttribute("round_num", self.getSessionAttribute("round_num", 1) + 1, 1)
+                    self.setSessionAttribute("guan_num", self.getSessionAttribute("guan_num", 1) + 1, 1)
 
                     bodyTemplate = BodyTemplate1()
                     bodyTemplate.setBackGroundImage(
                         'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
-                    bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，要继续，请对我说“下一关”')
-                    bodyTemplate.setTitle('答对了')
+                    bodyTemplate.setPlainTextContent(r'你真棒，被你接到了，那么我接' + new_give_idiom)
+                    bodyTemplate.setTitle('蒲公英：成语接龙：第' + str(guan) + '关')
 
                     directive = RenderTemplate(bodyTemplate)
                     return {
                         'directives': [directive],
-                        'outputSpeech': r'你真棒，被你接到了，要继续，请对我说“下一关”'
+                        'outputSpeech': r'你真棒，被你接到了，那么我接' + new_give_idiom
                     }
         elif game_type == 'IdiomGuessBlank':
 
@@ -1188,7 +1245,7 @@ class PuGongYing(Bot):
 
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.setBackGroundImage(
-                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
                 bodyTemplate.setPlainTextContent(r'恭喜你，答对了，要继续，请对我说“下一关”')
                 bodyTemplate.setTitle('答对了')
 
@@ -1202,7 +1259,7 @@ class PuGongYing(Bot):
 
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.setBackGroundImage(
-                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
                 bodyTemplate.setPlainTextContent(r'好遗憾，答错了，正确答案是' + real_answer + '，你可以对我说“下一关”即可进入下一关')
                 bodyTemplate.setTitle('答错了')
 
@@ -1218,7 +1275,7 @@ class PuGongYing(Bot):
 
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.setBackGroundImage(
-                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E5%AF%B9.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A13%3A21Z%2F-1%2F%2Fd2f43299bddab52cfb966a8115303b8a18e934e8cb5b7b34ec0c4b376a72c513')
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
                 bodyTemplate.setPlainTextContent(r'恭喜你！答对了！对我说“下一关”即可进入下一关')
                 bodyTemplate.setTitle('答对了')
 
@@ -1231,7 +1288,7 @@ class PuGongYing(Bot):
 
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.setBackGroundImage(
-                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A12%3A59Z%2F-1%2F%2F93d5f20ef7979ef40c3da594888b5227c14e5740eb9c31cc7ac29e1334194680')
+                    'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
                 bodyTemplate.setPlainTextContent(r'好遗憾，答错了，你可以回答' + real_answer + '，你可以对我说“下一关”即可进入下一关')
                 bodyTemplate.setTitle('答错了')
 
