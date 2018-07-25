@@ -1210,13 +1210,15 @@ class PuGongYing(Bot):
             pass
 
 
-        if game_type == 'IdiomC':
+        if game_type == 'IdiomC': # 成语接龙正确错误判断
+
 
             a = 0
             real_answer = self.getSessionAttribute("give_idiom", 0)
             answer = self.getSessionAttribute("answer", 0)
             guan = self.getSessionAttribute("guan_num", 0)
             if user_answer[0] != real_answer[3]:
+                # 错误分支
 
                 idiom = self.idiom
                 while 1 == 1:
@@ -1226,7 +1228,7 @@ class PuGongYing(Bot):
                         break
                     else:
                         if idiom[a][0] == real_answer[-1]:
-                            new_give_idiom = idiom[a]
+                            new_give_idiom = idiom[a][1] # error
                             if new_give_idiom == user_answer:
                                 a = a + 1
                             else:
@@ -1253,6 +1255,8 @@ class PuGongYing(Bot):
                 }
 
             else:
+
+                # 正确分支
                 idiom = self.idiom
                 while 1 == 1:
                         try:
@@ -1288,8 +1292,9 @@ class PuGongYing(Bot):
                         'directives': [directive],
                         'outputSpeech': r'你真棒，被你接到了，那么我接' + new_give_idiom
                     }
-        elif game_type == 'IdiomGuessBlank':
+        elif game_type == 'IdiomGuessBlank': # 填空猜成语正确错误判断
 
+            # 正确分支
             real_answer = self.getSessionAttribute("real_answer", 0)
             if user_answer == real_answer:
 
@@ -1307,6 +1312,7 @@ class PuGongYing(Bot):
 
             else:
 
+                # 错误分支
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.setBackGroundImage(
                     'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-23T13%3A21%3A37Z%2F-1%2F%2F05ab264f18c6ae80d701ea2245435acc0817a67d35e0d8d6522535208ae0e73d')
