@@ -1225,9 +1225,9 @@ class PuGongYing(Bot):
                     except IndexError:
                         break
                     else:
-                        if idiom[a][0] == user_answer[-1]:
+                        if idiom[a][0] == real_answer[-1]:
                             new_give_idiom = idiom[a]
-                            if new_give_idiom == real_answer:
+                            if new_give_idiom == user_answer:
                                 a = a + 1
                             else:
                                 break
