@@ -1228,7 +1228,7 @@ class PuGongYing(Bot):
                         break
                     else:
                         if idiom[a][0] == real_answer[-1]:
-                            new_give_idiom = idiom[a][1] # error
+                            new_give_idiom = idiom[a]
                             if new_give_idiom == user_answer:
                                 a = a + 1
                             else:
