@@ -1233,7 +1233,7 @@ class PuGongYing(Bot):
                                 break
                         else:
                             a = a + 1
-                if new_give_idiom == None or new_give_idiom == '':
+                if not new_give_idiom:
                     new_give_idiom = '。。。诶呀！突然发现我也接不了，我们重新来吧，对我说“重新开始”'
                 else:
                     pass
@@ -1268,7 +1268,7 @@ class PuGongYing(Bot):
                                     break
                             else:
                                 a = a + 1
-                if new_give_idiom == None or new_give_idiom == '':
+                if not new_give_idiom:
                     return {
                         'outputSpeech': '诶呀，你这下真的打败我了，我输了，对我说，重新开始成语接龙，'
                     }
