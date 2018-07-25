@@ -734,7 +734,7 @@ class PuGongYing(Bot):
         except:
             user_story = result
         if not user_story:
-            self.nlu.ask('idiom')
+            self.nlu.ask('idiom_story')
         else:
             pass
 
@@ -789,7 +789,16 @@ class PuGongYing(Bot):
         :return:
         """
         self.waitAnswer()
-        mode = self.getSlots('guess_mode')
+        result = self.getSlots('guess_mode')
+        try:
+            mode = json.loads(result)
+            mode = mode.get("origin")
+        except:
+            mode = result
+        if not mode:
+            self.nlu.ask('guess_mode')
+        else:
+            pass
 
         if mode == 'blank':
 
