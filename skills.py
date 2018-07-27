@@ -830,25 +830,68 @@ class PuGongYing(Bot):
         """
         self.wait_answer()
 
-        rand_id = random.randint(0, 1100)
-        rand_ids = random.randint(0, 3)
-        answer = self.idiom[rand_id]
-        give_idiom = answer.replace(answer[rand_ids] + answer[rand_ids + 1], '*')
-        self.set_session_attribute("real_answer", answer, 0)
-        self.set_session_attribute("give_idiom", give_idiom, '')
-        self.set_session_attribute("game_type", 'IdiomGuessBlank', 0)
-        self.set_session_attribute("guan_num", 1, 1)
+        result = self.get_slots('guess_mode')
+        try:
+            mode = json.loads(result)
+            mode = mode.get("origin")
+        except:
+            mode = result
+        if not mode:
+            self.nlu.ask('guess_mode')
+        else:
+            pass
 
-        bodyTemplate = BodyTemplate1()
-        bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A43Z%2F-1%2F%2F10a6eb0f0593447bacb9c08c0679252e1e32ca08ba2d9c23ac00d75858bb86d1')
-        bodyTemplate.set_plain_text_content(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
-        bodyTemplate.set_title(r'蒲公英：填空猜成语：第一关')
+        if mode == 'Blank':
+            rand_id = random.randint(0, 1100)
+            rand_ids = random.randint(0, 3)
+            answer = self.idiom[rand_id]
+            give_idiom = answer.replace(answer[rand_ids], '*')
+            while 1 == 1:
+                rand_idss = random.randint(0, 3)
+                if rand_idss == rand_ids:
+                    rand_idss = random.randint(0, 3)
+                else:
+                    break
+            give_idiom = give_idiom.replace(answer[rand_idss], '*')
 
-        directive = RenderTemplate(bodyTemplate)
-        return {
-            'directives': [directive],
-            'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom
-        }
+            self.set_session_attribute("real_answer", answer, 0)
+            self.set_session_attribute("give_idiom", give_idiom, '')
+            self.set_session_attribute("game_type", 'IdiomGuessBlank', 0)
+            self.set_session_attribute("guan_num", 1, 1)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A43Z%2F-1%2F%2F10a6eb0f0593447bacb9c08c0679252e1e32ca08ba2d9c23ac00d75858bb86d1')
+            bodyTemplate.set_plain_text_content(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!' + give_idiom)
+            bodyTemplate.set_title(r'蒲公英：填空猜成语：第一关')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom
+            }
+
+        elif mode == 'Means':
+            rand_id = random.randint(0, 111)
+            means = self.idiom_mean
+            ask = means[rand_id][1]
+            answer = means[rand_id][0]
+
+            self.set_session_attribute("real_answer", answer, 0)
+            self.set_session_attribute("game_type", 'IdiomGuessMeans', 0)
+            self.set_session_attribute("guan_num", 1, 1)
+
+            bodyTemplate = BodyTemplate1()
+            bodyTemplate.set_background_image(
+                'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A43Z%2F-1%2F%2F10a6eb0f0593447bacb9c08c0679252e1e32ca08ba2d9c23ac00d75858bb86d1')
+            bodyTemplate.set_plain_text_content(r'好啊，看看这个是哪个成语的意思呢：' + ask)
+            bodyTemplate.set_title(r'蒲公英：意义猜成语：第一关')
+
+            directive = RenderTemplate(bodyTemplate)
+            return {
+                'directives': [directive],
+                'outputSpeech': r'好啊，看看这个是哪个成语的意思呢：' + ask
+            }
+
 
     def tell_english_story(self):
 
