@@ -830,14 +830,14 @@ class PuGongYing(Bot):
         """
         self.wait_answer()
 
-        result = self.get_slots('guess_mode')
+        result = self.get_slots('guess_idiom_mode')
         try:
             mode = json.loads(result)
             mode = mode.get("origin")
         except:
             mode = result
         if not mode:
-            self.nlu.ask('guess_mode')
+            self.nlu.ask('guess_idiom_mode')
         else:
             pass
 
