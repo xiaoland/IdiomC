@@ -33,7 +33,7 @@ def application(environ, start_response):
 
         bot = PuGongYing(request_body)
         #添加错误回调方法
-        bot.set_call_back(callback)
+        bot.set_callback(callback)
 
         #验证签名enableVerifyRequestSign  disableVerifyRequestSign 关闭验证签名
         # bot.initCertificate(environ).enableVerifyRequestSign()
