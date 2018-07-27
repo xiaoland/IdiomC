@@ -703,7 +703,7 @@ class PuGongYing(Bot):
         self.wait_answer()
         self.set_session_attribute("game_type", 'SkillLaunch', 0)
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png')
+        bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png')
         bodyTemplate.set_plain_text_content(r'欢迎来到蒲公英，在这里，您可以跟我一起学习英语，也可以跟我互斗成语！试着对我说，我怎么跟你玩')
         bodyTemplate.set_title('蒲公英')
 
@@ -722,7 +722,7 @@ class PuGongYing(Bot):
         self.wait_answer()
         self.set_session_attribute("game_type", 'welcome', 0)
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png')
+        bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E5%BC%80%E5%A7%8B%E7%95%8C%E9%9D%A2.png')
         bodyTemplate.set_plain_text_content(r'使用手册：我们这里有成语接龙、猜成语，也有英语故事、成语故事、英语笑话，还有英语歌谣和学习英语单词与短语，快来一起吧')
         bodyTemplate.set_title('蒲公英使用介绍')
 
@@ -749,7 +749,7 @@ class PuGongYing(Bot):
         self.set_session_attribute("guan_num", 1, 1)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%8E%A5%E9%BE%99.png')
+        bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%8E%A5%E9%BE%99.png')
         bodyTemplate.set_plain_text_content(r'我先来，我出：' + give_idiom)
         bodyTemplate.set_title(r'蒲公英：成语接龙：第一关')
 
@@ -790,7 +790,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("game_type", 'IdiomStoryRandom', 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png')
+            bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png')
             bodyTemplate.set_plain_text_content(r'好的，我们来听：' + '：' + idiom_story + '，，，还想再听一遍吗，试着对我说：再来一遍')
             bodyTemplate.set_title('蒲公英：成语故事：' + user_story)
 
@@ -812,7 +812,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("game_type", 'IdiomStoryNormal', 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png')
+            bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png')
             bodyTemplate.set_plain_text_content(r'好的，我们来听：' + user_story +  '：' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
             bodyTemplate.set_title(user_story)
 
@@ -840,7 +840,7 @@ class PuGongYing(Bot):
         self.set_session_attribute("guan_num", 1, 1)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E7%8C%9C%E6%88%90%E8%AF%AD.png')
+        bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E7%8C%9C%E6%88%90%E8%AF%AD.png')
         bodyTemplate.set_plain_text_content(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
         bodyTemplate.set_title(r'蒲公英：填空猜成语：第一关')
 
@@ -862,7 +862,7 @@ class PuGongYing(Bot):
         self.set_session_attribute("english_story_num", rand_id, 0)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%8B%B1%E8%AF%AD%E6%95%85%E4%BA%8B.png')
+        bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%8B%B1%E8%AF%AD%E6%95%85%E4%BA%8B.png')
         bodyTemplate.set_plain_text_content(r'好啊，让我们一起来看英语故事吧！' + story + '。好看吗？要再来一个吗？试着对我说“再来一个”')
         bodyTemplate.set_title(r'蒲公英：英语故事')
 
@@ -884,7 +884,7 @@ class PuGongYing(Bot):
         self.set_session_attribute("english_joke_num", rand_id, 0)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%8B%B1%E8%AF%AD%E7%AC%91%E8%AF%9D.png')
+        bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%8B%B1%E8%AF%AD%E7%AC%91%E8%AF%9D.png')
         bodyTemplate.set_plain_text_content(r'好啊，让我们来搞笑一下吧！' + joke + '。好笑吗？试着对我说“再来一个”')
         bodyTemplate.set_title(r'蒲公英：英语笑话')
 
@@ -906,7 +906,7 @@ class PuGongYing(Bot):
         self.set_session_attribute("english_word_num", rand_id, 0)
 
         bodyTemplate = BodyTemplate1()
-        bodyTemplate.set_back_ground_image(self.english_word[rand_id][1])
+        bodyTemplate.set_background_image(self.english_word[rand_id][1])
         bodyTemplate.set_plain_text_content(r'这个是' + self.english_word[rand_id][0])
         bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0] + '，再来一个呗，试着对我说“下一个”')
 
@@ -979,7 +979,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("english_word_num", rand_id, 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T05%3A08%3A49Z%2F-1%2F%2F250250b95cdc93cdb36f2f7d6ac4661f179b0be1545978e0ac435c9ca49f24a7')
+            bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T05%3A08%3A49Z%2F-1%2F%2F250250b95cdc93cdb36f2f7d6ac4661f179b0be1545978e0ac435c9ca49f24a7')
             bodyTemplate.set_plain_text_content(r'这个是' + self.english_word[rand_id][0])
             bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
 
@@ -1005,7 +1005,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("english_joke_num", rand_id, 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%8B%B1%E8%AF%AD%E7%AC%91%E8%AF%9D.png')
+            bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%8B%B1%E8%AF%AD%E7%AC%91%E8%AF%9D.png')
             bodyTemplate.set_plain_text_content(r'好的，笑一笑更健康！让我们再来一个' + joke)
             bodyTemplate.set_title(r'蒲公英：英语笑话')
 
@@ -1031,7 +1031,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("game_type", 'EnglishStory', 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%8B%B1%E8%AF%AD%E6%95%85%E4%BA%8B.png')
+            bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E8%8B%B1%E8%AF%AD%E6%95%85%E4%BA%8B.png')
             bodyTemplate.set_plain_text_content(r'好的，英语故事等着您呢！' + story)
             bodyTemplate.set_title(r'蒲公英：英语故事')
 
@@ -1050,7 +1050,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("game_type", 'IdiomStoryRandom', 0)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image(
+            bodyTemplate.set_background_image(
                 'https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png')
             bodyTemplate.set_plain_text_content(r'好的，再来一个' + '：' + idiom_story)
             bodyTemplate.set_title('蒲公英：成语故事：' + user_story)
@@ -1084,7 +1084,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("guan_num", guan + 1, 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E7%8C%9C%E6%88%90%E8%AF%AD.png')
+            bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E7%8C%9C%E6%88%90%E8%AF%AD.png')
             bodyTemplate.set_plain_text_content(r'好的，让我们进入第' + guan + '关，那么这个意思是哪个成语呢：' + ask)
             bodyTemplate.set_title(r'蒲公英：填空猜成语：第' + str(guan + 1) + '关')
 
@@ -1107,7 +1107,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("guan_num", guan + 1, 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image(
+            bodyTemplate.set_background_image(
                 'https://github.com/xiaoland/xiaozi/blob/master/%E7%8C%9C%E6%88%90%E8%AF%AD.png')
             bodyTemplate.set_plain_text_content(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
             bodyTemplate.set_title(r'蒲公英：意思猜成语：第' + str(guan + 1) + '关')
@@ -1130,7 +1130,7 @@ class PuGongYing(Bot):
             self.set_session_attribute("guan_num", self.get_session_attribute("guan_num", 0) + 1, 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image(
+            bodyTemplate.set_background_image(
                 'https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%8E%A5%E9%BE%99.png')
             bodyTemplate.set_plain_text_content(r'好的，让我们进入下一关，我先来，我出' + give_idiom)
             bodyTemplate.set_title(r'蒲公英：成语接龙：第' + str(self.get_session_attribute("guan_num", 1)) + '关')
@@ -1178,7 +1178,7 @@ class PuGongYing(Bot):
             if helper_idiom == '' or helper_idiom == None:
 
                 bodyTemplate = BodyTemplate1()
-                bodyTemplate.set_back_ground_image(
+                bodyTemplate.set_background_image(
                     'https://github.com/xiaoland/xiaozi/blob/master/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png')
                 bodyTemplate.set_plain_text_content(r'诶呀，提示不见了，努力想想吧')
 
@@ -1191,7 +1191,7 @@ class PuGongYing(Bot):
             else:
 
                 bodyTemplate = BodyTemplate1()
-                bodyTemplate.set_back_ground_image(
+                bodyTemplate.set_background_image(
                     'https://github.com/xiaoland/xiaozi/blob/master/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png')
                 bodyTemplate.set_plain_text_content(r'给你前两个字，想想,' + helper_idiom + '**如果实在想不到，可以对我说，跳过，')
 
@@ -1203,7 +1203,7 @@ class PuGongYing(Bot):
         elif game_type == 'IdiomGuessBlank':
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image(
+            bodyTemplate.set_background_image(
                 'https://github.com/xiaoland/xiaozi/blob/master/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png')
             bodyTemplate.set_plain_text_content(r'这个那么简单，不用提示了吧')
 
@@ -1215,7 +1215,7 @@ class PuGongYing(Bot):
         elif game_type == 'IdiomGuessMeans':
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image(
+            bodyTemplate.set_background_image(
                 'https://github.com/xiaoland/xiaozi/blob/master/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png')
             bodyTemplate.set_plain_text_content(r'给你前两个字，想一想，' + self.get_session_attribute("real_answer", 0)[0] + self.get_session_attribute("real_answer", 0)[1])
 
@@ -1241,7 +1241,7 @@ class PuGongYing(Bot):
         if game_type == 'IdiomC':
             give_idiom = self.get_session_attribute("give_idiom", '')
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image(
+            bodyTemplate.set_background_image(
                 'https://github.com/xiaoland/xiaozi/blob/master/%E6%88%90%E8%AF%AD%E6%8E%A5%E9%BE%99.png')
             bodyTemplate.set_plain_text_content(r'好的，我们继续，我刚刚出了：' + give_idiom)
 
@@ -1256,7 +1256,7 @@ class PuGongYing(Bot):
             guan = self.get_session_attribute("guan_num", 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image(
+            bodyTemplate.set_background_image(
                 'https://github.com/xiaoland/xiaozi/blob/master/%E7%8C%9C%E6%88%90%E8%AF%AD.png')
             bodyTemplate.set_plain_text_content(r'好的，我们继续填空猜成语：' + give_idiom)
             bodyTemplate.set_title(r'蒲公英：填空猜成语：第' + str(guan) + '关')
@@ -1272,7 +1272,7 @@ class PuGongYing(Bot):
             guan = self.get_session_attribute("guan_num", 1)
 
             bodyTemplate = BodyTemplate1()
-            bodyTemplate.set_back_ground_image(
+            bodyTemplate.set_background_image(
                 'https://github.com/xiaoland/xiaozi/blob/master/%E7%8C%9C%E6%88%90%E8%AF%AD.png')
             bodyTemplate.set_plain_text_content(r'好的，让我们继续意思猜成语' + ask )
             bodyTemplate.set_title(r'蒲公英：意思猜成语：第' + str(guan) + '关')
@@ -1343,7 +1343,7 @@ class PuGongYing(Bot):
                 self.set_session_attribute("guan_num", self.get_session_attribute("guan_num", 1) + 1, 1)
 
                 bodyTemplate = BodyTemplate1()
-                bodyTemplate.set_back_ground_image('https://github.com/xiaoland/xiaozi/blob/master/%E7%AD%94%E9%94%99%E4%BA%86.png')
+                bodyTemplate.set_background_image('https://github.com/xiaoland/xiaozi/blob/master/%E7%AD%94%E9%94%99%E4%BA%86.png')
                 bodyTemplate.set_plain_text_content(r'接错了哦，你可以接' + new_give_idiom + '，好的，接下来我出' + new_give_idiom)
                 bodyTemplate.set_title('蒲公英：成语接龙：第' + str(guan) + '关')
 
@@ -1381,7 +1381,7 @@ class PuGongYing(Bot):
                     self.set_session_attribute("guan_num", self.get_session_attribute("guan_num", 1) + 1, 1)
 
                     bodyTemplate = BodyTemplate1()
-                    bodyTemplate.set_back_ground_image(
+                    bodyTemplate.set_background_image(
                         'https://github.com/xiaoland/xiaozi/blob/master/%E7%AD%94%E5%AF%B9.png')
                     bodyTemplate.set_plain_text_content(r'你真棒，被你接到了，那么我接' + new_give_idiom)
                     bodyTemplate.set_title('蒲公英：成语接龙：第' + str(guan) + '关')
@@ -1398,7 +1398,7 @@ class PuGongYing(Bot):
             if user_answer == real_answer:
 
                 bodyTemplate = BodyTemplate1()
-                bodyTemplate.set_back_ground_image(
+                bodyTemplate.set_background_image(
                     'https://github.com/xiaoland/xiaozi/blob/master/%E7%AD%94%E5%AF%B9.png')
                 bodyTemplate.set_plain_text_content(r'恭喜你，答对了，要继续，请对我说“下一关”')
                 bodyTemplate.set_title('答对了')
@@ -1413,7 +1413,7 @@ class PuGongYing(Bot):
 
                 # 错误分支
                 bodyTemplate = BodyTemplate1()
-                bodyTemplate.set_back_ground_image(
+                bodyTemplate.set_background_image(
                     'https://github.com/xiaoland/xiaozi/blob/master/%E7%AD%94%E9%94%99%E4%BA%86.png')
                 bodyTemplate.set_plain_text_content(r'好遗憾，答错了，正确答案是' + real_answer + '，你可以对我说“下一关”即可进入下一关')
                 bodyTemplate.set_title('答错了')
@@ -1429,7 +1429,7 @@ class PuGongYing(Bot):
             if user_answer == real_answer:
 
                 bodyTemplate = BodyTemplate1()
-                bodyTemplate.set_back_ground_image(
+                bodyTemplate.set_background_image(
                     'https://github.com/xiaoland/xiaozi/blob/master/%E7%AD%94%E5%AF%B9.png')
                 bodyTemplate.set_plain_text_content(r'恭喜你！答对了！对我说“下一关”即可进入下一关')
                 bodyTemplate.set_title('答对了')
@@ -1442,7 +1442,7 @@ class PuGongYing(Bot):
             else:
 
                 bodyTemplate = BodyTemplate1()
-                bodyTemplate.set_back_ground_image(
+                bodyTemplate.set_background_image(
                     'https://github.com/xiaoland/xiaozi/blob/master/%E7%AD%94%E9%94%99%E4%BA%86.png')
                 bodyTemplate.set_plain_text_content(r'好遗憾，答错了，你可以回答' + real_answer + '，你可以对我说“下一关”即可进入下一关')
                 bodyTemplate.set_title('答错了')
