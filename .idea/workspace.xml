@@ -14,8 +14,8 @@
       <file leaf-file-name="skills.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skills.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12800">
-              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+            <state relative-caret-position="216">
+              <caret line="1118" column="52" selection-start-line="1118" selection-start-column="52" selection-end-line="1118" selection-end-column="52" />
               <folding>
                 <element signature="e#50#60#0" expanded="true" />
               </folding>
@@ -45,11 +45,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1448" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="15" />
+    <option name="width" value="2275" />
+    <option name="height" value="1369" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -99,10 +99,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1448" y="-8" width="1456" height="876" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13958333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13085938" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -184,8 +184,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skills.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12800">
-          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+        <state relative-caret-position="216">
+          <caret line="1118" column="52" selection-start-line="1118" selection-start-column="52" selection-end-line="1118" selection-end-column="52" />
           <folding>
             <element signature="e#50#60#0" expanded="true" />
           </folding>

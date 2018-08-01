@@ -757,7 +757,7 @@ class PuGongYing(Bot):
         else:
             try:
                 idiom_story = self.idiom_story[user_story][0]
-            except KeyError:
+            except:
                 return {
                     'outputSpeech': r'真是对不起，我这里没有这个成语故事'
                 }
