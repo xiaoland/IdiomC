@@ -124,52 +124,7 @@ class PuGongYing(Bot):
             ["“How do you make out that George Washington was the first man?“asked the teacher, smiling indulgently.", "“Because, “said the little boy, “he was first in war, first in peace, and first in the hearts of his countrymen.“But at this point a larger boy held up his hand.”the history b“I don't know what his name was,“said the larger boy, “but I know it wasn't George Washington, ma'am, because ook says George Washington married a widow, so, of course, there must have been a man ahead of him."],
             ["“A married couple on the farm are visited by an alien couple. The alien couple asked the human couple if they would like to swap partners for sex. ", "They agree, the human woman and alien man are together. She says, ”“You have a small penis!”“ The alien man replies, ”“pull my ears!”“ ......A man enters a barber shop for a shaveWhile the barber is foaming him up, he mentions the problem he has getting a close shave around his cheeks. I have just the thing,”“ says the barber, taking a small wooden ball from a nearby drawer. ”“Just place this between your cheek and gum.”“ ......”", ""],
             ["”One girl went to the preacher and confessed her sin.”, “Girl: Father, I have sinned.”reacher: What did you do, little girl?“irl: Yesterday, I called a man a ”“son of a Bitch.”“", ""],
-            ["There was a farmer who raised watermelons.“, ”He was doing pretty well but he was disturbed by some local kids who would sneak into his watermelon patch（西瓜地）at night and eat his watermelons. After some careful thought he comes up with a clever idea that he thinks will scare the kids away for sure. So he makes up a sign and posts it in the field. ", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""]
+            ["There was a farmer who raised watermelons.“, ”He was doing pretty well but he was disturbed by some local kids who would sneak into his watermelon patch（西瓜地）at night and eat his watermelons. After some careful thought he comes up with a clever idea that he thinks will scare the kids away for sure. So he makes up a sign and posts it in the field. ", ""]
         ]
         self.english_story = [
             "这个大家讲的故事主角是狮子，一个狮子在森林里安静的睡觉，一只老鼠沿着他的身体爬了上去，在狮子头顶上玩的特别开心，当狮子醒来后发生了什么事情？它会和老鼠打架吗？从下面的故事中找找答案吧。The ray of the warm sunlight told us that it was spring. A lion was sleeping peacefully in the forest.While the lion was fast asleep, a mouse went on top of the lion. The bold mouse played happily on top of the lion. “Yuppie! This is really fun.” The mouse ran around thumping and stomping here and there.The lion was not able to sleep with all the racket. The lion knew that there was someone on top of him. So, the lion made a surprise attack and rolled on the ground.And the mouse fell over. When the lion saw the mouse he was relieved and said, “Whew! It was only a mouse.”However, far away a fox had seen the scene. The fox laughed mockingly to the lion and said, “You're as big as a mountain and you're afraid of the mouse. You're a coward!” The fox kept making fun of the Lion.Finally the lion spoke, “I wasn't afraid of the mouse. I was only shocked to find a bold enough animal not afraid to run around on top of a lion.“ When the fox heard this he quietly left.”",
@@ -804,7 +759,7 @@ class PuGongYing(Bot):
                 idiom_story = self.idiom_story[user_story][0]
             except KeyError:
                 return {
-                    'outputSpeech': r'真是对不起了，我这里没有这个成语故事'
+                    'outputSpeech': r'真是对不起，我这里没有这个成语故事'
                 }
             else:
                 pass
@@ -1140,10 +1095,18 @@ class PuGongYing(Bot):
         elif game_type == 'IdiomGuessBlank':
 
             guan = self.get_session_attribute("guan_num", 0)
+            real_answer = self.get_session_attribute("real_answer", 0)
             rand_id = random.randint(0, 1100)
             rand_ids = random.randint(0, 3)
             answer = self.idiom[rand_id]
-            give_idiom = answer.replace(answer[rand_ids] + answer[rand_ids + 1], '*')
+            give_idiom = answer.replace(answer[rand_ids], '*')
+            while 1 == 1:
+                rand_idss = random.randint(0, 3)
+                if rand_idss == rand_ids:
+                    rand_idss = random.randint(0, 3)
+                else:
+                    break
+            give_idiom = give_idiom.replace(answer[rand_idss], '*')
             self.set_session_attribute("real_answer", answer, 0)
             self.set_session_attribute("give_idiom", give_idiom, '')
             self.set_session_attribute("game_type", 'IdiomGuessBlank', 0)
@@ -1152,13 +1115,13 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.set_background_image(
                 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A43Z%2F-1%2F%2F10a6eb0f0593447bacb9c08c0679252e1e32ca08ba2d9c23ac00d75858bb86d1')
-            bodyTemplate.set_plain_text_content(r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom)
+            bodyTemplate.set_plain_text_content(r'上一题的答案是' + real_answer + '那么接下来这个你可以还原吗：' + give_idiom)
             bodyTemplate.set_title(r'蒲公英：意思猜成语：第' + str(guan + 1) + '关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
-                'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧!   ' + give_idiom
+                'outputSpeech': r'上一题的答案是' + real_answer + '那么接下来这个你可以还原吗：' + give_idiom
             }
 
         elif game_type == 'IdiomC':
@@ -1458,13 +1421,13 @@ class PuGongYing(Bot):
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.set_background_image(
                     'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A49Z%2F-1%2F%2F8b3359c1a384bf5c4ace5265ccb0d5ddacdc7042c0145ddf1cc91b7844f247f5')
-                bodyTemplate.set_plain_text_content(r'好遗憾，答错了，正确答案是' + real_answer + '，你可以对我说“下一关”即可进入下一关')
+                bodyTemplate.set_plain_text_content(r'好遗憾，答错了，对我说“下一关”即可进入下一关')
                 bodyTemplate.set_title('答错了')
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
                     'directives': [directive],
-                    'outputSpeech': r'好遗憾，答错了，正确答案是' + real_answer + '，你可以对我说“下一关”即可进入下一关'
+                    'outputSpeech': r'好遗憾，答错了，对我说“下一关”即可进入下一关'
                 }
         elif game_type == 'IdiomGuessMeans':
 
@@ -1487,13 +1450,13 @@ class PuGongYing(Bot):
                 bodyTemplate = BodyTemplate1()
                 bodyTemplate.set_background_image(
                     'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A49Z%2F-1%2F%2F8b3359c1a384bf5c4ace5265ccb0d5ddacdc7042c0145ddf1cc91b7844f247f5')
-                bodyTemplate.set_plain_text_content(r'好遗憾，答错了，你可以回答' + real_answer + '，你可以对我说“下一关”即可进入下一关')
+                bodyTemplate.set_plain_text_content(r'好遗憾，答错了，对我说“下一关”即可进入下一关')
                 bodyTemplate.set_title('答错了')
 
                 directive = RenderTemplate(bodyTemplate)
                 return {
                     'directives': [directive],
-                    'outputSpeech': r'好遗憾，答错了，你可以回答' + real_answer + '，你可以对我说“下一关”即可进入下一关'
+                    'outputSpeech': r'好遗憾，答错了，对我说“下一关”即可进入下一关'
                 }
 
     def quesheng(self):
