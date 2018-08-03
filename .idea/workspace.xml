@@ -14,8 +14,8 @@
       <file leaf-file-name="skills.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skills.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="1118" column="52" selection-start-line="1118" selection-start-column="52" selection-end-line="1118" selection-end-column="52" />
+            <state relative-caret-position="273">
+              <caret line="908" column="75" selection-start-line="908" selection-start-column="75" selection-end-line="908" selection-end-column="75" />
               <folding>
                 <element signature="e#50#60#0" expanded="true" />
               </folding>
@@ -35,6 +35,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>english_word</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -46,16 +51,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
+    <option name="x" value="66" />
     <option name="y" value="15" />
     <option name="width" value="2275" />
-    <option name="height" value="1369" />
+    <option name="height" value="1370" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -67,11 +73,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xiaolan" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -102,16 +107,16 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13085938" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -125,6 +130,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/skills.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20995">
+          <caret line="1118" column="52" selection-start-line="1118" selection-start-column="52" selection-end-line="1118" selection-end-column="52" />
+          <folding>
+            <element signature="e#50#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotServer.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/skills.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20311">
@@ -184,8 +205,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skills.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="1118" column="52" selection-start-line="1118" selection-start-column="52" selection-end-line="1118" selection-end-column="52" />
+        <state relative-caret-position="273">
+          <caret line="908" column="75" selection-start-line="908" selection-start-column="75" selection-end-line="908" selection-end-column="75" />
           <folding>
             <element signature="e#50#60#0" expanded="true" />
           </folding>

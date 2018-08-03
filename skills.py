@@ -197,33 +197,33 @@ class PuGongYing(Bot):
             "There is a naughty boy in a village. He likes telling lies. One day he wants to make fun of the farmers. So he shouts, “Wolf! Wolf! Wolf is coming!” The kind farmers are working in the field. They hear the shout, and hurry to help the boy. But when get there, the boy says: “There isn’t a wolf. I’m joking. The farers are angry and go back to their field. After a while the biy shouts again, “Wolf! Wolf! Wolf is coming!” And the farmers come and are cheated again. The boy laughs and laughs. They say, “You tell lies. We will not believe you.” Later a wolf really comes. The boy is very scared. “Wolf! Wolf! Wolf is coming!” the boy shouts and shouts. “Help! Help!” But no one comes. And wolf eats the naughty boy."
         ]
         self.english_word = [
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
-            ['', ''],
+            ['樱桃', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%A8%B1%E6%A1%83.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A57Z%2F-1%2F%2Fd4706b9c726e64d0e4821de3c20e1f40d7a7e184611a2cd8d0fb7e0f5d60f833'],
+            ['香蕉', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E9%A6%99%E8%95%89.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A57Z%2F-1%2F%2F398a8f54eb82cc5e99dbc64fca24e8c40814775e4d1f6b8cf38beba689d947f5'],
+            ['竹笋', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AB%B9%E7%AC%8B.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A57Z%2F-1%2F%2F2393d1d81a3ffb352bd97bdbb24f5fc8b20b55d9ce2f017c65137b8be5029aae'],
+            ['西瓜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%A5%BF%E7%93%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A55Z%2F-1%2F%2Fe163929a1f0617704a394703f13ab302e4b312f073e5d2cb4905d85c98fc2f62'],
+            ['桃子', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%A1%83%E5%AD%90.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A55Z%2F-1%2F%2F3b4a1409f3f20ca7c433b468af6efe7a312c3f268e417d32d5d0be02005f5c42'],
+            ['杨桃', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%9D%A8%E6%A1%83.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A55Z%2F-1%2F%2Ffa4e2809c8f3aff67ab8858caaa3874d59766fbd937b55fa0a985d0c9056a1e3'],
+            ['圣女果', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E5%9C%A3%E5%A5%B3%E6%9E%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A54Z%2F-1%2F%2F2dac0d8e661918663cd9e8bc7fd7c0f9e65db097aabb4419b4e03b068a3cd9ab'],
+            ['奇异果', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E5%A5%87%E5%BC%82%E6%9E%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A54Z%2F-1%2F%2F47e69323102828a12d6f6f52ea1b47641c61379c8ba601870cb57dca10bb5380'],
+            ['生姜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%94%9F%E5%A7%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A54Z%2F-1%2F%2F25003b9efcd720bd4f86a7ad86b91ff77702bfd77a23e802fa878b27b42c091b'],
+            ['菠萝', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8F%A0%E8%90%9D.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2F179fa324a90cda683031b3eb5b8be415381b53b42880230a35babf54dbfaa38a'],
+            ['土豆', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E5%9C%9F%E8%B1%86.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A54Z%2F-1%2F%2F47740acb6b199022c93dcd1d3106455f18c9e1c5e6a9e58266622d5ccb1901d7'],
+            ['哈密瓜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E5%93%88%E5%AF%86%E7%93%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2F61e83e0a8267c4c6922a01cdccafc1dd9bee41899a524d4179317d291af8e3ca'],
+            ['大葱', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E5%A4%A7%E8%91%B1.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2Fb2240af1d854949fffbeec169a610cd05b9d5f9ec64d1822b2c1ca4c86ea39bb'],
+            ['冬瓜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E5%86%AC%E7%93%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2F3145ab0fb4b038bfef9d508562ef33d012c015ca542dde9e1ebfad6ba4707392'],
+            ['榴莲', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%A6%B4%E8%8E%B2.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2Fb8d39973c4acf5a89f658cec40fac5baff10e724a0f635294f59abea98ac1903'],
+            ['荔枝', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8D%94%E6%9E%9D.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2Fc3241f537b5fbf6d2530472990e193e6034906b636271de63d5a99396996f785'],
+            ['红薯', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%BA%A2%E8%96%AF.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2F9a8625f67a2b8f961adfd0e3f181f3689bfe83620cea3c0e69d503237381984e'],
+            ['芦笋', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8A%A6%E7%AC%8B.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2F7fd00c097a4f4e39ce452da4b42cac414c16046b25d412f3dc5285be4762f608'],
+            ['南瓜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E5%8D%97%E7%93%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2Fe4ef544a36b61c499cea9731128f7babdba2a46697a8ba36014fcdd4a55c555b'],
+            ['萝卜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%90%9D%E5%8D%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2Fa16d2874e01468bf4e85159d01d0f0d0752ec6fd19b2cae1e6dc523e51d72ec2'],
+            ['柠檬', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%9F%A0%E6%AA%AC.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2F831247942bca0d95289834f153ce402fd2e5146b0b9a16e45fc5bd6b9dc8a60f'],
+            ['葡萄', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%91%A1%E8%90%84.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2F1e9688f4dd1dfc55a76f141202679182c7ebe8ff0ab35bcbe113ef0ba7b3e20a'],
+            ['苹果', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B9%E6%9E%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A52Z%2F-1%2F%2Fb6367e77120b8cca55e1b9266393e7bffab699f708921f6aacef6dafd3e128f2'],
+            ['菠菜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8F%A0%E8%8F%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A51Z%2F-1%2F%2F373a4a6d6eaf6fc2f21892221e2629bd8d19ee719d5b9c40e6b9122078bd4317'],
+            ['白菜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%99%BD%E8%8F%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A51Z%2F-1%2F%2F17c97e9d628100d93098d9e818005a53dfe468db2c9bf86d2b867a700977d156'],
+            ['白萝卜', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%99%BD%E8%90%9D%E5%8D%9C.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A51Z%2F-1%2F%2Fbeb2f2f5c5fd7f5ec108501c7f11670ae120780cca3d7bef145be85db8e93ff9'],
+            ['橙子', 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%A9%99%E5%AD%90.jpg?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-08-03T08%3A04%3A51Z%2F-1%2F%2F688d647481406e339ee4f8adcf5e7c461802684bbb0e01bdfcd5bcb6ac8637ad'],
             ['', ''],
             ['', ''],
             ['', ''],
@@ -905,13 +905,13 @@ class PuGongYing(Bot):
 
         bodyTemplate = BodyTemplate1()
         bodyTemplate.set_background_image(self.english_word[rand_id][1])
-        bodyTemplate.set_plain_text_content(r'这个是' + self.english_word[rand_id][0])
-        bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0] + '，再来一个呗，试着对我说“下一个”')
+        bodyTemplate.set_plain_text_content(self.english_word[rand_id][0])
+        bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
 
         directive = RenderTemplate(bodyTemplate)
         return {
             'directives': [directive],
-            'outputSpeech': r'这个是' + self.english_word[rand_id][0] + '，再来一个呗，试着对我说“下一个”'
+            'outputSpeech': r'这个是' + self.english_word[rand_id][0] + '，要再来一个吗，试着对我说“再来一个”'
         }
 
 
