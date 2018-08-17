@@ -737,7 +737,7 @@ class PuGongYing(Bot):
             self.nlu.ask('idiom_story')
         elif user_story == 'random':
 
-            rand_id = random.randint(0, 30)
+            rand_id = random.randint(0, 144)
             user_story = self.idiom_story_name[rand_id]
             idiom_story = self.idiom_story[user_story][0]
 
@@ -855,7 +855,7 @@ class PuGongYing(Bot):
         :return:
         """
         self.set_session_attribute("game_type", 'EnglishStory', 0)
-        rand_id = random.randint(0, 65)
+        rand_id = random.randint(0, 66)
         story = self.english_story[rand_id]
         self.set_session_attribute("english_story_num", rand_id, 0)
 
@@ -877,7 +877,7 @@ class PuGongYing(Bot):
         :return:
         """
         self.set_session_attribute("game_type", 'EnglishJoke', 0)
-        rand_id = random.randint(0, 65)
+        rand_id = random.randint(0, 42)
         joke = self.english_joke[rand_id][0]
         self.set_session_attribute("english_joke_num", rand_id, 0)
 
@@ -900,12 +900,12 @@ class PuGongYing(Bot):
         :return:
         """
         self.set_session_attribute("game_type", 'EnglishWord', 0)
-        rand_id = random.randint(0, 123)
+        rand_id = random.randint(0, 25)
         self.set_session_attribute("english_word_num", rand_id, 0)
 
         bodyTemplate = BodyTemplate1()
         bodyTemplate.set_background_image(self.english_word[rand_id][1])
-        bodyTemplate.set_plain_text_content(self.english_word[rand_id][0])
+        bodyTemplate.set_plain_text_content()
         bodyTemplate.set_title(r'蒲公英：英语单词：' + self.english_word[rand_id][0])
 
         directive = RenderTemplate(bodyTemplate)
