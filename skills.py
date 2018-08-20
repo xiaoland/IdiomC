@@ -1083,8 +1083,8 @@ class PuGongYing(Bot):
 
             bodyTemplate = BodyTemplate1()
             bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%8C%9C%E6%88%90%E8%AF%AD.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A43Z%2F-1%2F%2F10a6eb0f0593447bacb9c08c0679252e1e32ca08ba2d9c23ac00d75858bb86d1')
-            bodyTemplate.set_plain_text_content(r'好的，让我们进入第' + guan + '关，那么这个意思是哪个成语呢：' + ask)
-            bodyTemplate.set_title(r'蒲公英：填空猜成语：第' + str(guan + 1) + '关')
+            bodyTemplate.set_plain_text_content(r'好的，让我们进入第' + str(guan) + '关，那么这个意思是哪个成语呢：' + ask)
+            bodyTemplate.set_title(r'蒲公英：意思猜成语：第' + str(guan + 1) + '关')
 
             directive = RenderTemplate(bodyTemplate)
             return {
