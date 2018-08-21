@@ -811,6 +811,7 @@ class PuGongYing(Bot):
 
             self.set_session_attribute("real_answer", answer, 0)
             self.set_session_attribute("give_idiom", give_idiom, '')
+            self.set_session_attribute("help_idiom", answer[rand_ids], '')
             self.set_session_attribute("game_type", 'IdiomGuessBlank', 0)
             self.set_session_attribute("guan_num", 1, 1)
 
@@ -1211,12 +1212,12 @@ class PuGongYing(Bot):
             bodyTemplate = BodyTemplate1()
             bodyTemplate.set_background_image(
                 'http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%92%B2%E5%85%AC%E8%8B%B1%E6%8A%80%E8%83%BD%E6%8F%90%E7%A4%BA%E8%83%8C%E6%99%AF%E5%9B%BE.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A28%3A15Z%2F-1%2F%2F7577948afa2f15eabc0d9a571f74c8c6aab441d893030958ce8b4ba58f23b67b')
-            bodyTemplate.set_plain_text_content(r'这个那么简单，不用提示了吧')
+            bodyTemplate.set_plain_text_content(r'给你其中一个字想一想：' + self.get_session_attribute("give_idiom", '')) + '中有一个字是：' + self.get_session_attribute("help_idiom", '')
 
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
-                'outputSpeech': r'这个那么简单，不用提示了吧'
+                'outputSpeech': r'给你其中一个字想一想：' + self.get_session_attribute("give_idiom", '')) + '中有一个字是：' + self.get_session_attribute("help_idiom", '')
             }
         elif game_type == 'IdiomGuessMeans':
 
