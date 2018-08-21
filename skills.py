@@ -1041,7 +1041,7 @@ class PuGongYing(Bot):
             }
         elif game_type == 'IdiomStoryRandom' or game_type == 'IdiomStoryNormal':
 
-            rand_id = random.randint(0, 65)
+            rand_id = random.randint(0, 144)
             user_story = self.idiom_story_name[rand_id]
             idiom_story = self.idiom_story[user_story][0]
 
