@@ -746,18 +746,18 @@ class PuGongYing(Bot):
 
             bodyTemplate = BodyTemplate1()
             bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A43Z%2F-1%2F%2Fd3a86918b3ff6289e7bfe819e2dbc33c8ab75ec2eda3912759cd6617ca2164c7')
-            bodyTemplate.set_plain_text_content(r'好的，我们来听：' + '：' + idiom_story + '，，，还想再听一遍吗，试着对我说：再来一遍')
+            bodyTemplate.set_plain_text_content(r'好的，我们来听：' + '：' + idiom_story + '，，，还想再听一个吗，试着对我说：再来一个')
             bodyTemplate.set_title('蒲公英：成语故事：' + user_story)
 
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
-                'outputSpeech': r'好的，我们来听：' + user_story + '，，，，' + idiom_story + '，，，还想再听一遍吗，试着对我说，再来一遍'
+                'outputSpeech': r'好的，我们来听：' + user_story + '，，，，' + idiom_story + '，，，还想再听一个吗，试着对我说，再来一个'
             }
         else:
             try:
                 idiom_story = self.idiom_story[user_story][0]
-            except:
+            except KeyError:
                 return {
                     'outputSpeech': r'真是对不起，我这里没有这个成语故事'
                 }
@@ -768,13 +768,13 @@ class PuGongYing(Bot):
 
             bodyTemplate = BodyTemplate1()
             bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E6%88%90%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A43Z%2F-1%2F%2Fd3a86918b3ff6289e7bfe819e2dbc33c8ab75ec2eda3912759cd6617ca2164c7')
-            bodyTemplate.set_plain_text_content(r'好的，我们来听：' + user_story +  '：' + idiom_story + '还想再听一遍吗，试着对我说：再来一遍')
+            bodyTemplate.set_plain_text_content(r'好的，我们来听：' + user_story +  '：' + idiom_story + '还想再听一个吗，试着对我说：再来一个')
             bodyTemplate.set_title(user_story)
 
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
-                'outputSpeech': r'好的，我们来听：' + user_story +  '，，，，' + idiom_story + '还想再听一遍吗，试着对我说，再来一遍'
+                'outputSpeech': r'好的，我们来听：' + user_story +  '，，，，' + idiom_story + '还想再听一个吗，试着对我说，再来一个'
             }
 
     def start_IdiomGuess(self):
