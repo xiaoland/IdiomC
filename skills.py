@@ -855,6 +855,7 @@ class PuGongYing(Bot):
         英语故事
         :return:
         """
+        self.wait_answer()
         self.set_session_attribute("game_type", 'EnglishStory', 0)
         rand_id = random.randint(0, 66)
         story = self.english_story[rand_id]
@@ -877,6 +878,7 @@ class PuGongYing(Bot):
         英语笑话
         :return:
         """
+        self.wait_answer()
         self.set_session_attribute("game_type", 'EnglishJoke', 0)
         rand_id = random.randint(0, 42)
         joke = self.english_joke[rand_id][0]
@@ -900,6 +902,7 @@ class PuGongYing(Bot):
         学习英语单词
         :return:
         """
+        self.wait_answer()
         self.set_session_attribute("game_type", 'EnglishWord', 0)
         rand_id = random.randint(0, 25)
         self.set_session_attribute("english_word_num", rand_id, 0)
