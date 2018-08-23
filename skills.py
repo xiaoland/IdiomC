@@ -739,10 +739,11 @@ class PuGongYing(Bot):
             return {
                 "outputSpeech": r'请问您要听什么成语故事？例如“杯弓蛇影的成语故事”，也可以对我说“随便来一个成语故事”'
             }
-        elif user_story == 'random' or user_story == '随便一个' or user_story == '随便':
+        elif user_story == 'random' or user_story == '随便一个' or user_story == '随便' or user_story == '随便来一个':
 
             rand_id = random.randint(0, 144)
-            user_story = self.idiom_story_name[rand_id]
+            idiom_story_name = self.idiom_story.keys()
+            user_story = idiom_story_name[rand_id]
             idiom_story = self.idiom_story[user_story][0]
 
             self.set_session_attribute("idiom_story_name", user_story, 0)
