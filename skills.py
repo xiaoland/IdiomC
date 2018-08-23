@@ -729,12 +729,16 @@ class PuGongYing(Bot):
         except:
             user_story = result
         if not user_story:
-            self.nlu.ask('idiom_story')
+            return {
+                "outputSpeech": r'请问您要听什么成语故事？例如“杯弓蛇影的成语故事”，也可以对我说“随便来一个成语故事”'
+            }
         else:
             pass
 
         if not user_story:
-            self.nlu.ask('idiom_story')
+            return {
+                "outputSpeech": r'请问您要听什么成语故事？例如“杯弓蛇影的成语故事”，也可以对我说“随便来一个成语故事”'
+            }
         elif user_story == 'random':
 
             rand_id = random.randint(0, 144)
