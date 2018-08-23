@@ -1343,22 +1343,35 @@ class PuGongYing(Bot):
                             a = a + 1
                 if not new_give_idiom:
                     new_give_idiom = '。。。诶呀！突然发现我也接不了，我们重新来吧，对我说“重新开始”'
+                    self.set_session_attribute("answer", new_give_idiom[-1], '')
+                    self.set_session_attribute("give_idiom", new_give_idiom, '')
+                    self.set_session_attribute("guan_num", self.get_session_attribute("guan_num", 1) + 1, 1)
+
+                    bodyTemplate = BodyTemplate1()
+                    bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A49Z%2F-1%2F%2F8b3359c1a384bf5c4ace5265ccb0d5ddacdc7042c0145ddf1cc91b7844f247f5')
+                    bodyTemplate.set_plain_text_content(r'接错了哦，你可以接' + new_give_idiom + '，好的，接下来我出' + new_give_idiom)
+                    bodyTemplate.set_title('蒲公英：成语接龙：第' + str(guan) + '关')
+
+                    directive = RenderTemplate(bodyTemplate)
+                    return {
+                        'directives': [directive],
+                        'outputSpeech': r'接错了哦，你可以接' + new_give_idiom + '，好的，接下来我出' + new_give_idiom
+                    }
                 else:
-                    pass
-                self.set_session_attribute("answer", new_give_idiom[-1], '')
-                self.set_session_attribute("give_idiom", new_give_idiom, '')
-                self.set_session_attribute("guan_num", self.get_session_attribute("guan_num", 1) + 1, 1)
+                    self.set_session_attribute("answer", new_give_idiom[-1], '')
+                    self.set_session_attribute("give_idiom", new_give_idiom, '')
+                    self.set_session_attribute("guan_num", self.get_session_attribute("guan_num", 1) + 1, 1)
 
-                bodyTemplate = BodyTemplate1()
-                bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A49Z%2F-1%2F%2F8b3359c1a384bf5c4ace5265ccb0d5ddacdc7042c0145ddf1cc91b7844f247f5')
-                bodyTemplate.set_plain_text_content(r'接错了哦，你可以接' + new_give_idiom + '，好的，接下来我出' + new_give_idiom)
-                bodyTemplate.set_title('蒲公英：成语接龙：第' + str(guan) + '关')
+                    bodyTemplate = BodyTemplate1()
+                    bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E7%AD%94%E9%94%99%E4%BA%86.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A27%3A49Z%2F-1%2F%2F8b3359c1a384bf5c4ace5265ccb0d5ddacdc7042c0145ddf1cc91b7844f247f5')
+                    bodyTemplate.set_plain_text_content(r'接错了哦，接下来我出' + new_give_idiom)
+                    bodyTemplate.set_title('蒲公英：成语接龙：第' + str(guan) + '关')
 
-                directive = RenderTemplate(bodyTemplate)
-                return {
-                    'directives': [directive],
-                    'outputSpeech': r'接错了哦，你可以接' + new_give_idiom + '，好的，接下来我出' + new_give_idiom
-                }
+                    directive = RenderTemplate(bodyTemplate)
+                    return {
+                        'directives': [directive],
+                        'outputSpeech': r'接错了哦，接下来我出' + new_give_idiom
+                    }
 
             else:
 
