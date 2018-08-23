@@ -1217,7 +1217,7 @@ class PuGongYing(Bot):
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
-                'outputSpeech': r'给你其中一个字想一想：' + self.get_session_attribute("give_idiom", '') + '中有一个字是：' + self.get_session_attribute("help_idiom", '')
+                'outputSpeech': r'答案中有一个字是：' + self.get_session_attribute("help_idiom", '')
             }
         elif game_type == 'IdiomGuessMeans':
 
