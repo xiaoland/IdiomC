@@ -742,7 +742,7 @@ class PuGongYing(Bot):
         elif user_story == 'random' or user_story == '随便一个' or user_story == '随便' or user_story == '随便来一个':
 
             rand_id = random.randint(0, 144)
-            idiom_story_name = self.idiom_story.keys()
+            idiom_story_name = list(self.idiom_story.keys())
             user_story = idiom_story_name[rand_id]
             idiom_story = self.idiom_story[user_story][0]
 
