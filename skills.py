@@ -868,7 +868,7 @@ class PuGongYing(Bot):
 
         bodyTemplate = BodyTemplate1()
         bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E6%95%85%E4%BA%8B.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A28%3A15Z%2F-1%2F%2Fa48285803423fa1653a0581977198697d9c8136f7965c57c8f13f8b9248b7b2b')
-        bodyTemplate.set_plain_text_content(r'好啊，让我们一起来看英语故事吧！' + story + '。好看吗？要再来一个吗？试着对我说“再来一个”')
+        bodyTemplate.set_plain_text_content(r'好啊，让我们一起来看英语故事吧！' + story + '。好看吗？要再来一个吗？试着对我说“再来一个英语故事”')
         bodyTemplate.set_title(r'蒲公英：英语故事')
 
         directive = RenderTemplate(bodyTemplate)
@@ -891,7 +891,7 @@ class PuGongYing(Bot):
 
         bodyTemplate = BodyTemplate1()
         bodyTemplate.set_background_image('http://dbp-resource.gz.bcebos.com/d794e4f2-b2d5-4302-c42d-f34781a54abf/%E8%8B%B1%E8%AF%AD%E7%AC%91%E8%AF%9D.png?authorization=bce-auth-v1%2Fa4d81bbd930c41e6857b989362415714%2F2018-07-27T07%3A28%3A18Z%2F-1%2F%2F839dccab6b59c434a0370b3489b236a69f3dc96fa16a4c4e17d22b80271c3234')
-        bodyTemplate.set_plain_text_content(r'好啊，让我们来搞笑一下吧！' + joke + '。好笑吗？试着对我说“再来一个”')
+        bodyTemplate.set_plain_text_content(r'好啊，让我们来搞笑一下吧！' + joke + '。好笑吗？试着对我说“再来一个英语笑话”')
         bodyTemplate.set_title(r'蒲公英：英语笑话')
 
         directive = RenderTemplate(bodyTemplate)
