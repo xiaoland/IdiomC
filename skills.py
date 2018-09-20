@@ -1118,6 +1118,7 @@ class PuGongYing(Bot):
             give_idiom = give_idiom.replace(answer[rand_idss], '*')
             self.set_session_attribute("real_answer", answer, 0)
             self.set_session_attribute("give_idiom", give_idiom, '')
+            self.set_session_attribute("help_idiom", answer[rand_ids], '')
             self.set_session_attribute("game_type", 'IdiomGuessBlank', 0)
             self.set_session_attribute("guan_num", guan + 1, 1)
 
