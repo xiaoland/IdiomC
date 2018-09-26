@@ -828,7 +828,7 @@ class PuGongYing(Bot):
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
-                'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧！'
+                'outputSpeech': r'诶呀！我吃掉了成语的一部分，快来帮我还原吧！，，，' + give_idiom.replace("*", "，")
             }
 
         elif mode == 'Means':
@@ -1131,7 +1131,7 @@ class PuGongYing(Bot):
             directive = RenderTemplate(bodyTemplate)
             return {
                 'directives': [directive],
-                'outputSpeech': r'上一题的答案是' + real_answer + '那么接下来这个你可以还原吗？'
+                'outputSpeech': r'上一题的答案是' + real_answer + '那么接下来这个你可以还原吗？，，，' + give_idiom.replace("*", "，")
             }
 
         elif game_type == 'IdiomC':
